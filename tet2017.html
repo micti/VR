@@ -1,0 +1,399 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tet 2016</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css"> -->
+
+        <style type="text/css">
+
+            svg {
+                font-family: "Helvetica Neue", Helvetica;
+            }
+
+            .line {
+                stroke-width: 1px;
+                stroke: #000;
+            }
+
+            .station {
+                stroke-width: 0px;
+                fill: red;
+            }
+
+            .train {
+                stroke-width: 0px;
+                fill: blue;
+            }
+
+            .station_label {
+                text-anchor: end
+            }
+
+            .train_label {
+
+            }
+            
+            .headline {
+                position: fixed;
+                bottom: 200px;
+                left: 300px;
+                width: 300px;
+                background: #000;
+                color: #fff;
+                font-family: sans-serif;
+                padding: 3px;
+                line-height: 1.3;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <!-- Add your site or application content here -->
+        <div class="headline">
+            Mô phỏng chạy tàu theo kế hoạch 2146<br>1s tương đương 3 phút<br>
+            <span id="timer">00:00</span>
+        </div>
+
+        <script src="d3.min.js"></script>
+        <script>
+
+
+
+        var lineLength = 1726,
+            scaleRatio = 2,
+            width = 1100,
+            height = (lineLength + 20) * scaleRatio;
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var scale = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
+
+        // 1. KM Axis
+        var axisKM = d3.axisLeft(scale);
+        svg.append('g')
+            .attr("transform", "translate(40,20)")
+            .call(axisKM)
+        
+        // 2. Marley time Axis
+        var scaleTime = d3.scaleTime()
+            .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
+            .range([0, 720])
+        //scaleTime.ticks(d3.timeMinute.every(15))
+        var axisTime = d3.axisTop(scaleTime)
+            .ticks(24)
+            .tickFormat(d3.timeFormat("%H:%M"))
+        svg.append('g')
+            .attr("transform", "translate(350,20)")
+            .call(axisTime)
+        
+        //2.1 Line
+        var lineForMarley = d3.line()
+            .x(function(d) { return scale(d.km); })
+            .y(function(d) { return scaleTime(d.time); });
+
+        // 2. Route
+        var routeSvg = svg.append('g')
+            .attr("class", "route")
+            .attr("transform", "translate(200,20)")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "10px")
+
+
+        // load data and process
+        d3.json("data.json", function(data) {
+            // process flexiable data for D3
+            var dataLines = [];
+            var i = 0;
+            for (var d in data.connections) {
+                dataLines[i] = data.connections[d];
+                i++;
+            }
+
+            var dataStations = [];
+            var i = 0;
+            for (var d in data.stations) {
+                dataStations[i] = data.stations[d];
+                i++;
+            }
+
+            var lines = routeSvg.selectAll('.line').data(dataLines)
+            var stations = routeSvg.selectAll('.station').data(dataStations)
+            var stationLabels = routeSvg.selectAll('.station_label').data(dataStations)
+            var stationTicks = routeSvg.selectAll('.station_tick').data(dataStations)
+
+            lines.enter().append('line')
+                .attr('class', 'line')
+                .attr('x1', 0)
+                .style('shape-rendering','crispEdges')
+                .attr('y1', function (d) { return scale(data.stations[d.station1].postKm); })
+                .attr('x2', 0)
+                .attr('y2', function (d) { return scale(data.stations[d.station2].postKm); });
+
+            // stations.enter().append('circle')
+            //     .attr('class', 'station')
+            //     .attr("cx", 0)
+            //     .attr("cy", function(d) { return (scale(d.postKm)); })
+            //     .attr("r", 2)
+
+            stationLabels.enter().append('text')
+                .attr('class', 'station_label')
+                .attr("x", function (d, i) { return i % 2 === 0 ? '-75' : '-15'})
+                .attr("y", function (d) { return (scale(d.postKm)); })
+                .attr("dy", "0.32em")
+                .text(function (d) { return d.name })
+
+            stationTicks.enter().append('line')
+                .attr('class', 'station_tick')
+                .attr('fill', 'none')
+                .attr('stroke', '#000')
+                .style('shape-rendering','crispEdges')
+                .attr("y2", function (d, i) { return (scale(d.postKm)) })
+                .attr("y1", function (d, i) { return (scale(d.postKm)) })
+                .attr("x1", function (d, i) { return i % 2 === 0 ? '-70' : '-10'})
+                .attr("x2", "-3")
+
+            var timeToMin = function(time)
+            {
+                parts = time.split(":")
+                return parseInt(parts[0]) * 60 + parseInt(parts[1])
+            }
+
+            var dayToMin = function(day) {
+                return day * 24 * 60
+            }
+
+            // Train data
+            var trains = []
+            var trainCircles = []
+            var trainLastPos = []
+            var trainLabels = []
+
+            var setTrainsByTime = function(time)
+            {
+                var total = trains.length
+                for (i = 0; i < total; i++) {
+                    setTrainByTime(i, time)
+                }
+            }
+
+            var setTrainByTime = function(index, time) {
+                if (time < trains[index].start) {
+                    trainCircles[index].style("opacity", 0)
+                    trainLabels[index].style("opacity", 0)
+                    return;
+                }
+
+                if (time > trains[index].end) {
+                    trainCircles[index].style("opacity", 0)
+                    trainLabels[index].style("opacity", 0)
+                    return;
+                }
+
+                var route = 0
+                if (trainLastPos[index] === null) {
+                    var totalRoutes = trains[index].route.length
+                    var totalTimes = trains[index].end - trains[index].start
+                    var avgTimeForRoute = totalTimes / totalRoutes
+                    var currentTime = time - trains[index].start
+                    var preRoutes = Math.ceil(currentTime / avgTimeForRoute) - 1
+                    preRoutes = preRoutes < 0 ? 0 : preRoutes
+                    preRoutes = preRoutes > totalRoutes ? totalRoutes : preRoutes
+                    var direction = 1
+                    if (time < trains[index].route[preRoutes].start) {
+                        direction = -1
+                    }
+
+                    do {
+                        if (trains[index].route[preRoutes].start <= time && trains[index].route[preRoutes].out >= time) {
+                            route = preRoutes
+                            break;
+                        }
+                        preRoutes = preRoutes + direction
+                    } while (true)
+                } else {
+                    route = trainLastPos[index]
+                    do {
+                        if (trains[index].route[route].start <= time && trains[index].route[route].out >= time) {
+                            break
+                        }
+                        route++
+                    } while (true)
+                }
+
+                var station1 = trains[index].route[route].station1
+                var station2 = trains[index].route[route].station2
+                var routeLenght = data.stations[station2].postKm - data.stations[station1].postKm;
+                var routeDuration = trains[index].route[route].in - trains[index].route[route].start;
+                var routeRunningTime = trains[index].route[route].in - time;
+                if (routeRunningTime < 0) routeRunningTime = 0;
+                routeRunningTime = routeDuration - routeRunningTime;
+                var currentPos = data.stations[station1].postKm + routeRunningTime * routeLenght / routeDuration;
+                trainCircles[index].style("opacity", 1);
+                trainCircles[index].attr("cy", currentPos * scaleRatio)
+                trainCircles[index].attr("cy", currentPos * scaleRatio)
+                trainLabels[index].style("opacity", 1);
+                trainLabels[index].attr("y", currentPos * scaleRatio)
+                trainLastPos[index] = route
+            }
+
+            var createTrain = function(route, day)
+            {
+                var train = {
+                    'start': '',
+                    'end': '',
+                    'route': []
+                }
+
+                var i = 0;
+                for (var key in data.routes[route].route) {
+                    var dayStart = data.routes[route].route[key].time1OutDay + day
+                    var dayIn = data.routes[route].route[key].time2InDay + day
+                    var dayOut = data.routes[route].route[key].time2OutDay + day
+                    var timeStart = timeToMin(data.routes[route].route[key].time1Out)
+                    var timeIn = timeToMin(data.routes[route].route[key].time2In)
+                    var timeOut = timeToMin(data.routes[route].route[key].time2Out)
+
+                    train.route[i] = {}
+                    train.route[i].start = timeStart + dayToMin(dayStart)
+                    train.route[i].in = timeIn + dayToMin(dayIn)
+                    train.route[i].out = timeOut + dayToMin(dayOut)
+                    train.route[i].station1 = data.routes[route].route[key].station1
+                    train.route[i].station2 = data.routes[route].route[key].station2
+
+                    i++;
+                }
+
+                train.start = train.route[0].start
+                train.end = train.route[i-1].out
+
+                // add data
+                trains.push(train)
+
+                // add cirlce
+                var cir = routeSvg.append('circle')
+                    //.attr('id', 'train_se1')
+                    .attr('class', 'train')
+                    .attr("cx", 0)
+                    .attr("cy", 0)
+                    .attr("r", 2)
+                    .style("opacity", 0)
+                trainCircles.push(cir)
+
+                // add label
+                var text = routeSvg.append('text')
+                    .attr('class', 'train_label')
+                    .attr("x", 5)
+                    .attr("y", 0)
+                    .attr("dy", "0.32em")
+                    .text(route)
+                    .style("opacity", 0)
+                trainLabels.push(text)
+
+                trainLastPos.push(null)
+            }
+            
+            var timer = d3.select("#timer")
+            
+            var updateTimer = function(time) {
+                var midnightToNow = Math.round(time) % (60 * 24);
+                var hh = Math.floor(midnightToNow / 60);
+                var mm = midnightToNow - (hh * 60);
+                
+                hh = hh < 10 ? '0' + hh : hh;
+                mm = mm < 10 ? '0' + mm : mm;
+                
+                timer.text(hh + ":" + mm + ":00")
+            }
+            
+            // var makeTrainPath()
+      //       {
+      //           var train = svg.append("g")
+      //               .attr("class", "train")
+      //               .attr("clip-path", "url(#clip)")
+      //           .selectAll("g")
+      //               .data(trains)
+      //         .enter().append("g")
+      //           //.attr("class", function(d) { return d.type; });
+      //     train.append("path")
+      //           .attr("d", function(d) { return lineForMarley(d.route); });
+      //
+      //       }
+
+
+
+            for(i = 0; i <= 35; i++) {
+                createTrain('se1', i)
+                createTrain('se3', i)
+                createTrain('se5', i)
+                createTrain('se7', i)
+                createTrain('tn1', i)
+                createTrain('tn3', i)
+                createTrain('tn5', i)
+                createTrain('tn7', i)
+                createTrain('se9', i)
+                createTrain('se11', i)
+                createTrain('se2', i)
+                createTrain('se4', i)
+                createTrain('se6', i)
+                createTrain('se8', i)
+                createTrain('tn2', i)
+                createTrain('tn4', i)
+                createTrain('tn6', i)
+                createTrain('tn8', i)
+                createTrain('se10', i)
+                createTrain('se12', i)
+                createTrain('spt2', i)
+                createTrain('se22', i)
+                createTrain('se26', i)
+                createTrain('snt2', i)
+                createTrain('spt1', i)
+                createTrain('se21', i)
+                createTrain('se25', i)
+                createTrain('snt1', i)
+            }
+
+            //setTrainsByTime(300)
+            var t = 345 + 2 * 24 * 60; // bắt đầu 5:45 2ngày sau
+            var animation = function() {
+                setTrainsByTime(t);
+                updateTimer(t);
+                t += 0.3;
+                setTimeout(animation, 100);
+            }
+            animation()
+
+            // console.log('ok')
+        })
+
+
+
+
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script> -->
+
+    </body>
+
+</html>
