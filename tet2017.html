@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Kế hoạch Tàu tết Đinh Dậu 2017 | Đường sắt Việt Nam</title>
+        <title>Tàu tết Đinh Dậu 2017 | Đường sắt Việt Nam</title>
         <meta name="description" content="Giờ tàu, giá vé, kế hoạch chạy tàu tết 2017 Đinh Dậu">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,11 +12,16 @@
 
         <!-- <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;subset=vietnamese" rel="stylesheet"> 
 
         <style type="text/css">
+        
+            html {
+                font-family: 'EB Garamond', serif;
+            }
 
             svg {
-                font-family: "Helvetica Neue", Helvetica;
+                font-family: 'EB Garamond', serif;
             }
 
             .line {
@@ -49,7 +54,7 @@
                 width: 300px;
                 background: #000;
                 color: #fff;
-                font-family: sans-serif;
+                font-family: 'EB Garamond', serif;
                 padding: 3px;
                 line-height: 1.3;
             }
@@ -58,7 +63,25 @@
 
     </head>
     <body>
-
+        
+        <h1>Kết hoạch chạy tàu Tết 2017, Tết Đinh Dậu <small>&lt;Đang cập nhật&gt;</small></h1>
+        <p>Thông tin chi tiết về kế hoạch chạy tàu tết 2017 của đường sắt Việt Nam được biên tập lại trong 1 trang web duy nhất, dành cho các bạn quan tâm đến tàu tết trên CLB Đam mê Đường sắt, hi vọng đây là nguồn tham khảo bổ ích cho những ai quân tâm đến ngành đường sắt, các bạn đang học các ngành liên quan đến vận tải kinh tế đường sắt...</p>
+        <p>CHÚ Ý: Đây không phải là trang web chính thức của ngành đường sắt, website không cung cấp các chức năng bán vé cũng như các thông tin chính thống và mới nhất về tàu tết 2017, nếu là hành khách có nhu cầu mua vé, xin vui lòng truy cập trang web http://dsvn.vn, để xem giờ tàu giá vé, xin vui lòng truy cập trang web http://giotaugiave.dsvn.vn/</p>
+        <p>Dữ liệu: Kế hoạch chạy tàu tết của ĐSVN, http://dsvn.vn<br>Biên tập: Lê Nhật Anh, Nguyễn Thành Bình Nguyên (CLB Đam mê Đường sắt)<br>Thiết kế: Lê Nhật Anh<br>Chỉnh sửa lần cuối: 04 tháng 12, 2016<br>(c) 2017 . Giấy phép: MIT cho mã nguồn, CC BY 4.0 cho nội dung.</p>
+        <h2>Thời gian</h2>
+        <p>Đang cập nhật</p>
+        <h2>Ram xe</h2>
+        <p>Đang cập nhật</p>
+        <h2>Lịch chạy</h2>
+        <p>Đang cập nhật</p>
+        <h2>Đầu máy</h2>
+        <p>Đang cập nhật</p>
+        <h2>Biểu đồ chạy tàu</h2>
+        <p>Đang cập nhật</p>
+        <div id="bieudo"></div>
+        
+        <h2>Vé</h2>
+        <p>Đang cập nhật</p>
 
         <!-- Add your site or application content here -->
         <div class="headline">
@@ -76,7 +99,7 @@
             width = 1100,
             height = (lineLength + 20) * scaleRatio;
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select("#bieudo").append("svg")
             .attr("width", width)
             .attr("height", height);
 
@@ -109,17 +132,16 @@
         var routeSvg = svg.append('g')
             .attr("class", "route")
             .attr("transform", "translate(200,20)")
-            .attr("font-family", "sans-serif")
             .attr("font-size", "10px")
 
 
         // load data and process
-        d3.json("data.json", function(data) {
+        d3.json("data_e.json", function(data) {
             // process flexiable data for D3
             var dataLines = [];
             var i = 0;
-            for (var d in data.connections) {
-                dataLines[i] = data.connections[d];
+            for (var d in data.sections) {
+                dataLines[i] = data.sections[d];
                 i++;
             }
 
@@ -139,9 +161,9 @@
                 .attr('class', 'line')
                 .attr('x1', 0)
                 .style('shape-rendering','crispEdges')
-                .attr('y1', function (d) { return scale(data.stations[d.station1].postKm); })
+                .attr('y1', function (d) { return scale(data.stations[d.station1].km); })
                 .attr('x2', 0)
-                .attr('y2', function (d) { return scale(data.stations[d.station2].postKm); });
+                .attr('y2', function (d) { return scale(data.stations[d.station2].km); });
 
             // stations.enter().append('circle')
             //     .attr('class', 'station')
@@ -152,7 +174,7 @@
             stationLabels.enter().append('text')
                 .attr('class', 'station_label')
                 .attr("x", function (d, i) { return i % 2 === 0 ? '-75' : '-15'})
-                .attr("y", function (d) { return (scale(d.postKm)); })
+                .attr("y", function (d) { return (scale(d.km)); })
                 .attr("dy", "0.32em")
                 .text(function (d) { return d.name })
 
@@ -161,8 +183,8 @@
                 .attr('fill', 'none')
                 .attr('stroke', '#000')
                 .style('shape-rendering','crispEdges')
-                .attr("y2", function (d, i) { return (scale(d.postKm)) })
-                .attr("y1", function (d, i) { return (scale(d.postKm)) })
+                .attr("y2", function (d, i) { return (scale(d.km)) })
+                .attr("y1", function (d, i) { return (scale(d.km)) })
                 .attr("x1", function (d, i) { return i % 2 === 0 ? '-70' : '-10'})
                 .attr("x2", "-3")
 
@@ -236,12 +258,12 @@
 
                 var station1 = trains[index].route[route].station1
                 var station2 = trains[index].route[route].station2
-                var routeLenght = data.stations[station2].postKm - data.stations[station1].postKm;
+                var routeLenght = data.stations[station2].km - data.stations[station1].km;
                 var routeDuration = trains[index].route[route].in - trains[index].route[route].start;
                 var routeRunningTime = trains[index].route[route].in - time;
                 if (routeRunningTime < 0) routeRunningTime = 0;
                 routeRunningTime = routeDuration - routeRunningTime;
-                var currentPos = data.stations[station1].postKm + routeRunningTime * routeLenght / routeDuration;
+                var currentPos = data.stations[station1].km + routeRunningTime * routeLenght / routeDuration;
                 trainCircles[index].style("opacity", 1);
                 trainCircles[index].attr("cy", currentPos * scaleRatio)
                 trainCircles[index].attr("cy", currentPos * scaleRatio)
@@ -259,20 +281,20 @@
                 }
 
                 var i = 0;
-                for (var key in data.routes[route].route) {
-                    var dayStart = data.routes[route].route[key].time1OutDay + day
-                    var dayIn = data.routes[route].route[key].time2InDay + day
-                    var dayOut = data.routes[route].route[key].time2OutDay + day
-                    var timeStart = timeToMin(data.routes[route].route[key].time1Out)
-                    var timeIn = timeToMin(data.routes[route].route[key].time2In)
-                    var timeOut = timeToMin(data.routes[route].route[key].time2Out)
+                for (var key in data.routes[route].sections) {
+                    var dayStart = data.routes[route].sections[key].time1OutDay + day
+                    var dayIn = data.routes[route].sections[key].time2InDay + day
+                    var dayOut = data.routes[route].sections[key].time2OutDay + day
+                    var timeStart = timeToMin(data.routes[route].sections[key].time1Out)
+                    var timeIn = timeToMin(data.routes[route].sections[key].time2In)
+                    var timeOut = timeToMin(data.routes[route].sections[key].time2Out)
 
                     train.route[i] = {}
                     train.route[i].start = timeStart + dayToMin(dayStart)
                     train.route[i].in = timeIn + dayToMin(dayIn)
                     train.route[i].out = timeOut + dayToMin(dayOut)
-                    train.route[i].station1 = data.routes[route].route[key].station1
-                    train.route[i].station2 = data.routes[route].route[key].station2
+                    train.route[i].station1 = data.routes[route].sections[key].station1
+                    train.route[i].station2 = data.routes[route].sections[key].station2
 
                     i++;
                 }
@@ -306,6 +328,12 @@
                 trainLastPos.push(null)
             }
             
+            var resetLastPost = function() {
+                for (var pos in trainLastPos) {
+                    trainLastPos[pos] = null
+                }
+            }
+            
             var timer = d3.select("#timer")
             
             var updateTimer = function(time) {
@@ -335,7 +363,7 @@
 
 
 
-            for(i = 0; i <= 35; i++) {
+            for(i = 0; i <= 4; i++) {
                 createTrain('se1', i)
                 createTrain('se3', i)
                 createTrain('se5', i)
@@ -346,6 +374,20 @@
                 createTrain('tn7', i)
                 createTrain('se9', i)
                 createTrain('se11', i)
+                createTrain('se13', i)
+                createTrain('se14', i)
+                createTrain('se17', i)
+                createTrain('se18', i)
+                createTrain('se29', i)
+                createTrain('se30', i)
+                createTrain('se23', i)
+                createTrain('se24', i)
+                createTrain('sqn1', i)
+                createTrain('sqn2', i)
+                createTrain('snt2', i)
+                createTrain('snt4', i)
+                createTrain('snt3', i)
+
                 createTrain('se2', i)
                 createTrain('se4', i)
                 createTrain('se6', i)
@@ -367,11 +409,15 @@
             }
 
             //setTrainsByTime(300)
-            var t = 345 + 2 * 24 * 60; // bắt đầu 5:45 2ngày sau
+            var t = 3 * 24 * 60; // 0:00 ngày 2
             var animation = function() {
                 setTrainsByTime(t);
                 updateTimer(t);
                 t += 0.3;
+                if (t > 4 * 24 * 60) {
+                    resetLastPost()
+                    t = t - 3 * 24 * 60
+                }
                 setTimeout(animation, 100);
             }
             animation()
