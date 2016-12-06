@@ -3,25 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Tàu tết Đinh Dậu 2017 | Đường sắt Việt Nam</title>
+        <title>Tàu tết Đinh Dậu 2017</title>
         <meta name="description" content="Giờ tàu, giá vé, kế hoạch chạy tàu tết 2017 Đinh Dậu">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <!-- <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css"> -->
-        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;subset=vietnamese" rel="stylesheet"> 
+        <link rel="stylesheet" href="/client/css/normalize.css">
+        <link rel="stylesheet" href="/client/css/tet2017.css">
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=vietnamese" rel="stylesheet">
 
         <style type="text/css">
-        
-            html {
-                font-family: 'EB Garamond', serif;
+
+            body {
+                font-family: 'Source Sans Pro', sans-serif;
             }
 
             svg {
-                font-family: 'EB Garamond', serif;
+                font-family: 'Source Sans Pro', sans-serif;
             }
 
             .line {
@@ -44,9 +45,9 @@
             }
 
             .train_label {
-
+                font-size: 12px;
             }
-            
+
             .headline {
                 position: fixed;
                 bottom: 200px;
@@ -54,7 +55,6 @@
                 width: 300px;
                 background: #000;
                 color: #fff;
-                font-family: 'EB Garamond', serif;
                 padding: 3px;
                 line-height: 1.3;
             }
@@ -63,80 +63,91 @@
 
     </head>
     <body>
-        
-        <h1>Kết hoạch chạy tàu Tết 2017, Tết Đinh Dậu <small>&lt;Đang cập nhật&gt;</small></h1>
-        <p>Thông tin chi tiết về kế hoạch chạy tàu tết 2017 của đường sắt Việt Nam được biên tập lại trong 1 trang web duy nhất, dành cho các bạn quan tâm đến tàu tết trên CLB Đam mê Đường sắt, hi vọng đây là nguồn tham khảo bổ ích cho những ai quân tâm đến ngành đường sắt, các bạn đang học các ngành liên quan đến vận tải kinh tế đường sắt...</p>
-        <p>CHÚ Ý: Đây không phải là trang web chính thức của ngành đường sắt, website không cung cấp các chức năng bán vé cũng như các thông tin chính thống và mới nhất về tàu tết 2017, nếu là hành khách có nhu cầu mua vé, xin vui lòng truy cập trang web http://dsvn.vn, để xem giờ tàu giá vé, xin vui lòng truy cập trang web http://giotaugiave.dsvn.vn/</p>
-        <p>Dữ liệu: Kế hoạch chạy tàu tết của ĐSVN, http://dsvn.vn<br>Biên tập: Lê Nhật Anh, Nguyễn Thành Bình Nguyên (CLB Đam mê Đường sắt)<br>Thiết kế: Lê Nhật Anh<br>Chỉnh sửa lần cuối: 04 tháng 12, 2016<br>(c) 2017 . Giấy phép: MIT cho mã nguồn, CC BY 4.0 cho nội dung.</p>
-        <h2>Thời gian</h2>
-        <p>Đang cập nhật</p>
-        <h2>Ram xe</h2>
-        <p>Đang cập nhật</p>
-        <h2>Lịch chạy</h2>
-        <p>Đang cập nhật</p>
-        <h2>Đầu máy</h2>
-        <p>Đang cập nhật</p>
-        <h2>Biểu đồ chạy tàu</h2>
-        <p>Đang cập nhật</p>
-        <div id="bieudo"></div>
-        
-        <h2>Vé</h2>
-        <p>Đang cập nhật</p>
+        <div class="container">
+            <h1>Kế hoạch chạy tàu Tết 2017, Tết Đinh Dậu <small>&lt;Đang cập nhật&gt;</small></h1>
+            <p>Thông tin chi tiết về kế hoạch chạy tàu tết 2017 của đường sắt Việt Nam được biên tập lại trong 1 trang web duy nhất, dành cho các bạn quan tâm đến tàu tết trên CLB Đam mê Đường sắt, hi vọng đây là nguồn tham khảo bổ ích cho những ai quân tâm đến ngành đường sắt, các bạn đang học các ngành liên quan đến vận tải kinh tế đường sắt...</p>
+            <p>CHÚ Ý: Đây không phải là trang web chính thức của ngành đường sắt, website không cung cấp các chức năng bán vé cũng như các thông tin chính thống và mới nhất về tàu tết 2017, nếu là hành khách có nhu cầu mua vé, xin vui lòng truy cập trang web http://dsvn.vn, để xem giờ tàu giá vé, xin vui lòng truy cập trang web http://giotaugiave.dsvn.vn/</p>
+            <p>Dữ liệu: Kế hoạch chạy tàu tết của ĐSVN, http://dsvn.vn<br>Biên tập: Lê Nhật Anh, Nguyễn Thành Bình Nguyên (CLB Đam mê Đường sắt)<br>Thiết kế: Lê Nhật Anh<br>Chỉnh sửa lần cuối: 04 tháng 12, 2016<br>(c) 2017 . Giấy phép: MIT cho mã nguồn, CC BY 4.0 cho nội dung.</p>
+            <h2>Thời gian</h2>
+            <p>Đang cập nhật</p>
+            <h2>Ram xe</h2>
+            <p>Đang cập nhật</p>
+            <h2>Lịch chạy</h2>
+            <p>Đang cập nhật</p>
+            <h2>Đầu máy</h2>
+            <p>Đang cập nhật</p>
+            <h2>Biểu đồ chạy tàu</h2>
+            <h3>Mô phỏng biểu đồ</h3>
+            <p>Đang cập nhật</p>
+
+            <div id="bieudo"></div>
+            <h3>Biểu đồ chạy tàu</h3>
+            <div id="bieudo_chaytau_svg">
+            </div>
+
+            <h2>Vé</h2>
+            <p>Đang cập nhật</p>
+        </div>
 
         <!-- Add your site or application content here -->
         <div class="headline">
-            Mô phỏng chạy tàu theo kế hoạch 2146<br>1s tương đương 3 phút<br>
             <span id="timer">00:00</span>
         </div>
 
-        <script src="d3.min.js"></script>
+        <script src="/client/js/d3.min.js"></script>
         <script>
 
-
-
         var lineLength = 1726,
-            scaleRatio = 2,
-            width = 1100,
+            scaleRatio = 3,
+            width = 1200,
             height = (lineLength + 20) * scaleRatio;
 
         var svg = d3.select("#bieudo").append("svg")
             .attr("width", width)
             .attr("height", height);
 
-        var scale = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
+        var bieudoSVG = d3.select("#bieudo_chaytau_svg").append("svg")
+            .attr("width", 24 * 44 + 70)
+            .attr("height", lineLength * scaleRatio + 20);
+
+        var scaleStation = scale = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
+        var scaleTime = d3.scaleTime()
+            .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
+            .range([0, 24 * 44])
+        var lineForMarley = d3.line()
+            .y(function(d) { return scaleStation(d.km) })
+            .x(function(d) { return scaleTime(d.time) })
 
         // 1. KM Axis
         var axisKM = d3.axisLeft(scale);
         svg.append('g')
             .attr("transform", "translate(40,20)")
             .call(axisKM)
-        
+
         // 2. Marley time Axis
-        var scaleTime = d3.scaleTime()
-            .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
-            .range([0, 720])
-        //scaleTime.ticks(d3.timeMinute.every(15))
         var axisTime = d3.axisTop(scaleTime)
             .ticks(24)
             .tickFormat(d3.timeFormat("%H:%M"))
-        svg.append('g')
-            .attr("transform", "translate(350,20)")
+        bieudoSVG.append('g')
+            .attr("transform", "translate(50,20)")
             .call(axisTime)
-        
+
         //2.1 Line
-        var lineForMarley = d3.line()
-            .x(function(d) { return scale(d.km); })
-            .y(function(d) { return scaleTime(d.time); });
+
 
         // 2. Route
         var routeSvg = svg.append('g')
             .attr("class", "route")
             .attr("transform", "translate(200,20)")
-            .attr("font-size", "10px")
+            .attr("font-size", "12px")
 
+        var praseTimeString = function(time) {
+            time = time.split(":")
+            return new Date(2016, 0, 15, parseInt(time[0]), parseInt(time[1], 0))
+        }
 
         // load data and process
-        d3.json("data_e.json", function(data) {
+        d3.json("data/tet2017.json", function(data) {
             // process flexiable data for D3
             var dataLines = [];
             var i = 0;
@@ -328,26 +339,26 @@
 
                 trainLastPos.push(null)
             }
-            
+
             var resetLastPost = function() {
                 for (var pos in trainLastPos) {
                     trainLastPos[pos] = null
                 }
             }
-            
+
             var timer = d3.select("#timer")
-            
+
             var updateTimer = function(time) {
                 var midnightToNow = Math.round(time) % (60 * 24);
                 var hh = Math.floor(midnightToNow / 60);
                 var mm = midnightToNow - (hh * 60);
-                
+
                 hh = hh < 10 ? '0' + hh : hh;
                 mm = mm < 10 ? '0' + mm : mm;
-                
+
                 timer.text(hh + ":" + mm + ":00")
             }
-            
+
             // var makeTrainPath()
       //       {
       //           var train = svg.append("g")
@@ -388,7 +399,6 @@
                 createTrain('snt2', 'snt2', i)
                 createTrain('snt4', 'snt4', i)
                 createTrain('snt3', 'snt3', i)
-
                 createTrain('se2', 'se2', i)
                 createTrain('se4', 'se4', i)
                 createTrain('se6', 'se6', i)
@@ -424,6 +434,65 @@
             animation()
 
             // console.log('ok')
+
+
+
+
+
+            /**
+             * Vẽ biểu đồ
+             */
+
+            // Dữ liệu
+            var dataTimeTable = [];
+            for (var route in data.routes) {
+                dataTimeTable[route] = []
+                var i = 0
+                dataTimeTable[route][i] = []
+                for (var section in data.routes[route].sections) {
+                    var info = data.routes[route].sections[section];
+                    dataTimeTable[route][i].push({km: data.stations[info.station1].km, time: praseTimeString(info.time1In)})
+                    //if (info.time1In !== info.time1Out) {
+                        dataTimeTable[route][i].push({km: data.stations[info.station1].km, time: praseTimeString(info.time1Out)})
+                    //}
+                }
+            }
+
+            // Chú thích ga
+            var stationLabelsForBieudoSVG = bieudoSVG.selectAll('.station_label').data(dataStations)
+            var stationLinesForBieudoSVG = bieudoSVG.selectAll('.station_tick').data(dataStations)
+            // stationLabelsForBieudoSVG.enter().append('text')
+//                 .attr('class', 'station_label')
+//                 .attr("x", function (d, i) { return i % 2 === 0 ? '-75' : '-15'})
+//                 .attr("y", function (d) { return (scale(d.km)); })
+//                 .attr("dy", "0.32em")
+//                 .text(function (d) { return d.name })
+
+            stationLinesForBieudoSVG.enter().append('line')
+                .attr("transform", "translate(50,20)")
+                .attr('class', 'station_tick')
+                .attr('fill', 'none')
+                .attr('stroke', '#ccc')
+                .style('shape-rendering','crispEdges')
+                .attr("y2", function (d, i) { return (scaleStation(d.km)) })
+                .attr("y1", function (d, i) { return (scaleStation(d.km)) })
+                .attr("x1", 0)
+                .attr("x2", 24 * 44)
+
+            // Tạp biểu đồ
+            var trainPaths = bieudoSVG.append('g')
+                .attr("transform", "translate(50,20)")
+            trainPaths.append("path")
+                .attr("d", lineForMarley(dataTimeTable['se1'][0]))
+                .attr("stroke", "grey")
+                .attr("stroke-width", 1.5)
+                .attr("fill", "none")
+            trainPaths.append("path")
+                .attr("d", lineForMarley(dataTimeTable['se2'][0]))
+                .attr("stroke", "grey")
+                .attr("stroke-width", 1.5)
+                .attr("fill", "none")
+
         })
 
 
