@@ -272,9 +272,10 @@
                 trainLastPos[index] = route
             }
 
-            var createTrain = function(route, day)
+            var createTrain = function(name, route, day)
             {
                 var train = {
+                    'name': name + '_' + day,
                     'start': '',
                     'end': '',
                     'route': []
@@ -321,7 +322,7 @@
                     .attr("x", 5)
                     .attr("y", 0)
                     .attr("dy", "0.32em")
-                    .text(route)
+                    .text(train.name)
                     .style("opacity", 0)
                 trainLabels.push(text)
 
@@ -364,59 +365,59 @@
 
 
             for(i = 0; i <= 4; i++) {
-                createTrain('se1', i)
-                createTrain('se3', i)
-                createTrain('se5', i)
-                createTrain('se7', i)
-                createTrain('tn1', i)
-                createTrain('tn3', i)
-                createTrain('tn5', i)
-                createTrain('tn7', i)
-                createTrain('se9', i)
-                createTrain('se11', i)
-                createTrain('se13', i)
-                createTrain('se14', i)
-                createTrain('se17', i)
-                createTrain('se18', i)
-                createTrain('se29', i)
-                createTrain('se30', i)
-                createTrain('se23', i)
-                createTrain('se24', i)
-                createTrain('sqn1', i)
-                createTrain('sqn2', i)
-                createTrain('snt2', i)
-                createTrain('snt4', i)
-                createTrain('snt3', i)
+                createTrain('se1', 'se1', i)
+                createTrain('se3', 'se3', i)
+                createTrain('se5', 'se5', i)
+                createTrain('se7', 'se7', i)
+                createTrain('tn1', 'tn1', i)
+                createTrain('tn3', 'tn3', i)
+                createTrain('tn5', 'tn5', i)
+                createTrain('tn7', 'tn7', i)
+                createTrain('se9', 'se9', i)
+                createTrain('se11', 'se11', i)
+                createTrain('se13', 'se13', i)
+                createTrain('se14', 'se14', i)
+                createTrain('se17', 'se17', i)
+                createTrain('se18', 'se18', i)
+                createTrain('se29', 'se29', i)
+                createTrain('se30', 'se30', i)
+                createTrain('se23', 'se23', i)
+                createTrain('se24', 'se24', i)
+                createTrain('sqn1', 'sqn1', i)
+                createTrain('sqn2', 'sqn2', i)
+                createTrain('snt2', 'snt2', i)
+                createTrain('snt4', 'snt4', i)
+                createTrain('snt3', 'snt3', i)
 
-                createTrain('se2', i)
-                createTrain('se4', i)
-                createTrain('se6', i)
-                createTrain('se8', i)
-                createTrain('tn2', i)
-                createTrain('tn4', i)
-                createTrain('tn6', i)
-                createTrain('tn8', i)
-                createTrain('se10', i)
-                createTrain('se12', i)
-                createTrain('spt2', i)
-                createTrain('se22', i)
-                createTrain('se26', i)
-                createTrain('snt2', i)
-                createTrain('spt1', i)
-                createTrain('se21', i)
-                createTrain('se25', i)
-                createTrain('snt1', i)
+                createTrain('se2', 'se2', i)
+                createTrain('se4', 'se4', i)
+                createTrain('se6', 'se6', i)
+                createTrain('se8', 'se8', i)
+                createTrain('tn2', 'tn2', i)
+                createTrain('tn4', 'tn4', i)
+                createTrain('tn6', 'tn6', i)
+                createTrain('tn8', 'tn8', i)
+                createTrain('se10', 'se10', i)
+                createTrain('se12', 'se12', i)
+                createTrain('spt2', 'spt2', i)
+                createTrain('se22', 'se22', i)
+                createTrain('se26', 'se26', i)
+                createTrain('snt2', 'snt2', i)
+                createTrain('spt1', 'spt1', i)
+                createTrain('se21', 'se21', i)
+                createTrain('se25', 'se25', i)
+                createTrain('snt1', 'snt1', i)
             }
 
             //setTrainsByTime(300)
-            var t = 3 * 24 * 60; // 0:00 ngày 2
+            var t = 60*23+50 + 2 * 24 * 60; // 0:00 ngày 2
             var animation = function() {
                 setTrainsByTime(t);
                 updateTimer(t);
                 t += 0.3;
-                if (t > 4 * 24 * 60) {
+                if (t >= 3 * 24 * 60) {
                     resetLastPost()
-                    t = t - 3 * 24 * 60
+                    t = t - 1 * 24 * 60
                 }
                 setTimeout(animation, 100);
             }
