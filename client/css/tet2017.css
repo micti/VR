@@ -68,16 +68,123 @@
   }
 }
 
+.station_label {
+    text-anchor: end
+}
+
 #bieudo_chaytau_svg {
     overflow-x: auto;
+}
+
+#bieudo_chaytau_svg .station_helper line {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 1, 1
+}
+
+#bieudo_chaytau_svg .station_helper text {
+    font-size: 10px;
+    text-anchor: end
 }
 
 #bieudo_chaytau_svg .train_detail path {
     fill: none;
     stroke-width: 1px;
-    stroke: #ccc;
 }
 
 #bieudo_chaytau_svg .train_detail circle {
     stroke: #fff;
 }
+
+.se1 path, .se2 path {
+    stroke: #1f77b4;
+    stroke-width: 2px;
+}
+
+.se1 path:hover, .se2 path:hover {
+    stroke: #1f77b4;
+    z-index: 1
+}
+
+.se3 path, .se4 path {
+    stroke: #aec7e8
+}
+
+.se5 path, .se6 path {
+    stroke: #ff7f0e
+}
+
+.se7 path, .se8 path {
+    stroke: #ffbb78
+}
+
+.se9 path, .se10 path {
+    stroke: #2ca02c
+}
+
+.se11 path, .se12 path {
+    stroke: #98df8a
+}
+
+.se13 path, .se14 path {
+    stroke: #d62728
+}
+
+.se17 path, .se18 path {
+    stroke: #ff9896
+}
+
+.se21 path, .se22 path {
+    stroke: #c7c7c7
+}
+
+.se23 path, .se24 path {
+    stroke: #9467bd
+}
+
+.se25 path, .se26 path {
+    stroke: #c5b0d5
+}
+
+.se29 path, .se30 path {
+    stroke: #8c564b
+}
+
+.tn1 path, .tn2 path {
+    stroke: #c49c94
+}
+
+.tn3 path, .tn4 path {
+    stroke: #e377c2
+}
+
+.tn5 path, .tn6 path {
+    stroke: #f7b6d2
+}
+
+.tn7 path, .tn8 path {
+    stroke: #7f7f7f
+}
+
+.snt1 path, .snt2 path {
+    stroke: #bcbd22
+}
+
+.snt3 path, .snt4 path, .snt6 path {
+    stroke: #dbdb8d
+}
+
+.spt1 path, .spt2 path {
+    stroke: #17becf
+}
+
+.sqn1 path, .sqn2 path {
+    stroke: #9edae5
+}
+
+/*
+"#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5",
+"#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"
+*/

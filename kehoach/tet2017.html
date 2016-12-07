@@ -40,9 +40,7 @@
                 fill: blue;
             }
 
-            .station_label {
-                text-anchor: end
-            }
+
 
             .train_label {
                 font-size: 12px;
@@ -496,21 +494,19 @@
             }
 
             // Chú thích ga
-            var stationLabelsForBieudoSVG = bieudoSVG.append('g').selectAll('.station_label').data(dataStations)
-            var stationLinesForBieudoSVG = bieudoSVG.append('g').selectAll('.station_tick').data(dataStations)
-            // stationLabelsForBieudoSVG.enter().append('text')
-//                 .attr('class', 'station_label')
-//                 .attr("x", function (d, i) { return i % 2 === 0 ? '-75' : '-15'})
-//                 .attr("y", function (d) { return (scale(d.km)); })
-//                 .attr("dy", "0.32em")
-//                 .text(function (d) { return d.name })
-
-            stationLinesForBieudoSVG.enter().append('line')
+            var diagramHelper = bieudoSVG.append('g')
                 .attr("transform", "translate(50,30)")
-                .attr('class', 'station_tick')
-                .attr('fill', 'none')
-                .attr('stroke', '#ccc')
-                .style('shape-rendering','crispEdges')
+                .attr("class", "station_helper")
+            .selectAll('g')
+                .data(dataStations)
+
+            diagramHelper.enter().append('text')
+                .attr("x", function (d, i) { return i % 2 === 0 ? '-5' : '-20'})
+                .attr("y", function (d) { return (scale(d.km)); })
+                .attr("dy", "0.32em")
+                .text(function (d) { return d.code })
+
+            diagramHelper.enter().append('line')
                 .attr("y2", function (d, i) { return (scaleStation(d.km)) })
                 .attr("y1", function (d, i) { return (scaleStation(d.km)) })
                 .attr("x1", 0)
@@ -522,20 +518,19 @@
             .selectAll("g")
                 .data(dataTimeTable)
             .enter().append("g")
-                .attr("class", function(d) { return d.route; })
+                .attr("class", function(d) { return "train_detail " + d.route; })
             .selectAll("g")
                 .data(function (d) { return d.point })
-            .enter().append("g")
-                .attr("class", "train_detail")
+            .enter()
 
             trainPath.append("path")
                 .attr("d", function(d) { return lineForMarley(d); })
 
-            trainPath.selectAll("circle")
-                .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
-            .enter().append("circle")
-                .attr("transform", function(d) { return "translate(" + scaleTime(d.time) + "," + scaleStation(d.km) + ")"; })
-                .attr("r", 2);
+            // trainPath.selectAll("circle")
+            //     .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
+            // .enter().append("circle")
+            //     .attr("transform", function(d) { return "translate(" + scaleTime(d.time) + "," + scaleStation(d.km) + ")"; })
+            //     .attr("r", 2);
         })
 
 
