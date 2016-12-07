@@ -107,13 +107,13 @@
             .attr("height", height);
 
         var bieudoSVG = d3.select("#bieudo_chaytau_svg").append("svg")
-            .attr("width", 24 * 44 + 70)
-            .attr("height", lineLength * scaleRatio + 20);
+            .attr("width", 24 * 42 + 70)
+            .attr("height", lineLength * scaleRatio + 50);
 
         var scaleStation = scale = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
         var scaleTime = d3.scaleTime()
             .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
-            .range([0, 24 * 44])
+            .range([0, 24 * 42])
         var lineForMarley = d3.line()
             .y(function(d) { return scaleStation(d.km) })
             .x(function(d) { return scaleTime(d.time) })
@@ -444,23 +444,60 @@
              */
 
             // Dữ liệu
-            var dataTimeTable = [];
-            for (var route in data.routes) {
-                dataTimeTable[route] = []
+            var dataTimeTable = []
+
+            var getTrainDiagramData = function(route)
+            {
+                var point = []
                 var i = 0
-                dataTimeTable[route][i] = []
+                var lastKm = 0
+                var lastTime = '000:000'
+                point[i] = []
+
+                var addPoint = function(km, time) {
+                    if (time === lastTime) {
+                        return;
+                    }
+
+                    if (timeToMin(time) < timeToMin(lastTime)) {
+                        console.log(time, lastTime, route)
+                        var l = km - lastKm
+                        var t1 = timeToMin('24:00') - timeToMin(lastTime)
+                        var t2 = timeToMin(time) - 0
+                        var km1 = Math.floor(t1 / (t1 + t2) * l) + lastKm
+                        point[i].push({km: km1, time: praseTimeString('24:00')})
+                        i++
+                        point[i] = []
+                        point[i].push({km: km1, time: praseTimeString('00:00')})
+                    }
+
+                    point[i].push({km: km, time: praseTimeString(time), t: 's'})
+                    lastKm = km
+                    lastTime = time
+                }
+
+                var count = 0
                 for (var section in data.routes[route].sections) {
                     var info = data.routes[route].sections[section];
-                    dataTimeTable[route][i].push({km: data.stations[info.station1].km, time: praseTimeString(info.time1In)})
-                    //if (info.time1In !== info.time1Out) {
-                        dataTimeTable[route][i].push({km: data.stations[info.station1].km, time: praseTimeString(info.time1Out)})
-                    //}
+                    if (count === 0) {
+                        addPoint(data.stations[info.station1].km, info.time1In)
+                        addPoint(data.stations[info.station1].km, info.time1Out)
+                    }
+                    addPoint(data.stations[info.station2].km, info.time2In)
+                    addPoint(data.stations[info.station2].km, info.time2Out)
+                    count++
                 }
+
+                return {route: route, point: point}
+            }
+
+            for (var route in data.routes) {
+                dataTimeTable.push(getTrainDiagramData(route))
             }
 
             // Chú thích ga
-            var stationLabelsForBieudoSVG = bieudoSVG.selectAll('.station_label').data(dataStations)
-            var stationLinesForBieudoSVG = bieudoSVG.selectAll('.station_tick').data(dataStations)
+            var stationLabelsForBieudoSVG = bieudoSVG.append('g').selectAll('.station_label').data(dataStations)
+            var stationLinesForBieudoSVG = bieudoSVG.append('g').selectAll('.station_tick').data(dataStations)
             // stationLabelsForBieudoSVG.enter().append('text')
 //                 .attr('class', 'station_label')
 //                 .attr("x", function (d, i) { return i % 2 === 0 ? '-75' : '-15'})
@@ -469,7 +506,7 @@
 //                 .text(function (d) { return d.name })
 
             stationLinesForBieudoSVG.enter().append('line')
-                .attr("transform", "translate(50,20)")
+                .attr("transform", "translate(50,30)")
                 .attr('class', 'station_tick')
                 .attr('fill', 'none')
                 .attr('stroke', '#ccc')
@@ -477,22 +514,28 @@
                 .attr("y2", function (d, i) { return (scaleStation(d.km)) })
                 .attr("y1", function (d, i) { return (scaleStation(d.km)) })
                 .attr("x1", 0)
-                .attr("x2", 24 * 44)
+                .attr("x2", 24 * 42)
 
             // Tạp biểu đồ
-            var trainPaths = bieudoSVG.append('g')
-                .attr("transform", "translate(50,20)")
-            trainPaths.append("path")
-                .attr("d", lineForMarley(dataTimeTable['se1'][0]))
-                .attr("stroke", "grey")
-                .attr("stroke-width", 1.5)
-                .attr("fill", "none")
-            trainPaths.append("path")
-                .attr("d", lineForMarley(dataTimeTable['se2'][0]))
-                .attr("stroke", "grey")
-                .attr("stroke-width", 1.5)
-                .attr("fill", "none")
+            var trainPath = bieudoSVG.append('g')
+                .attr("transform", "translate(50,30)")
+            .selectAll("g")
+                .data(dataTimeTable)
+            .enter().append("g")
+                .attr("class", function(d) { return d.route; })
+            .selectAll("g")
+                .data(function (d) { return d.point })
+            .enter().append("g")
+                .attr("class", "train_detail")
 
+            trainPath.append("path")
+                .attr("d", function(d) { return lineForMarley(d); })
+
+            trainPath.selectAll("circle")
+                .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
+            .enter().append("circle")
+                .attr("transform", function(d) { return "translate(" + scaleTime(d.time) + "," + scaleStation(d.km) + ")"; })
+                .attr("r", 2);
         })
 
 

@@ -71,3 +71,13 @@
 #bieudo_chaytau_svg {
     overflow-x: auto;
 }
+
+#bieudo_chaytau_svg .train_detail path {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #ccc;
+}
+
+#bieudo_chaytau_svg .train_detail circle {
+    stroke: #fff;
+}
