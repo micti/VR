@@ -452,7 +452,7 @@
                 var lastTime = '000:000'
                 point[i] = []
 
-                var addPoint = function(km, time) {
+                var addPoint = function(km, time, type) {
                     if (time === lastTime) {
                         return;
                     }
@@ -469,7 +469,7 @@
                         point[i].push({km: km1, time: praseTimeString('00:00')})
                     }
 
-                    point[i].push({km: km, time: praseTimeString(time), t: 's'})
+                    point[i].push({km: km, time: praseTimeString(time), t: 's', ti: time, type: type})
                     lastKm = km
                     lastTime = time
                 }
@@ -478,11 +478,11 @@
                 for (var section in data.routes[route].sections) {
                     var info = data.routes[route].sections[section];
                     if (count === 0) {
-                        addPoint(data.stations[info.station1].km, info.time1In)
-                        addPoint(data.stations[info.station1].km, info.time1Out)
+                        addPoint(data.stations[info.station1].km, info.time1In, 'i')
+                        addPoint(data.stations[info.station1].km, info.time1Out, 'o')
                     }
-                    addPoint(data.stations[info.station2].km, info.time2In)
-                    addPoint(data.stations[info.station2].km, info.time2Out)
+                    addPoint(data.stations[info.station2].km, info.time2In, 'i')
+                    addPoint(data.stations[info.station2].km, info.time2Out, 'o')
                     count++
                 }
 
@@ -491,6 +491,11 @@
 
             for (var route in data.routes) {
                 dataTimeTable.push(getTrainDiagramData(route))
+            }
+
+            var formatTime = function (time) {
+                var a = time.split(":")
+                return "." + a[1]
             }
 
             // Chú thích ga
@@ -525,15 +530,63 @@
 
             trainPath.append("path")
                 .attr("d", function(d) { return lineForMarley(d); })
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
 
-            // trainPath.selectAll("circle")
-            //     .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
-            // .enter().append("circle")
-            //     .attr("transform", function(d) { return "translate(" + scaleTime(d.time) + "," + scaleStation(d.km) + ")"; })
-            //     .attr("r", 2);
+            trainPath.selectAll("circle")
+                .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
+            .enter().append("circle")
+                .style('opacity', 0)
+                .attr("transform", function(d) {
+                    return "translate(" + scaleTime(d.time) + "," + scaleStation(d.km) + ")";
+                })
+                .attr("r", 2)
+
+            trainPath.selectAll("text")
+                .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
+            .enter().append("text")
+                .style('opacity', 0)
+                .attr("transform", function(d) {
+                    var adjust = 5
+                    if (d.type === 'i') adjust = -15
+                    return "translate(" + (scaleTime(d.time) + adjust) + "," + (scaleStation(d.km) + 3) + ")";
+                })
+                .text(function(d) { return formatTime(d.ti) })
+
+
         })
 
+        function handleMouseOver(d, i) {  // Add interactivity
+            d3.select(this.parentNode).selectAll('text').style('opacity', 1)
 
+                    // Use D3 to select element, change color and size
+                    // d3.select(this).attr({
+                    //   fill: "orange",
+                    //   r: radius * 2
+                    // });
+                    //
+                    // // Specify where to put label of text
+                    // svg.append("text").attr({
+                    //    id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+                    //     x: function() { return xScale(d.x) - 30; },
+                    //     y: function() { return yScale(d.y) - 15; }
+                    // })
+                    // .text(function() {
+                    //   return [d.x, d.y];  // Value of the text
+                    // });
+                  }
+
+              function handleMouseOut(d, i) {
+                  d3.select(this.parentNode).selectAll('text').style('opacity', 0)
+                    // // Use D3 to select element, change color back to normal
+                    // d3.select(this).attr({
+                    //   fill: "black",
+                    //   r: radius
+                    // });
+                    //
+                    // // Select text by id and then remove
+                    // d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
+                  }
 
 
         </script>

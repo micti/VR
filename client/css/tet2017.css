@@ -91,52 +91,54 @@
 
 #bieudo_chaytau_svg .train_detail path {
     fill: none;
-    stroke-width: 1px;
+    stroke-width: 1.5px;
+}
+
+#bieudo_chaytau_svg .train_detail path:hover {
+    stroke-width: 2px;
 }
 
 #bieudo_chaytau_svg .train_detail circle {
     stroke: #fff;
 }
 
-.se1 path, .se2 path {
-    stroke: #1f77b4;
-    stroke-width: 2px;
+#bieudo_chaytau_svg .train_detail text {
+    font-size: 10px;
 }
 
-.se1 path:hover, .se2 path:hover {
+#bieudo_chaytau_svg .se1 path, .se2 path {
     stroke: #1f77b4;
-    z-index: 1
 }
 
-.se3 path, .se4 path {
+#bieudo_chaytau_svg .se3 path, #bieudo_chaytau_svg .se4 path {
     stroke: #aec7e8
 }
 
-.se5 path, .se6 path {
+#bieudo_chaytau_svg .se5 path, .se6 path {
     stroke: #ff7f0e
 }
 
-.se7 path, .se8 path {
+#bieudo_chaytau_svg .se7 path, .se8 path {
     stroke: #ffbb78
 }
 
-.se9 path, .se10 path {
+#bieudo_chaytau_svg .se9 path, .se10 path {
     stroke: #2ca02c
 }
 
-.se11 path, .se12 path {
+#bieudo_chaytau_svg .se11 path, .se12 path {
     stroke: #98df8a
 }
 
-.se13 path, .se14 path {
+#bieudo_chaytau_svg .se13 path, .se14 path {
     stroke: #d62728
 }
 
-.se17 path, .se18 path {
+#bieudo_chaytau_svg .se17 path, .se18 path {
     stroke: #ff9896
 }
 
-.se21 path, .se22 path {
+#bieudo_chaytau_svg .se21 path, .se22 path {
     stroke: #c7c7c7
 }
 
