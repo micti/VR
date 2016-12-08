@@ -338,7 +338,7 @@
                 trainLastPos.push(null)
             }
 
-            var resetLastPost = function() {
+            var resetLastPos = function() {
                 for (var pos in trainLastPos) {
                     trainLastPos[pos] = null
                 }
@@ -356,22 +356,6 @@
 
                 timer.text(hh + ":" + mm + ":00")
             }
-
-            // var makeTrainPath()
-      //       {
-      //           var train = svg.append("g")
-      //               .attr("class", "train")
-      //               .attr("clip-path", "url(#clip)")
-      //           .selectAll("g")
-      //               .data(trains)
-      //         .enter().append("g")
-      //           //.attr("class", function(d) { return d.type; });
-      //     train.append("path")
-      //           .attr("d", function(d) { return lineForMarley(d.route); });
-      //
-      //       }
-
-
 
             for(i = 0; i <= 4; i++) {
                 createTrain('se1', 'se1', i)
@@ -418,24 +402,18 @@
             }
 
             //setTrainsByTime(300)
-            var t = 60*23+50 + 2 * 24 * 60; // 0:00 ngày 2
+            var t = 2 * 24 * 60; // 0:00 ngày 2
             var animation = function() {
                 setTrainsByTime(t);
                 updateTimer(t);
                 t += 0.3;
                 if (t >= 3 * 24 * 60) {
-                    resetLastPost()
+                    resetLastPos()
                     t = t - 1 * 24 * 60
                 }
                 setTimeout(animation, 100);
             }
             animation()
-
-            // console.log('ok')
-
-
-
-
 
             /**
              * Vẽ biểu đồ
