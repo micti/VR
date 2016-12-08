@@ -81,10 +81,12 @@
 
             <div id="bieudo"></div>
             <h3>Biểu đồ chạy tàu</h3>
-            <div id="bieudo_chaytau_svg">
+            <div id="bieudo_chaytau">
+                <div id="bieudo_chaytau_time_svg"></div>
+                <div id="bieudo_chaytau_svg"></div>
             </div>
 
-            <h2>Vé</h2>
+            <h2 style="height: 1400px">Vé</h2>
             <p>Đang cập nhật</p>
         </div>
 
@@ -93,8 +95,11 @@
             <span id="timer">00:00</span>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="/client/js/d3.min.js"></script>
         <script>
+        // Layout
+
 
         // extend d3
         d3.selection.prototype.moveToBack = function() {
@@ -139,10 +144,13 @@
             .call(axisKM)
 
         // 2. Marley time Axis
+        var bieudoTimeSVG = d3.select("#bieudo_chaytau_time_svg").append("svg")
+            .attr("width", 24 * 42 + 122)
+            .attr("height", 20);
         var axisTime = d3.axisTop(scaleTime)
             .ticks(24)
             .tickFormat(d3.timeFormat("%H:%M"))
-        bieudoSVG.append('g')
+        bieudoTimeSVG.append('g')
             .attr("transform", "translate(50,20)")
             .call(axisTime)
 
@@ -500,7 +508,7 @@
                 .data(dataStations)
 
             diagramHelper.enter().append('text')
-                .attr("x", function (d, i) { return i % 2 === 0 ? '-5' : '-20'})
+                .attr("x", function (d, i) { return i % 2 === 0 ? '-10' : '-30'})
                 .attr("y", function (d) { return (scale(d.km)); })
                 .attr("dy", "0.32em")
                 .text(function (d) { return d.code })
@@ -565,7 +573,18 @@
                 })
                 .text(function(d) { return formatTime(d.ti) })
 
-
+            // position
+            var w = $(window);
+            w.on('scroll', function() {
+                var bieudo_offset_top = $("#bieudo_chaytau").offset().top
+                var bieudo_h = $("#bieudo_chaytau").outerHeight()
+                var window_scroll_h = w.scrollTop()
+                if (window_scroll_h > bieudo_offset_top && window_scroll_h < bieudo_offset_top + bieudo_h - 40) {
+                    $("#bieudo_chaytau_time_svg").css('top', window_scroll_h - bieudo_offset_top)
+                } else {
+                    $("#bieudo_chaytau_time_svg").css('top', 0)
+                }
+            })
         })
 
         function handleMouseOver(d, i) {  // Add interactivity

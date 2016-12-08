@@ -72,8 +72,21 @@
     text-anchor: end
 }
 
-#bieudo_chaytau_svg {
+#bieudo_chaytau {
+    position: relative;
     overflow-x: auto;
+}
+
+#bieudo_chaytau_svg {
+
+}
+
+#bieudo_chaytau_time_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
 }
 
 #bieudo_chaytau_svg .station_helper line, #bieudo_chaytau_svg .time_helper line {
