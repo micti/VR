@@ -63,7 +63,7 @@
 
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 1160px;
     max-width: 100%;
   }
 }
@@ -92,6 +92,7 @@
 #bieudo_chaytau_svg .train_detail path {
     fill: none;
     stroke-width: 2px;
+    stroke: #000;
 }
 
 #bieudo_chaytau_svg .train_detail path:hover {
@@ -106,7 +107,7 @@
     font-size: 10px;
 }
 
-#bieudo_chaytau_svg .se1 path, .se2 path {
+#bieudo_chaytau_svg .se1 path, #bieudo_chaytau_svg .se2 path {
     stroke: #1f77b4;
 }
 
@@ -114,80 +115,169 @@
     stroke: #aec7e8
 }
 
-#bieudo_chaytau_svg .se5 path, .se6 path {
+#bieudo_chaytau_svg .se5 path, #bieudo_chaytau_svg .se6 path {
     stroke: #ff7f0e
 }
 
-#bieudo_chaytau_svg .se7 path, .se8 path {
+#bieudo_chaytau_svg .se7 path, #bieudo_chaytau_svg .se8 path {
     stroke: #ffbb78
 }
 
-#bieudo_chaytau_svg .se9 path, .se10 path {
+#bieudo_chaytau_svg .se9 path, #bieudo_chaytau_svg .se10 path {
     stroke: #2ca02c
 }
 
-#bieudo_chaytau_svg .se11 path, .se12 path {
+#bieudo_chaytau_svg .se11 path, #bieudo_chaytau_svg .se12 path {
     stroke: #98df8a
 }
 
-#bieudo_chaytau_svg .se13 path, .se14 path {
+#bieudo_chaytau_svg .se13 path, #bieudo_chaytau_svg .se14 path {
     stroke: #d62728
 }
 
-#bieudo_chaytau_svg .se17 path, .se18 path {
+#bieudo_chaytau_svg .se17 path, #bieudo_chaytau_svg .se18 path {
     stroke: #ff9896
 }
 
-#bieudo_chaytau_svg .se21 path, .se22 path {
+#bieudo_chaytau_svg .se21 path, #bieudo_chaytau_svg .se22 path {
     stroke: #c7c7c7
 }
 
-.se23 path, .se24 path {
+#bieudo_chaytau_svg .se23 path, #bieudo_chaytau_svg .se24 path {
     stroke: #9467bd
 }
 
-.se25 path, .se26 path {
+#bieudo_chaytau_svg .se25 path, #bieudo_chaytau_svg .se26 path {
     stroke: #c5b0d5
 }
 
-.se29 path, .se30 path {
+#bieudo_chaytau_svg .se29 path, #bieudo_chaytau_svg .se30 path {
     stroke: #8c564b
 }
 
-.tn1 path, .tn2 path {
+#bieudo_chaytau_svg .tn1 path, #bieudo_chaytau_svg .tn2 path {
     stroke: #c49c94
 }
 
-.tn3 path, .tn4 path {
+#bieudo_chaytau_svg .tn3 path, #bieudo_chaytau_svg .tn4 path {
     stroke: #e377c2
 }
 
-.tn5 path, .tn6 path {
+#bieudo_chaytau_svg .tn5 path, #bieudo_chaytau_svg .tn6 path {
     stroke: #f7b6d2
 }
 
-.tn7 path, .tn8 path {
+#bieudo_chaytau_svg .tn7 path, #bieudo_chaytau_svg .tn8 path {
     stroke: #7f7f7f
 }
 
-.snt1 path, .snt2 path {
+#bieudo_chaytau_svg .snt1 path, #bieudo_chaytau_svg .snt2 path {
     stroke: #bcbd22
 }
 
-.snt3 path, .snt4 path, .snt6 path {
+#bieudo_chaytau_svg .snt3 path, #bieudo_chaytau_svg .snt4 path, #bieudo_chaytau_svg .snt6 path {
     stroke: #dbdb8d
 }
 
-.spt1 path, .spt2 path {
+#bieudo_chaytau_svg .spt1 path, #bieudo_chaytau_svg .spt2 path {
     stroke: #17becf
 }
 
-.sqn1 path, .sqn2 path {
+#bieudo_chaytau_svg .sqn1 path, #bieudo_chaytau_svg .sqn2 path {
     stroke: #9edae5
+}
+
+#bieudo_chaytau_svg .se28 path {
+    stroke: #393b79
+}
+
+#bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
+    fill: #1f77b4;
+}
+
+#bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
+    fill: #aec7e8
+}
+
+#bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
+    fill: #ff7f0e
+}
+
+#bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
+    fill: #ffbb78
+}
+
+#bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
+    fill: #2ca02c
+}
+
+#bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
+    fill: #98df8a
+}
+
+#bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
+    fill: #d62728
+}
+
+#bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
+    fill: #ff9896
+}
+
+#bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
+    fill: #c7c7c7
+}
+
+#bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
+    fill: #9467bd
+}
+
+#bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
+    fill: #c5b0d5
+}
+
+#bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
+    fill: #8c564b
+}
+
+#bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
+    fill: #c49c94
+}
+
+#bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
+    fill: #e377c2
+}
+
+#bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
+    fill: #f7b6d2
+}
+
+#bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
+    fill: #7f7f7f
+}
+
+#bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
+    fill: #bcbd22
+}
+
+#bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
+    fill: #dbdb8d
+}
+
+#bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
+    fill: #17becf
+}
+
+#bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
+    fill: #9edae5
+}
+
+#bieudo_chaytau_svg .se28 circle {
+    fill: #393b79
 }
 
 /*
  Bảng màu minh họa cho tàu
 "#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5",
 "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"
+"#393b79"
 */
