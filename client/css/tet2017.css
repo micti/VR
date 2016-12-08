@@ -76,7 +76,7 @@
     overflow-x: auto;
 }
 
-#bieudo_chaytau_svg .station_helper line {
+#bieudo_chaytau_svg .station_helper line, #bieudo_chaytau_svg .time_helper line {
     fill: none;
     stroke-width: 1px;
     stroke: #ddd;
@@ -91,11 +91,11 @@
 
 #bieudo_chaytau_svg .train_detail path {
     fill: none;
-    stroke-width: 1.5px;
+    stroke-width: 2px;
 }
 
 #bieudo_chaytau_svg .train_detail path:hover {
-    stroke-width: 2px;
+    stroke-width: 3px;
 }
 
 #bieudo_chaytau_svg .train_detail circle {

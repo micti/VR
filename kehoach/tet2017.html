@@ -517,6 +517,24 @@
                 .attr("x1", 0)
                 .attr("x2", 24 * 42)
 
+            // Chú thích giờ
+            var timeHelper = bieudoSVG.append('g')
+                .attr("transform", "translate(50,0)")
+                .attr("class", "time_helper")
+            .selectAll('g')
+                .data([
+                    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00',
+                    '07:00', '08:00', '09:00', '10:00', '11:00', '12:00',
+                    '13:00', '14:00', '15:00', '16:00', '17:00', '18:00',
+                    '19:00', '20:00', '21:00', '22:00', '23:00', '00:00'
+                ])
+
+            timeHelper.enter().append('line')
+                .attr("y1", 30)
+                .attr("x1", function (d, i) { return i * 42 })
+                .attr("x2", function (d, i) { return i * 42 })
+                .attr("y2", lineLength * scaleRatio)
+
             // Tạp biểu đồ
             var trainPath = bieudoSVG.append('g')
                 .attr("transform", "translate(50,30)")
@@ -558,35 +576,11 @@
 
         function handleMouseOver(d, i) {  // Add interactivity
             d3.select(this.parentNode).selectAll('text').style('opacity', 1)
+        }
 
-                    // Use D3 to select element, change color and size
-                    // d3.select(this).attr({
-                    //   fill: "orange",
-                    //   r: radius * 2
-                    // });
-                    //
-                    // // Specify where to put label of text
-                    // svg.append("text").attr({
-                    //    id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
-                    //     x: function() { return xScale(d.x) - 30; },
-                    //     y: function() { return yScale(d.y) - 15; }
-                    // })
-                    // .text(function() {
-                    //   return [d.x, d.y];  // Value of the text
-                    // });
-                  }
-
-              function handleMouseOut(d, i) {
-                  d3.select(this.parentNode).selectAll('text').style('opacity', 0)
-                    // // Use D3 to select element, change color back to normal
-                    // d3.select(this).attr({
-                    //   fill: "black",
-                    //   r: radius
-                    // });
-                    //
-                    // // Select text by id and then remove
-                    // d3.select("#t" + d.x + "-" + d.y + "-" + i).remove();  // Remove text location
-                  }
+        function handleMouseOut(d, i) {
+            d3.select(this.parentNode).selectAll('text').style('opacity', 0)
+        }
 
 
         </script>
