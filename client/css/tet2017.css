@@ -1,3 +1,57 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+svg {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page_header {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-image: url(/client/img/kehoach/tet2017/banner01.jpg);
+}
+
+.page_header .cover_filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #010101;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.page_header .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    heigh: 500px;
+    color: #fff;
+    z-index: 2;
+    padding: 30px;
+}
+
+.page_header .title {
+    height: 400px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.page_header .title h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.page_header .title .slogan {
+    opacity: 0.9;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -10,6 +64,40 @@
     display: block;
     content: "";
     clear: both;
+}
+
+.heading {
+    margin-top: 60px;
+}
+
+.heading h2 {
+    font-size: 1.2rem;
+}
+
+.section_intro::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_intro .intro {
+    width: 60%;
+    float: left;
+}
+
+.section_intro .intro p {
+    padding-right: 15px;
+}
+
+.section_intro .note {
+    float: left;
+    width: 40%;
+    background: #f2614b;
+    color: #fff;
+}
+
+.section_intro .note p {
+    padding: 15px;
 }
 
 @media (min-width: 576px) {
