@@ -87,13 +87,15 @@
     left: 0;
     width: 50px;
     background: #fff;
+
 }
 
 #bieudo_chaytau_time_svg {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 1140px;
+    z-index: 4;
     background: #fff;
 }
 
