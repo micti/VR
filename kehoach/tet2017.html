@@ -83,6 +83,7 @@
             <h3>Biểu đồ chạy tàu</h3>
             <div id="bieudo_chaytau">
                 <div id="bieudo_chaytau_time_svg"></div>
+                <div id="bieudo_chaytau_station_svg"></div>
                 <div id="bieudo_chaytau_svg"></div>
             </div>
 
@@ -147,6 +148,9 @@
         var bieudoTimeSVG = d3.select("#bieudo_chaytau_time_svg").append("svg")
             .attr("width", 24 * 42 + 122)
             .attr("height", 20);
+        var bieudoStationSVG = d3.select("#bieudo_chaytau_station_svg").append("svg")
+            .attr("width", 50)
+            .attr("height", lineLength * scaleRatio + 50);
         var axisTime = d3.axisTop(scaleTime)
             .ticks(24)
             .tickFormat(d3.timeFormat("%H:%M"))
@@ -501,19 +505,25 @@
             }
 
             // Chú thích ga
-            var diagramHelper = bieudoSVG.append('g')
-                .attr("transform", "translate(50,30)")
+            var diagramHelper = bieudoStationSVG.append('g')
+                .attr("transform", "translate(0,30)")
                 .attr("class", "station_helper")
             .selectAll('g')
                 .data(dataStations)
 
+            var lineHelper = bieudoSVG.append('g')
+                .attr("transform", "translate(50,30)")
+                .attr("class", "line_helper")
+            .selectAll('g')
+                .data(dataStations)
+
             diagramHelper.enter().append('text')
-                .attr("x", function (d, i) { return i % 2 === 0 ? '-10' : '-30'})
+                .attr("x", function (d, i) { return i % 2 === 0 ? '0' : '20'})
                 .attr("y", function (d) { return (scale(d.km)); })
                 .attr("dy", "0.32em")
                 .text(function (d) { return d.code })
 
-            diagramHelper.enter().append('line')
+            lineHelper.enter().append('line')
                 .attr("y2", function (d, i) { return (scaleStation(d.km)) })
                 .attr("y1", function (d, i) { return (scaleStation(d.km)) })
                 .attr("x1", 0)
@@ -575,6 +585,7 @@
 
             // position
             var w = $(window);
+            var inner = $("#bieudo_chaytau");
             w.on('scroll', function() {
                 var bieudo_offset_top = $("#bieudo_chaytau").offset().top
                 var bieudo_h = $("#bieudo_chaytau").outerHeight()
@@ -584,6 +595,10 @@
                 } else {
                     $("#bieudo_chaytau_time_svg").css('top', 0)
                 }
+            })
+            inner.on('scroll', function() {
+                var inner_scroll_left = inner.scrollLeft()
+                    $("#bieudo_chaytau_station_svg").css('left', inner_scroll_left)
             })
         })
 

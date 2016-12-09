@@ -81,6 +81,14 @@
 
 }
 
+#bieudo_chaytau_station_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background: #fff;
+}
+
 #bieudo_chaytau_time_svg {
     position: absolute;
     top: 0;
@@ -89,7 +97,7 @@
     background: #fff;
 }
 
-#bieudo_chaytau_svg .station_helper line, #bieudo_chaytau_svg .time_helper line {
+#bieudo_chaytau_svg .line_helper line, #bieudo_chaytau_svg .time_helper line {
     fill: none;
     stroke-width: 1px;
     stroke: #ddd;
@@ -97,9 +105,8 @@
     stroke-dasharray: 1, 1
 }
 
-#bieudo_chaytau_svg .station_helper text {
+#bieudo_chaytau_station_svg .station_helper text {
     font-size: 10px;
-    text-anchor: end
 }
 
 #bieudo_chaytau_svg .train_detail path {
