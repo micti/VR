@@ -79,7 +79,12 @@
             <h3>Mô phỏng biểu đồ</h3>
             <p>Đang cập nhật</p>
 
-            <div id="bieudo"></div>
+            <div id="bieudo_mophong">
+                <div id="bieudo_thongtin">
+                    <span id="timer">00:00</span>
+                </div>
+                <div id="bieudo"></div>
+            </div>
             <h3>Biểu đồ chạy tàu</h3>
             <div id="bieudo_chaytau">
                 <div id="bieudo_chaytau_time_svg"></div>
@@ -87,13 +92,8 @@
                 <div id="bieudo_chaytau_svg"></div>
             </div>
 
-            <h2 style="height: 1400px">Vé</h2>
+            <h2>Vé</h2>
             <p>Đang cập nhật</p>
-        </div>
-
-        <!-- Add your site or application content here -->
-        <div class="headline">
-            <span id="timer">00:00</span>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -123,7 +123,7 @@
             height = (lineLength + 20) * scaleRatio;
 
         var svg = d3.select("#bieudo").append("svg")
-            .attr("width", width)
+            .attr("width", 250)
             .attr("height", height);
 
         var bieudoSVG = d3.select("#bieudo_chaytau_svg").append("svg")
@@ -594,6 +594,15 @@
                     $("#bieudo_chaytau_time_svg").css('top', window_scroll_h - bieudo_offset_top)
                 } else {
                     $("#bieudo_chaytau_time_svg").css('top', 0)
+                }
+
+                var bieudo_mophong_offset_top = $("#bieudo_mophong").offset().top
+                var bieudo_mophong_h = $("#bieudo_mophong").outerHeight()
+
+                if (window_scroll_h > bieudo_mophong_offset_top && window_scroll_h < bieudo_mophong_offset_top + bieudo_mophong_h - 250) {
+                    $("#bieudo_thongtin").css('top', window_scroll_h - bieudo_mophong_offset_top)
+                } else if (window_scroll_h <= bieudo_mophong_offset_top) {
+                    $("#bieudo_thongtin").css('top', 0)
                 }
             })
             inner.on('scroll', function() {
