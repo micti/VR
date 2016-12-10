@@ -100,6 +100,359 @@ svg {
     padding: 15px;
 }
 
+.section_date .period {
+    color: #fff;
+    text-align: center;
+}
+
+.section_date .period::after,
+.section_date .period .before_tet::after,
+.section_date .period .in_tet::after,
+.section_date .period .after_tet::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_date .period .before_tet {
+    float: left;
+    background-color: #1f77b4;
+    width: 37%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .before_tet div {
+    float: left;
+    width: 7.692307692%
+}
+
+.section_date .period .in_tet {
+    float: left;
+    background-color: #aec7e8;
+    width: 26%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .in_tet div {
+    float: left;
+    width: 11.1111111111%
+}
+
+.section_date .period .after_tet {
+    float: left;
+    background-color: #ff7f0e;
+    width: 37%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .after_tet div {
+    float: left;
+    width: 7.692307692%
+}
+
+.section_date .period .before_tet.title,
+.section_date .period .in_tet.title,
+.section_date .period .after_tet.title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.section_coachcomposition .overall::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_coachcomposition .overall .cc_company .title {
+    margin-bottom: 1px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.section_coachcomposition .overall .srt {
+    width: 54%;
+    float: left;
+}
+
+.section_coachcomposition .overall .srt .title {
+    background-color: #6baed6;
+}
+
+.section_coachcomposition .overall .hrt {
+    width: 46%;
+    float: left;
+}
+
+.section_coachcomposition .overall .hrt .title {
+    background-color: #fd8d3c;
+}
+
+.section_coachcomposition .overall .cc_company .cc_list::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_coachcomposition .overall .cc_company .cc_list .cc {
+    width: 27px;
+    height: 27px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule {
+    position: relative;
+    overflow-x: auto;
+}
+
+.section_schedule .schedule_train {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 38px;
+}
+
+.section_schedule .schedule_train .train {
+    width: 38px;
+    height: 28px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.train.se1, .train.se2 {
+    background-color: #1f77b4;
+}
+
+.train.se3, .train.se4  {
+    background-color: #aec7e8
+}
+
+.train.se5, .train.se6  {
+    background-color: #ff7f0e
+}
+
+.train.se7, .train.se8  {
+    background-color: #ffbb78
+}
+
+#bieudo_chaytau_svg .se9 path, #bieudo_chaytau_svg .se10 path {
+    stroke: #2ca02c
+}
+
+#bieudo_chaytau_svg .se11 path, #bieudo_chaytau_svg .se12 path {
+    stroke: #98df8a
+}
+
+.train.se13, .train.se14 {
+    background-color: #d62728
+}
+
+#bieudo_chaytau_svg .se17 path, #bieudo_chaytau_svg .se18 path {
+    stroke: #ff9896
+}
+
+#bieudo_chaytau_svg .se21 path, #bieudo_chaytau_svg .se22 path {
+    stroke: #c7c7c7
+}
+
+#bieudo_chaytau_svg .se23 path, #bieudo_chaytau_svg .se24 path {
+    stroke: #9467bd
+}
+
+#bieudo_chaytau_svg .se25 path, #bieudo_chaytau_svg .se26 path {
+    stroke: #c5b0d5
+}
+
+#bieudo_chaytau_svg .se29 path, #bieudo_chaytau_svg .se30 path {
+    stroke: #8c564b
+}
+
+#bieudo_chaytau_svg .tn1 path, #bieudo_chaytau_svg .tn2 path {
+    stroke: #c49c94
+}
+
+#bieudo_chaytau_svg .tn3 path, #bieudo_chaytau_svg .tn4 path {
+    stroke: #e377c2
+}
+
+#bieudo_chaytau_svg .tn5 path, #bieudo_chaytau_svg .tn6 path {
+    stroke: #f7b6d2
+}
+
+#bieudo_chaytau_svg .tn7 path, #bieudo_chaytau_svg .tn8 path {
+    stroke: #7f7f7f
+}
+
+#bieudo_chaytau_svg .snt1 path, #bieudo_chaytau_svg .snt2 path {
+    stroke: #bcbd22
+}
+
+#bieudo_chaytau_svg .snt3 path, #bieudo_chaytau_svg .snt4 path, #bieudo_chaytau_svg .snt6 path {
+    stroke: #dbdb8d
+}
+
+#bieudo_chaytau_svg .spt1 path, #bieudo_chaytau_svg .spt2 path {
+    stroke: #17becf
+}
+
+#bieudo_chaytau_svg .sqn1 path, #bieudo_chaytau_svg .sqn2 path {
+    stroke: #9edae5
+}
+
+#bieudo_chaytau_svg .se28 path {
+    stroke: #393b79
+}
+
+.section_schedule .schedule_day {
+    position: absolute;
+    top: 0;
+    left: 38px;
+}
+
+.section_schedule .schedule_day .day {
+    width: 28px;
+    height: 14px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule .schedule_day .day.prepared {
+    color: #000;
+}
+
+.section_schedule .schedule_day .day.before_tet {
+    background-color: #1f77b4;
+}
+
+.section_schedule .schedule_day .day.in_tet {
+    background-color: #aec7e8;
+}
+
+.section_schedule .schedule_day .day.after_tet {
+    background-color: #ff7f0e;
+}
+
+.section_schedule .schedule_table {
+    width: 1130px;
+    padding-left: 38px;
+    padding-top: 28px;
+}
+
+.section_schedule .train::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_schedule .train .day_info {
+    width: 28px;
+    height: 28px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule .train .day_info.old_cc {
+    color: #000;
+}
+
+.cc.se1, .day_info.se1 {
+    background-color: #1f77b4;
+}
+
+.cc.se4 {
+    background-color: #aec7e8
+}
+
+.cc.se5 {
+    background-color: #ff7f0e
+}
+
+.cc.se8 {
+    background-color: #ffbb78
+}
+
+.cc.se9 {
+    background-color: #2ca02c
+}
+
+.cc.se11 {
+    background-color: #98df8a
+}
+
+.cc.se18 {
+    background-color: #ff9896
+}
+
+.cc.se22 {
+    background-color: #c7c7c7
+}
+
+.cc.se23, .cc.se24 {
+    background-color: #9467bd
+}
+
+.cc.se26 {
+    background-color: #c5b0d5
+}
+
+.cc.se29 {
+    background-color: #8c564b
+}
+
+.cc.tn1 {
+    background-color: #c49c94
+}
+
+.cc.tn4 {
+    background-color: #e377c2
+}
+
+.cc.tn5, .cc.tn6 {
+    background-color: #f7b6d2
+}
+
+.cc.tn7, .cc.tn8 {
+    background-color: #7f7f7f
+}
+
+.cc.snt2 {
+    background-color: #bcbd22
+}
+
+.cc.spt2 {
+    background-color: #17becf
+}
+
+.cc.sqn2 {
+    background-color: #9edae5
+}
+
 @media (min-width: 576px) {
   .container {
     padding-right: 15px;
