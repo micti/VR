@@ -68,10 +68,46 @@ svg {
 
 .heading {
     margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.heading::after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 .heading h2 {
     font-size: 1.2rem;
+    width: 300px;
+    float: left;
+}
+
+.heading .submenu {
+    float: right;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.heading .submenu ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+.heading .submenu ul li {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    padding-bottom: 3px;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
+.heading .submenu ul li.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000;
 }
 
 .section_intro::after {
@@ -215,7 +251,7 @@ svg {
 
 .section_schedule .schedule_train {
     position: absolute;
-    top: 28px;
+    top: 15px;
     left: 0;
     width: 38px;
 }
@@ -233,88 +269,124 @@ svg {
     line-height: 0.8rem;
 }
 
-.train.se1, .train.se2 {
+.train {
+    background-color: #eee;
+}
+
+.train.t_se1, .train.t_se2 {
     background-color: #1f77b4;
 }
 
-.train.se3, .train.se4  {
+.train.t_se3, .train.t_se4  {
     background-color: #aec7e8
 }
 
-.train.se5, .train.se6  {
+.train.t_se5, .train.t_se6  {
     background-color: #ff7f0e
 }
 
-.train.se7, .train.se8  {
+.train.t_se7, .train.t_se8  {
     background-color: #ffbb78
 }
 
-#bieudo_chaytau_svg .se9 path, #bieudo_chaytau_svg .se10 path {
-    stroke: #2ca02c
+.train.t_se9, .train.t_se10 {
+    background-color: #2ca02c
 }
 
-#bieudo_chaytau_svg .se11 path, #bieudo_chaytau_svg .se12 path {
-    stroke: #98df8a
+.train.t_se31, .train.t_se32 {
+    background-color: #98df8a
 }
 
-.train.se13, .train.se14 {
+.train.t_se13, .train.t_se14 {
     background-color: #d62728
 }
 
-#bieudo_chaytau_svg .se17 path, #bieudo_chaytau_svg .se18 path {
-    stroke: #ff9896
+.train.t_se17, .train.t_se18 {
+    background-color: #ff9896
 }
 
-#bieudo_chaytau_svg .se21 path, #bieudo_chaytau_svg .se22 path {
-    stroke: #c7c7c7
+.train.t_se21, .train.t_se22 {
+    background-color: #c7c7c7
 }
 
-#bieudo_chaytau_svg .se23 path, #bieudo_chaytau_svg .se24 path {
-    stroke: #9467bd
+.train.t_se23, .train.t_se24 {
+    background-color: #9467bd
 }
 
-#bieudo_chaytau_svg .se25 path, #bieudo_chaytau_svg .se26 path {
-    stroke: #c5b0d5
+.train.t_se25, .train.t_se26 {
+    background-color: #c5b0d5
 }
 
-#bieudo_chaytau_svg .se29 path, #bieudo_chaytau_svg .se30 path {
-    stroke: #8c564b
+.train.t_se29, .train.t_se30 {
+    background-color: #8c564b
 }
 
-#bieudo_chaytau_svg .tn1 path, #bieudo_chaytau_svg .tn2 path {
-    stroke: #c49c94
+.train.t_tn1, .train.t_tn2 {
+    background-color: #c49c94
 }
 
-#bieudo_chaytau_svg .tn3 path, #bieudo_chaytau_svg .tn4 path {
-    stroke: #e377c2
+.train.t_tn3, .train.t_tn4 {
+    background-color: #e377c2
 }
 
-#bieudo_chaytau_svg .tn5 path, #bieudo_chaytau_svg .tn6 path {
-    stroke: #f7b6d2
+.train.t_tn5, .train.t_tn6 {
+    background-color: #f7b6d2
 }
 
-#bieudo_chaytau_svg .tn7 path, #bieudo_chaytau_svg .tn8 path {
-    stroke: #7f7f7f
+.train.t_tn7, .train.t_tn8 {
+    background-color: #7f7f7f
 }
 
-#bieudo_chaytau_svg .snt1 path, #bieudo_chaytau_svg .snt2 path {
-    stroke: #bcbd22
+.train.t_snt1, .train.t_snt2 {
+    background-color: #bcbd22
 }
 
-#bieudo_chaytau_svg .snt3 path, #bieudo_chaytau_svg .snt4 path, #bieudo_chaytau_svg .snt6 path {
-    stroke: #dbdb8d
+.train.t_snt3, .train.t_snt4, .train.t_snt6, .train.t_7501 {
+    background-color: #dbdb8d
 }
 
-#bieudo_chaytau_svg .spt1 path, #bieudo_chaytau_svg .spt2 path {
-    stroke: #17becf
+.train.t_spt1, .train.t_spt2 {
+    background-color: #17becf
 }
 
-#bieudo_chaytau_svg .sqn1 path, #bieudo_chaytau_svg .sqn2 path {
-    stroke: #9edae5
+.train.t_sqn1, .train.t_sqn2 {
+    background-color: #9edae5
 }
 
-#bieudo_chaytau_svg .se28 path {
-    stroke: #393b79
+.train.t_se28 {
+    background-color: #393b79
+}
+
+.train.t_sn7, .train.t_sn8, .train.t_sn3, .train.t_sn4, .train.t_sn5, .train.t_sn6 {
+    background-color: #5254a3
+}
+
+.train.t_se11, .train.t_se12 {
+    background-color: #6b6ecf;
+}
+
+.train.t_se15, .train.t_se16 {
+    background-color: #9c9ede;
+}
+
+.train.t_sd5, .train.t_sd6, .train.t_7503, .train.t_sd2, .train.t_sd3, .train.t_sd4 {
+    background-color: #637939
+}
+
+.train.t_sq2, .train.t_7407 {
+    background-color: #8ca252
+}
+
+.train.t_stk2, .train.t_stk3, .train.t_stk4, .train.t_7405 {
+    background-color: #b5cf6b
+}
+
+.train.t_d5, .train.t_d6, .train.t_7403, .train.t_d2, .train.t_d3, .train.t_d4, .train.t_d7, .train.t_d8 {
+    background-color: #cedb9c
+}
+
+.train.t_se35, .train.t_se36, .train.t_se37 {
+    background-color: #8c6d31
 }
 
 .section_schedule .schedule_day {
@@ -355,7 +427,7 @@ svg {
 .section_schedule .schedule_table {
     width: 1130px;
     padding-left: 38px;
-    padding-top: 28px;
+    padding-top: 15px;
 }
 
 .section_schedule .train::after {
@@ -377,80 +449,96 @@ svg {
     line-height: 0.8rem;
 }
 
-.section_schedule .train .day_info.old_cc {
+.section_schedule .train .day_info.old_cc, .section_schedule .train .day_info.unknow_cc {
     color: #000;
 }
 
-.cc.se1, .day_info.se1 {
+.day_info.has_trip {
     background-color: #1f77b4;
 }
 
-.cc.se4 {
+.cc.se1, .day_info.se1, .day_info.se2 {
+    background-color: #1f77b4;
+}
+
+.cc.se4, .day_info.se4, .day_info.se3 {
     background-color: #aec7e8
 }
 
-.cc.se5 {
+.cc.se5, .day_info.se5, .day_info.se6 {
     background-color: #ff7f0e
 }
 
-.cc.se8 {
+.cc.se8, .day_info.se8, .day_info.se7 {
     background-color: #ffbb78
 }
 
-.cc.se9 {
+.cc.se9, .day_info.se9, .day_info.se10 {
     background-color: #2ca02c
 }
 
-.cc.se11 {
+.cc.se31, .day_info.se31, .day_info.se11, .day_info.se12 {
     background-color: #98df8a
 }
 
-.cc.se18 {
+.cc.se18, .day_info.se18, .day_info.se17 {
     background-color: #ff9896
 }
 
-.cc.se22 {
+.cc.se22, .day_info.se22, .day_info.se21 {
     background-color: #c7c7c7
 }
 
-.cc.se23, .cc.se24 {
+.cc.se23, .cc.se24, .day_info.se23, .day_info.se24 {
     background-color: #9467bd
 }
 
-.cc.se26 {
+.cc.se26, .day_info.se26, .day_info.se25 {
     background-color: #c5b0d5
 }
 
-.cc.se29 {
+.cc.se29, .day_info.se29, .day_info.se30 {
     background-color: #8c564b
 }
 
-.cc.tn1 {
+.cc.tn1, .day_info.tn1, .day_info.tn2 {
     background-color: #c49c94
 }
 
-.cc.tn4 {
+.cc.tn4, .day_info.tn4, .day_info.tn3 {
     background-color: #e377c2
 }
 
-.cc.tn5, .cc.tn6 {
+.cc.tn5, .cc.tn6, .day_info.tn5, .day_info.tn6 {
     background-color: #f7b6d2
 }
 
-.cc.tn7, .cc.tn8 {
+.cc.tn7, .cc.tn8, .day_info.tn7, .day_info.tn8 {
     background-color: #7f7f7f
 }
 
-.cc.snt2 {
+.cc.snt2, .day_info.snt2, .day_info.snt1 {
     background-color: #bcbd22
 }
 
-.cc.spt2 {
+.day_info.snt3, .day_info.snt4, .day_info.snt6 {
+    background-color: #dbdb8d
+}
+
+.cc.spt2, .day_info.spt2, .day_info.spt1 {
     background-color: #17becf
 }
 
-.cc.sqn2 {
+.cc.sqn2, .day_info.sqn2, .day_info.sqn1 {
     background-color: #9edae5
+}
+
+.day_info.se28 {
+    background-color: #393b79
+}
+
+.day_info.se13, .day_info.se14 {
+    background-color: #d62728
 }
 
 @media (min-width: 576px) {
@@ -760,5 +848,7 @@ svg {
  Bảng màu minh họa cho tàu
 "#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5",
 "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"
-"#393b79"
+"#393b79",
+"#5254a3" => sn...
+
 */
