@@ -760,88 +760,97 @@ svg {
     stroke: #393b79
 }
 
-#bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
+#bieudo .train.se1, #bieudo .train.se2, #bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
     fill: #1f77b4;
 }
 
-#bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
+#bieudo .train.se3, #bieudo .train.se4, #bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
     fill: #aec7e8
 }
 
-#bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
+#bieudo .train.se5, #bieudo .train.se6, #bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
     fill: #ff7f0e
 }
 
-#bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
+#bieudo .train.se7, #bieudo .train.se8, #bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
     fill: #ffbb78
 }
 
-#bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
+#bieudo .train.se9, #bieudo .train.se10, #bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
     fill: #2ca02c
 }
 
-#bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
+#bieudo .train.se11, #bieudo .train.se12, #bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
     fill: #98df8a
 }
 
-#bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
+#bieudo .train.se13, #bieudo .train.se14, #bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
     fill: #d62728
 }
 
-#bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
+#bieudo .train.se17, #bieudo .train.se18, #bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
     fill: #ff9896
 }
 
-#bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
+#bieudo .train.se21, #bieudo .train.se22, #bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
     fill: #c7c7c7
 }
 
-#bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
+#bieudo .train.se23, #bieudo .train.se24, #bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
     fill: #9467bd
 }
 
-#bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
+#bieudo .train.se25, #bieudo .train.se26, #bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
     fill: #c5b0d5
 }
 
-#bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
+#bieudo .train.se29, #bieudo .train.se30, #bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
     fill: #8c564b
 }
 
-#bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
+#bieudo .train.tn1, #bieudo .train.tn2, #bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
     fill: #c49c94
 }
 
-#bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
+#bieudo .train.tn3, #bieudo .train.tn4, #bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
     fill: #e377c2
 }
 
-#bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
+#bieudo .train.tn5, #bieudo .train.tn6, #bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
     fill: #f7b6d2
 }
 
-#bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
+#bieudo .train.tn8, #bieudo .train.tn7, #bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
     fill: #7f7f7f
 }
 
-#bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
+#bieudo .train.snt2, #bieudo .train.snt1, #bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
     fill: #bcbd22
 }
 
-#bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
+#bieudo .train.snt6, #bieudo .train.snt4, #bieudo .train.snt3, #bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
     fill: #dbdb8d
 }
 
-#bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
+#bieudo .train.spt1, #bieudo .train.spt2, #bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
     fill: #17becf
 }
 
-#bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
+#bieudo .train.sqn1, #bieudo .train.sqn2, #bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
     fill: #9edae5
 }
 
-#bieudo_chaytau_svg .se28 circle {
+#bieudo .train.se28, #bieudo_chaytau_svg .se28 circle {
     fill: #393b79
+}
+
+#bieudo .train {
+    stroke-width: 0px;
+    fill: blue;
+}
+
+#biedudo .train_label {
+    font-size: 12px;
 }
 
 /*

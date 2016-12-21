@@ -245,10 +245,10 @@ d3.json("data/tet2017.json", function(data) {
         // add cirlce
         var cir = routeSvg.append('circle')
             //.attr('id', 'train_se1')
-            .attr('class', 'train')
+            .attr('class', 'train ' + route)
             .attr("cx", 0)
             .attr("cy", 0)
-            .attr("r", 2)
+            .attr("r", 3)
             .style("opacity", 0)
         trainCircles.push(cir)
 
