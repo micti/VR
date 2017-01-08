@@ -341,7 +341,7 @@ svg {
     background-color: #bcbd22
 }
 
-.train.t_snt3, .train.t_snt4, .train.t_snt6, .train.t_7501 {
+.train.t_snt3, .train.t_snt4, .train.t_snt6, .train.t_7502, .train.t_7501 {
     background-color: #dbdb8d
 }
 
@@ -369,6 +369,19 @@ svg {
     background-color: #9c9ede;
 }
 
+.train.t_spt3, .train.t_spt4 {
+    background-color: #bd9e39;
+}
+
+.train.t_se19, .train.t_se20 {
+    background-color: #e7ba52;
+}
+
+.train.t_na1, .train.t_na2, .train.t_na3, .train.t_na4, .train.t_na5, .train.t_na6, .train.t_na7, .train.t_na8,
+.train.t_na10, .train.t_7304, .train.t_7303 {
+    background-color: #e7cb94;
+}
+
 .train.t_sd5, .train.t_sd6, .train.t_7503, .train.t_sd2, .train.t_sd3, .train.t_sd4 {
     background-color: #637939
 }
@@ -393,6 +406,7 @@ svg {
     position: absolute;
     top: 0;
     left: 38px;
+    width: 1176px;
 }
 
 .section_schedule .schedule_day .day {
@@ -410,6 +424,7 @@ svg {
 
 .section_schedule .schedule_day .day.prepared {
     color: #000;
+    background-color: #fff;
 }
 
 .section_schedule .schedule_day .day.before_tet {
@@ -425,7 +440,7 @@ svg {
 }
 
 .section_schedule .schedule_table {
-    width: 1130px;
+    width: 1214px;
     padding-left: 38px;
     padding-top: 15px;
 }
@@ -541,60 +556,8 @@ svg {
     background-color: #d62728
 }
 
-@media (min-width: 576px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1160px;
-    max-width: 100%;
-  }
+.cc.na1, .cc.na3, .day_info.na3, .day_info.na1 {
+    background-color: #cedb9c
 }
 
 #bieudo_mophong {
@@ -605,7 +568,8 @@ svg {
     position: absolute;
     top: 0;
     right: 0;
-    width: 200px;
+    width: 80px;
+    text-align: center;
     background-color: #000;
     color: #fff;
     padding: 5px;
@@ -859,5 +823,63 @@ svg {
 "#8c564b", "#c49c94", "#e377c2", "#f7b6d2", "#7f7f7f", "#c7c7c7", "#bcbd22", "#dbdb8d", "#17becf", "#9edae5"
 "#393b79",
 "#5254a3" => sn...
-
+"#6b6ecf"
+"#9c9ede"
+"#637939", "#8ca252", "#b5cf6b", "#8c6d31" , "#bd9e39"
 */
+
+@media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+    max-width: 100%;
+  }
+}

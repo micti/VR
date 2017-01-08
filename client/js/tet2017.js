@@ -459,8 +459,8 @@ d3.json("data/tet2017.json", function(data) {
 
     trainPath.append("path")
         .attr("d", function(d) { return lineForMarley(d); })
-        .on("mouseover", handleMouseOver)
-        .on("mouseout", handleMouseOut);
+        .on("mouseover", routeMouseOver)
+        .on("mouseout", routeMouseOut);
 
     trainPath.selectAll("circle")
         .data(function(d) { return d.filter(function (d){ return d.t === 's'}) })
@@ -537,6 +537,23 @@ d3.json("data/tet2017.json", function(data) {
         .attr('class', function (d) { return 'train t_' + d.split(' ')[0].toLowerCase() })
         .text(function (d) { return d })
 
+    // Scroll
+    var scheduleInner = $("#schedule");
+    w.on('scroll', function() {
+        var bieudo_mophong_offset_top = scheduleInner.offset().top
+        var bieudo_mophong_h = scheduleInner.outerHeight()
+        var window_scroll_h = w.scrollTop()
+        if (window_scroll_h > bieudo_mophong_offset_top && window_scroll_h < bieudo_mophong_offset_top + bieudo_mophong_h - 30) {
+            $("#schedule_day").css('top', window_scroll_h - bieudo_mophong_offset_top)
+        } else if (window_scroll_h <= bieudo_mophong_offset_top) {
+            $("#schedule_day").css('top', 0)
+        }
+    })
+    scheduleInner.on('scroll', function() {
+        var inner_scroll_left = scheduleInner.scrollLeft()
+            $("#schedule_train").css('left', inner_scroll_left)
+    })
+
     // submenu click
     var viewTrainScheduleDateStart = function() {
         d3.select('#schedule_table').selectAll('div.train')
@@ -595,19 +612,19 @@ d3.json("data/tet2017.json", function(data) {
 
             if (_view === 'viewTrainSchedule_DateStart') return viewTrainScheduleDateStart()
             if (_view === 'viewTrainSchedule_Cc') return viewTrainScheduleCc()
-            if (_view === 'viewTrainSchedule_StationStartEnd') return viewTrainScheduleStationStartEnd()
+            // if (_view === 'viewTrainSchedule_StationStartEnd') return viewTrainScheduleStationStartEnd()
             if (_view === 'viewTrainSchedule_Route') return viewTrainScheduleRoute()
         })
     d3.selectAll('.submenu ul').select('li').dispatch('click')
 })
 
-function handleMouseOver(d, i) {
+function routeMouseOver(d, i) {
     d3.select(this.parentNode).selectAll('text').style('opacity', 1)
     d3.select(this.parentNode).selectAll('circle').style('opacity', 1)
     d3.select(this.parentNode).moveToFront()
 }
 
-function handleMouseOut(d, i) {
+function routeMouseOut(d, i) {
     d3.select(this.parentNode).selectAll('text').style('opacity', 0)
     d3.select(this.parentNode).selectAll('circle').style('opacity', 0)
 }
