@@ -552,6 +552,15 @@ svg {
     font-size: 10px;
 }
 
+#bieudo .train {
+    stroke-width: 0px;
+    fill: blue;
+}
+
+#biedudo .train_label {
+    font-size: 12px;
+}
+
 #bieudo_chaytau_svg .se1 path, #bieudo_chaytau_svg .se2 path {
     stroke: #1f77b4;
 }
@@ -718,15 +727,6 @@ svg {
 
 #bieudo .se28, #bieudo_chaytau_svg .se28 circle {
     fill: #393b79
-}
-
-#bieudo .train {
-    stroke-width: 0px;
-    fill: blue;
-}
-
-#biedudo .train_label {
-    font-size: 12px;
 }
 
 /*
