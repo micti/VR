@@ -573,7 +573,7 @@ d3.json("data/tet2017.json", function(data) {
                 var c = ""
                 if (d.cc === 'o') c = "old_cc"
                 else if (d.cc === 'u') c = "unknow_cc"
-                else c = d.cc.split('_')[0].toLowerCase()
+                else c = 't_' + d.cc.split('_')[0].toLowerCase()
                 return "day_info " + c
             })
             .html(function (d) {
@@ -593,7 +593,7 @@ d3.json("data/tet2017.json", function(data) {
         .selectAll('div')
             .attr('class', function (d) {
                 if (d === null) return "day_info"
-                return "day_info " + d.route.toLowerCase()
+                return "day_info t_" + d.route.toLowerCase()
             })
             .text(function (d) {
                 if (d === null) return ""

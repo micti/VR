@@ -273,132 +273,132 @@ svg {
     background-color: #eee;
 }
 
-.train.t_se1, .train.t_se2 {
+.t_se1, .t_se2 {
     background-color: #1f77b4;
 }
 
-.train.t_se3, .train.t_se4  {
+.t_se3, .t_se4  {
     background-color: #aec7e8
 }
 
-.train.t_se5, .train.t_se6  {
+.t_se5, .t_se6  {
     background-color: #ff7f0e
 }
 
-.train.t_se7, .train.t_se8  {
+.t_se7, .t_se8  {
     background-color: #ffbb78
 }
 
-.train.t_se9, .train.t_se10 {
+.t_se9, .t_se10 {
     background-color: #2ca02c
 }
 
-.train.t_se31, .train.t_se32 {
+.t_se31, .t_se32 {
     background-color: #98df8a
 }
 
-.train.t_se13, .train.t_se14 {
+.t_se13, .t_se14 {
     background-color: #d62728
 }
 
-.train.t_se17, .train.t_se18 {
+.t_se17, .t_se18 {
     background-color: #ff9896
 }
 
-.train.t_se21, .train.t_se22 {
+.t_se21, .t_se22 {
     background-color: #c7c7c7
 }
 
-.train.t_se23, .train.t_se24 {
+.t_se23, .t_se24 {
     background-color: #9467bd
 }
 
-.train.t_se25, .train.t_se26 {
+.t_se25, .t_se26 {
     background-color: #c5b0d5
 }
 
-.train.t_se29, .train.t_se30 {
+.t_se29, .t_se30 {
     background-color: #8c564b
 }
 
-.train.t_tn1, .train.t_tn2 {
+.t_tn1, .t_tn2 {
     background-color: #c49c94
 }
 
-.train.t_tn3, .train.t_tn4 {
+.t_tn3, .t_tn4 {
     background-color: #e377c2
 }
 
-.train.t_tn5, .train.t_tn6 {
+.t_tn5, .t_tn6 {
     background-color: #f7b6d2
 }
 
-.train.t_tn7, .train.t_tn8 {
+.t_tn7, .t_tn8 {
     background-color: #7f7f7f
 }
 
-.train.t_snt1, .train.t_snt2 {
+.t_snt1, .t_snt2 {
     background-color: #bcbd22
 }
 
-.train.t_snt3, .train.t_snt4, .train.t_snt6, .train.t_7502, .train.t_7501 {
+.t_snt3, .t_snt4, .t_snt6, .t_7502, .t_7501 {
     background-color: #dbdb8d
 }
 
-.train.t_spt1, .train.t_spt2 {
+.t_spt1, .t_spt2 {
     background-color: #17becf
 }
 
-.train.t_sqn1, .train.t_sqn2 {
+.t_sqn1, .t_sqn2 {
     background-color: #9edae5
 }
 
-.train.t_se28 {
+.t_se28 {
     background-color: #393b79
 }
 
-.train.t_sn7, .train.t_sn8, .train.t_sn3, .train.t_sn4, .train.t_sn5, .train.t_sn6 {
+.t_sn7, .t_sn8, .t_sn3, .t_sn4, .t_sn5, .t_sn6 {
     background-color: #5254a3
 }
 
-.train.t_se11, .train.t_se12 {
+.t_se11, .t_se12 {
     background-color: #6b6ecf;
 }
 
-.train.t_se15, .train.t_se16 {
+.t_se15, .t_se16 {
     background-color: #9c9ede;
 }
 
-.train.t_spt3, .train.t_spt4 {
+.t_spt3, .t_spt4 {
     background-color: #bd9e39;
 }
 
-.train.t_se19, .train.t_se20 {
+.t_se19, .t_se20 {
     background-color: #e7ba52;
 }
 
-.train.t_na1, .train.t_na2, .train.t_na3, .train.t_na4, .train.t_na5, .train.t_na6, .train.t_na7, .train.t_na8,
-.train.t_na10, .train.t_7304, .train.t_7303 {
+.t_na1, .t_na2, .t_na3, .t_na4, .t_na5, .t_na6, .t_na7, .t_na8,
+.t_na10, .t_7304, .t_7303 {
     background-color: #e7cb94;
 }
 
-.train.t_sd5, .train.t_sd6, .train.t_7503, .train.t_sd2, .train.t_sd3, .train.t_sd4 {
+.t_sd5, .t_sd6, .t_7503, .t_sd2, .t_sd3, .t_sd4 {
     background-color: #637939
 }
 
-.train.t_sq2, .train.t_7407 {
+.t_sq2, .t_7407 {
     background-color: #8ca252
 }
 
-.train.t_stk2, .train.t_stk3, .train.t_stk4, .train.t_7405 {
+.t_stk2, .t_stk3, .t_stk4, .t_7405 {
     background-color: #b5cf6b
 }
 
-.train.t_d5, .train.t_d6, .train.t_7403, .train.t_d2, .train.t_d3, .train.t_d4, .train.t_d7, .train.t_d8 {
+.t_d5, .t_d6, .t_7403, .t_d2, .t_d3, .t_d4, .t_d7, .t_d8 {
     background-color: #cedb9c
 }
 
-.train.t_se35, .train.t_se36, .train.t_se37 {
+.t_se35, .t_se36, .t_se37 {
     background-color: #8c6d31
 }
 
@@ -470,94 +470,6 @@ svg {
 
 .day_info.has_trip {
     background-color: #1f77b4;
-}
-
-.cc.se1, .day_info.se1, .day_info.se2 {
-    background-color: #1f77b4;
-}
-
-.cc.se4, .day_info.se4, .day_info.se3 {
-    background-color: #aec7e8
-}
-
-.cc.se5, .day_info.se5, .day_info.se6 {
-    background-color: #ff7f0e
-}
-
-.cc.se8, .day_info.se8, .day_info.se7 {
-    background-color: #ffbb78
-}
-
-.cc.se9, .day_info.se9, .day_info.se10 {
-    background-color: #2ca02c
-}
-
-.cc.se31, .day_info.se31, .day_info.se11, .day_info.se12 {
-    background-color: #98df8a
-}
-
-.cc.se18, .day_info.se18, .day_info.se17 {
-    background-color: #ff9896
-}
-
-.cc.se22, .day_info.se22, .day_info.se21 {
-    background-color: #c7c7c7
-}
-
-.cc.se23, .cc.se24, .day_info.se23, .day_info.se24 {
-    background-color: #9467bd
-}
-
-.cc.se26, .day_info.se26, .day_info.se25 {
-    background-color: #c5b0d5
-}
-
-.cc.se29, .day_info.se29, .day_info.se30 {
-    background-color: #8c564b
-}
-
-.cc.tn1, .day_info.tn1, .day_info.tn2 {
-    background-color: #c49c94
-}
-
-.cc.tn4, .day_info.tn4, .day_info.tn3 {
-    background-color: #e377c2
-}
-
-.cc.tn5, .cc.tn6, .day_info.tn5, .day_info.tn6 {
-    background-color: #f7b6d2
-}
-
-.cc.tn7, .cc.tn8, .day_info.tn7, .day_info.tn8 {
-    background-color: #7f7f7f
-}
-
-.cc.snt2, .day_info.snt2, .day_info.snt1 {
-    background-color: #bcbd22
-}
-
-.day_info.snt3, .day_info.snt4, .day_info.snt6 {
-    background-color: #dbdb8d
-}
-
-.cc.spt2, .day_info.spt2, .day_info.spt1 {
-    background-color: #17becf
-}
-
-.cc.sqn2, .day_info.sqn2, .day_info.sqn1 {
-    background-color: #9edae5
-}
-
-.day_info.se28 {
-    background-color: #393b79
-}
-
-.day_info.se13, .day_info.se14 {
-    background-color: #d62728
-}
-
-.cc.na1, .cc.na3, .day_info.na3, .day_info.na1 {
-    background-color: #cedb9c
 }
 
 #bieudo_mophong {
@@ -724,87 +636,87 @@ svg {
     stroke: #393b79
 }
 
-#bieudo .train.se1, #bieudo .train.se2, #bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
+#bieudo .se1, #bieudo .se2, #bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
     fill: #1f77b4;
 }
 
-#bieudo .train.se3, #bieudo .train.se4, #bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
+#bieudo .se3, #bieudo .se4, #bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
     fill: #aec7e8
 }
 
-#bieudo .train.se5, #bieudo .train.se6, #bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
+#bieudo .se5, #bieudo .se6, #bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
     fill: #ff7f0e
 }
 
-#bieudo .train.se7, #bieudo .train.se8, #bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
+#bieudo .se7, #bieudo .se8, #bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
     fill: #ffbb78
 }
 
-#bieudo .train.se9, #bieudo .train.se10, #bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
+#bieudo .se9, #bieudo .se10, #bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
     fill: #2ca02c
 }
 
-#bieudo .train.se11, #bieudo .train.se12, #bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
+#bieudo .se11, #bieudo .se12, #bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
     fill: #98df8a
 }
 
-#bieudo .train.se13, #bieudo .train.se14, #bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
+#bieudo .se13, #bieudo .se14, #bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
     fill: #d62728
 }
 
-#bieudo .train.se17, #bieudo .train.se18, #bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
+#bieudo .se17, #bieudo .se18, #bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
     fill: #ff9896
 }
 
-#bieudo .train.se21, #bieudo .train.se22, #bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
+#bieudo .se21, #bieudo .se22, #bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
     fill: #c7c7c7
 }
 
-#bieudo .train.se23, #bieudo .train.se24, #bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
+#bieudo .se23, #bieudo .se24, #bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
     fill: #9467bd
 }
 
-#bieudo .train.se25, #bieudo .train.se26, #bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
+#bieudo .se25, #bieudo .se26, #bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
     fill: #c5b0d5
 }
 
-#bieudo .train.se29, #bieudo .train.se30, #bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
+#bieudo .se29, #bieudo .se30, #bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
     fill: #8c564b
 }
 
-#bieudo .train.tn1, #bieudo .train.tn2, #bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
+#bieudo .tn1, #bieudo .tn2, #bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
     fill: #c49c94
 }
 
-#bieudo .train.tn3, #bieudo .train.tn4, #bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
+#bieudo .tn3, #bieudo .tn4, #bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
     fill: #e377c2
 }
 
-#bieudo .train.tn5, #bieudo .train.tn6, #bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
+#bieudo .tn5, #bieudo .tn6, #bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
     fill: #f7b6d2
 }
 
-#bieudo .train.tn8, #bieudo .train.tn7, #bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
+#bieudo .tn8, #bieudo .tn7, #bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
     fill: #7f7f7f
 }
 
-#bieudo .train.snt2, #bieudo .train.snt1, #bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
+#bieudo .snt2, #bieudo .snt1, #bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
     fill: #bcbd22
 }
 
-#bieudo .train.snt6, #bieudo .train.snt4, #bieudo .train.snt3, #bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
+#bieudo .snt6, #bieudo .snt4, #bieudo .snt3, #bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
     fill: #dbdb8d
 }
 
-#bieudo .train.spt1, #bieudo .train.spt2, #bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
+#bieudo .spt1, #bieudo .spt2, #bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
     fill: #17becf
 }
 
-#bieudo .train.sqn1, #bieudo .train.sqn2, #bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
+#bieudo .sqn1, #bieudo .sqn2, #bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
     fill: #9edae5
 }
 
-#bieudo .train.se28, #bieudo_chaytau_svg .se28 circle {
+#bieudo .se28, #bieudo_chaytau_svg .se28 circle {
     fill: #393b79
 }
 
