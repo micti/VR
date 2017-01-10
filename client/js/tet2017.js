@@ -54,7 +54,7 @@ var axisTime = d3.axisTop(scaleTime)
     .ticks(24)
     .tickFormat(d3.timeFormat("%H:%M"))
 bieudoTimeSVG.append('g')
-    .attr("transform", "translate(50,20)")
+    .attr("transform", "translate(60,20)")
     .call(axisTime)
 
 //2.1 Line
@@ -411,7 +411,7 @@ d3.json("data/tet2017.json", function(data) {
         .data(dataStations)
 
     var lineHelper = bieudoSVG.append('g')
-        .attr("transform", "translate(50,30)")
+        .attr("transform", "translate(60,30)")
         .attr("class", "line_helper")
     .selectAll('g')
         .data(dataStations)
@@ -430,7 +430,7 @@ d3.json("data/tet2017.json", function(data) {
 
     // Chú thích giờ
     var timeHelper = bieudoSVG.append('g')
-        .attr("transform", "translate(50,0)")
+        .attr("transform", "translate(60,0)")
         .attr("class", "time_helper")
     .selectAll('g')
         .data([
@@ -448,7 +448,7 @@ d3.json("data/tet2017.json", function(data) {
 
     // Tạp biểu đồ
     var trainPath = bieudoSVG.append('g')
-        .attr("transform", "translate(50,30)")
+        .attr("transform", "translate(60,30)")
     .selectAll("g")
         .data(dataTimeTable)
     .enter().append("g")
