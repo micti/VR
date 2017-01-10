@@ -558,18 +558,28 @@ d3.json("data/tet2017.json", function(data) {
      * Thành phần ram xe
      */
     var dataCC = []
-    //var dataTrainCode = []
+    var dataCCCode = []
     for (var trainCode in data.cc) {
+        data.cc[trainCode].code = trainCode
         dataCC.push(data.cc[trainCode])
-        //dataTrainCode.push(trainCode)
+        dataCCCode.push(trainCode)
     }
-    d3.select('#ccc').selectAll('div')
-     .data(dataCC)
+    var ccDetail = d3.select('#ccc').selectAll('div')
+        .data(dataCC)
     .enter().append('div')
-     .attr('class', 'train')
+        .attr('class', 'cc')
+
+    ccDetail.append('div')
+        .attr('class', function (d) { return 'info t_' + d.code.split('_')[0].toLowerCase() })
+        .text(function (d) { return d.code })
+
+    ccDetail.append('div')
+        .attr('class', 'coaches')
     .selectAll('div')
-     .data(function (d) { return d.coaches })
+        .data(function (d) { return d.coaches })
     .enter().append('div')
+        .attr('class', 'coach')
+        .html(function (d) { return d.code + "<br>" + d.reg})
 
     // submenu click
     var viewTrainScheduleDateStart = function() {

@@ -402,6 +402,56 @@ svg {
     background-color: #8c6d31
 }
 
+.section_cc #ccc {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.section_cc .cc {
+    width: 600px;
+    margin-bottom: 3px;
+}
+
+.section_cc .cc::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_cc .cc .info {
+    width: 38px;
+    height: 29px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_cc .cc .coaches {
+    float: left;
+    margin-left: 2px;
+    border-left: 1px solid #eee;
+}
+
+.section_cc .cc .coaches .coach {
+    width: 38px;
+    height: 28px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #000;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    background-color: #fff;
+}
+
 .section_schedule .schedule_day {
     position: absolute;
     top: 0;
