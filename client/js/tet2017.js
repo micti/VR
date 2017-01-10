@@ -281,7 +281,7 @@ d3.json("data/tet2017.json", function(data) {
         hh = hh < 10 ? '0' + hh : hh;
         mm = mm < 10 ? '0' + mm : mm;
 
-        timer.text(hh + ":" + mm + ":00")
+        timer.text(hh + ":" + mm)
     }
 
     for(i = 0; i <= 4; i++) {
