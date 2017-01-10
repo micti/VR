@@ -554,6 +554,23 @@ d3.json("data/tet2017.json", function(data) {
             $("#schedule_train").css('left', inner_scroll_left)
     })
 
+    /**
+     * Thành phần ram xe
+     */
+    var dataCC = []
+    //var dataTrainCode = []
+    for (var trainCode in data.cc) {
+        dataCC.push(data.cc[trainCode])
+        //dataTrainCode.push(trainCode)
+    }
+    d3.select('#ccc').selectAll('div')
+     .data(dataCC)
+    .enter().append('div')
+     .attr('class', 'train')
+    .selectAll('div')
+     .data(function (d) { return d.coaches })
+    .enter().append('div')
+
     // submenu click
     var viewTrainScheduleDateStart = function() {
         d3.select('#schedule_table').selectAll('div.train')
