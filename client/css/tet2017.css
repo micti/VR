@@ -408,7 +408,7 @@ svg {
 }
 
 .section_cc .cc {
-    width: 600px;
+    width: 620px;
     margin-bottom: 3px;
 }
 
@@ -777,6 +777,21 @@ svg {
 
 #bieudo .se28, #bieudo_chaytau_svg .se28 circle {
     fill: #393b79
+}
+
+.simulator_options {
+    display: none;
+}
+
+.simulator_options.show {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    z-index: 1000;
 }
 
 /*

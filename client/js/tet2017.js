@@ -628,6 +628,10 @@ d3.json("data/tet2017.json", function(data) {
             })
     }
 
+    var viewSimulatorOption = function() {
+        d3.select('#simulator_options').classed('show', true)
+    }
+
     d3.selectAll('.submenu ul').selectAll('li')
         .on('click', function() {
             var _parent = d3.select(this.parentNode)
@@ -641,8 +645,9 @@ d3.json("data/tet2017.json", function(data) {
             if (_view === 'viewTrainSchedule_Cc') return viewTrainScheduleCc()
             // if (_view === 'viewTrainSchedule_StationStartEnd') return viewTrainScheduleStationStartEnd()
             if (_view === 'viewTrainSchedule_Route') return viewTrainScheduleRoute()
+            if (_view === 'viewSimulatorOption') return viewSimulatorOption()
         })
-    d3.selectAll('.submenu ul').select('li').dispatch('click')
+    d3.selectAll('.submenu ul').select('li.auto').dispatch('click')
 })
 
 function routeMouseOver(d, i) {

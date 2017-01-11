@@ -231,7 +231,7 @@
                 <h2>Lịch chạy</h2>
                 <div class="submenu">
                     <ul id="submenu_trainschedule">
-                        <li data-view="viewTrainSchedule_DateStart">Ngày xuất phát</li>
+                        <li class="auto" data-view="viewTrainSchedule_DateStart">Ngày xuất phát</li>
                         <li data-view="viewTrainSchedule_Cc">Ram xe</li>
                         <!-- <li data-view="viewTrainSchedule_StationStartEnd">Ga đầu - Ga cuối</li> -->
                         <li data-view="viewTrainSchedule_Route">Hành trình</li>
@@ -308,6 +308,11 @@
 
             <div class="heading">
                 <h2>Mô phỏng biểu đồ chạy tàu</h2>
+                <div class="submenu">
+                    <ul id="submenu_simulator">
+                        <li data-view="viewSimulatorOption" data-save="0">Tùy chỉnh</li>
+                    </ul>
+                </div>
             </div>
             <p>Còn thiếu biểu đồ SPT3, NA1-10, SE19/20, một số sai sót ở khu gian Lăng Cô - Đà Nẵng chưa sửa</p>
             <div id="bieudo_mophong">
@@ -315,6 +320,10 @@
                     <span id="timer">00:00</span>
                 </div>
                 <div id="bieudo"></div>
+            </div>
+            <div id="simulator_options" class="simulator_options">
+                <h3>Tùy chọn xem mô phỏng chạy tàu</h3>
+
             </div>
         </div>
 
