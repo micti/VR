@@ -80010,6 +80010,90 @@
                 }
             ]
         },
+        "SQ6_a": {
+            "coaches": [
+                {
+                    "no": 0,
+                    "reg": "",
+                    "type": "HC",
+                    "seat": "",
+                    "air": "",
+                    "code": "HC"
+                },
+                {
+                    "no": 1,
+                    "reg": "",
+                    "type": "A",
+                    "seat": "56",
+                    "air": "l",
+                    "code": "A56l"
+                },
+                {
+                    "no": 2,
+                    "reg": "",
+                    "type": "A",
+                    "seat": "56",
+                    "air": "l",
+                    "code": "A56l"
+                },
+                {
+                    "no": 3,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 4,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 5,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 6,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 7,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 8,
+                    "reg": "",
+                    "type": "An",
+                    "seat": "28",
+                    "air": "l",
+                    "code": "An28l"
+                },
+                {
+                    "no": 0,
+                    "reg": "",
+                    "type": "CVPĐ",
+                    "seat": "",
+                    "air": "",
+                    "code": "CVPĐ"
+                }
+            ]
+        },
         "NA1_a": {
             "coaches": [
                 {
@@ -80215,14 +80299,6 @@
                     "seat": "28",
                     "air": "l",
                     "code": "An28l"
-                },
-                {
-                    "no": 0,
-                    "reg": "",
-                    "type": "HL",
-                    "seat": "",
-                    "air": "",
-                    "code": "GHL"
                 }
             ]
         }
@@ -86191,7 +86267,11 @@
                 },
                 null,
                 null,
-                null,
+                {
+                    "route": "SE23",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-01"
+                },
                 null,
                 null,
                 null,
@@ -86253,7 +86333,11 @@
                 },
                 null,
                 null,
-                null,
+                {
+                    "route": "SNT4",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-31"
+                },
                 null,
                 null,
                 null,
@@ -88552,6 +88636,219 @@
                 null,
                 null,
                 null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        "SQ5": {
+            "code": "SQ5",
+            "trips": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "route": "SQ5",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-03"
+                },
+                null,
+                {
+                    "route": "SQ5",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-05"
+                },
+                null,
+                {
+                    "route": "SQ5",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-07"
+                },
+                null,
+                {
+                    "route": "SQ5",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-09"
+                },
+                null,
+                {
+                    "route": "SQ5",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-11"
+                },
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        "7401 (SQ5)": {
+            "code": "7401 (SQ5)",
+            "trips": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "route": "7401 (SQ5)",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-24"
+                },
+                null,
+                {
+                    "route": "7401 (SQ5)",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-26"
+                },
+                null,
+                {
+                    "route": "7401 (SQ5)",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-28"
+                },
+                null,
+                {
+                    "route": "7401 (SQ5)",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-30"
+                },
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        "SQ6": {
+            "code": "SQ6",
+            "trips": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-23"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-25"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-27"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-01-29"
+                },
+                null,
+                null,
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-02"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-04"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-06"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-08"
+                },
+                null,
+                {
+                    "route": "SQ6",
+                    "cc": "SQ6_a",
+                    "date": "2017-02-10"
+                },
                 null,
                 null,
                 null,
