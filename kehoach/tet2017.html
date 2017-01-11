@@ -26,6 +26,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=vietnamese" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/client/css/normalize.css">
         <link rel="stylesheet" href="/client/css/tet2017.css">
 
@@ -34,7 +35,6 @@
                 stroke-width: 1px;
                 stroke: #000;
             }
-
             .station {
                 stroke-width: 0px;
                 fill: red;
@@ -321,9 +321,12 @@
                 </div>
                 <div id="bieudo"></div>
             </div>
-            <div id="simulator_options" class="simulator_options">
-                <h3>Tùy chọn xem mô phỏng chạy tàu</h3>
-
+            <div id="simulator_options" class="simulator_options modal">
+                <div class="modal_container">
+                    <h3>Tùy chọn xem mô phỏng chạy tàu</h3>
+                    <input class="timer" placeholder="00:00" id="time_to_start">
+                    <i id="play_from_setting" role="button" class="material-icons" style="font-size: 36px" >play_circle_outline</i>
+                </div>
             </div>
         </div>
 

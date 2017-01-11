@@ -648,6 +648,13 @@ d3.json("data/tet2017.json", function(data) {
             if (_view === 'viewSimulatorOption') return viewSimulatorOption()
         })
     d3.selectAll('.submenu ul').select('li.auto').dispatch('click')
+
+    // apply setting timer
+    // ^([0[0-9]|1[0-9]|2[0-4]):[0-5][0-9]$
+    d3.select('#play_from_setting').on('click', function() {
+         var time = d3.select(this).attr('value')
+         alert(/^([0[0-9]|1[0-9]|2[0-4]):[0-5][0-9]$/.test(time))
+    })
 })
 
 function routeMouseOver(d, i) {
