@@ -637,9 +637,12 @@ d3.json("data/tet2017.json", function(data) {
             var _parent = d3.select(this.parentNode)
             var _this = d3.select(this)
             var _view = _this.attr('data-view')
+            var _modal = _this.attr('data-modal')
 
-            _parent.selectAll('li').classed('active', false)
-            _this.classed('active', true)
+            if (_modal !== '1') {
+                _parent.selectAll('li').classed('active', false)
+                _this.classed('active', true)
+            }
 
             if (_view === 'viewTrainSchedule_DateStart') return viewTrainScheduleDateStart()
             if (_view === 'viewTrainSchedule_Cc') return viewTrainScheduleCc()
@@ -650,10 +653,23 @@ d3.json("data/tet2017.json", function(data) {
     d3.selectAll('.submenu ul').select('li.auto').dispatch('click')
 
     // apply setting timer
-    // ^([0[0-9]|1[0-9]|2[0-4]):[0-5][0-9]$
     d3.select('#play_from_setting').on('click', function() {
-         var time = d3.select(this).attr('value')
-         alert(/^([0[0-9]|1[0-9]|2[0-4]):[0-5][0-9]$/.test(time))
+         var time = d3.select('#time_to_start').property('value').trim()
+         if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) {
+             alert('Thời gian không đúng, vui lòng nhập từ 00:00 đến 23:59')
+             return false
+         }
+
+         resetLastPos()
+         t = timeToMin(time)
+         d3.select('#simulator_options').select('.close_button').dispatch('click')
+    })
+
+    // modal close
+    d3.select('.close_button').on('click', function() {
+        var _this = d3.select(this)
+        var _modal = '#' + _this.attr('data-modal')
+        d3.select(_modal).classed('show', false)
     })
 })
 
