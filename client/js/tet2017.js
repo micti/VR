@@ -356,23 +356,65 @@ d3.json("data/tet2017.json", function(data) {
         simTime = 2 * 24 * 60 + time
         resetLastPos()
 
-        if (status) simPlay()
+        if (status) {
+            simPlay()
+        } else {
+            setTrainsByTime(simTime)
+            updateTimer(simTime)
+        }
     }
 
     var simEnable = function() {
-        if (simIsPaused) return
-
-        setTrainsByTime(simTime)
-        updateTimer(simTime)
-        simTime += 0.3
-        if (simTime >= 3 * 24 * 60) {
-            resetLastPos()
-            simTime = t - 1 * 24 * 60
+        if (!simIsPaused) {
+            setTrainsByTime(simTime)
+            updateTimer(simTime)
+            simTime += 0.3
+            if (simTime >= 3 * 24 * 60) {
+                resetLastPos()
+                simTime = t - 1 * 24 * 60
+            }
         }
         setTimeout(simEnable, 100)
     }
 
     simEnable()
+
+    // Control button
+    // apply setting timer
+    d3.select("#sim_setting").on('click', function() {
+        d3.select('#simulator_options').classed('show', true)
+    })
+
+    d3.select("#sim_toggle").on('click', function() {
+        var _this = d3.select(this)
+        if (simRunningStatus()) {
+            simPause()
+            _this.html('<i class="material-icons">play_arrow</i>')
+            return true
+        }
+
+        simPlay()
+        _this.html('<i class="material-icons">pause</i>')
+    })
+
+    // Sim setting
+    d3.select('#play_from_setting').on('click', function() {
+         var time = d3.select('#time_to_start').property('value').trim()
+         if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) {
+             alert('Thời gian không đúng, vui lòng nhập từ 00:00 đến 23:59')
+             return false
+         }
+
+         simSetTime(timeToMin(time))
+         d3.select('#simulator_options').select('.close_button').dispatch('click')
+    })
+
+    // modal close
+    d3.select('.close_button').on('click', function() {
+        var _this = d3.select(this)
+        var _modal = '#' + _this.attr('data-modal')
+        d3.select(_modal).classed('show', false)
+    })
 
     /**
      * Vẽ biểu đồ
@@ -660,48 +702,26 @@ d3.json("data/tet2017.json", function(data) {
             })
     }
 
-    var viewSimulatorOption = function() {
-        d3.select('#simulator_options').classed('show', true)
-    }
-
     d3.selectAll('.submenu ul').selectAll('li')
         .on('click', function() {
             var _parent = d3.select(this.parentNode)
             var _this = d3.select(this)
             var _view = _this.attr('data-view')
-            var _modal = _this.attr('data-modal')
+            // var _modal = _this.attr('data-modal')
 
-            if (_modal !== '1') {
+            // if (_modal !== '1') {
                 _parent.selectAll('li').classed('active', false)
                 _this.classed('active', true)
-            }
+            // }
 
             if (_view === 'viewTrainSchedule_DateStart') return viewTrainScheduleDateStart()
             if (_view === 'viewTrainSchedule_Cc') return viewTrainScheduleCc()
             // if (_view === 'viewTrainSchedule_StationStartEnd') return viewTrainScheduleStationStartEnd()
             if (_view === 'viewTrainSchedule_Route') return viewTrainScheduleRoute()
-            if (_view === 'viewSimulatorOption') return viewSimulatorOption()
         })
-    d3.selectAll('.submenu ul').select('li.auto').dispatch('click')
+    d3.selectAll('.submenu ul').select('li').dispatch('click')
 
-    // apply setting timer
-    d3.select('#play_from_setting').on('click', function() {
-         var time = d3.select('#time_to_start').property('value').trim()
-         if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) {
-             alert('Thời gian không đúng, vui lòng nhập từ 00:00 đến 23:59')
-             return false
-         }
 
-         simSetTime(timeToMin(time))
-         d3.select('#simulator_options').select('.close_button').dispatch('click')
-    })
-
-    // modal close
-    d3.select('.close_button').on('click', function() {
-        var _this = d3.select(this)
-        var _modal = '#' + _this.attr('data-modal')
-        d3.select(_modal).classed('show', false)
-    })
 })
 
 function routeMouseOver(d, i) {

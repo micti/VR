@@ -568,7 +568,20 @@ svg {
     text-align: center;
     background-color: #000;
     color: #fff;
+}
+
+#bieudo_thongtin span {
+    display: block;
     padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+#bieudo_thongtin span[role="button"] {
+    padding-top: 7px;
+}
+
+#bieudo_thongtin span[role="button"]:hover {
+    background-color: #1f77b4;
 }
 
 #bieudo {
