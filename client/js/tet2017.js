@@ -371,7 +371,7 @@ d3.json("data/tet2017.json", function(data) {
             simTime += 0.3
             if (simTime >= 3 * 24 * 60) {
                 resetLastPos()
-                simTime = t - 1 * 24 * 60
+                simTime = simTime - 1 * 24 * 60
             }
         }
         setTimeout(simEnable, 100)
