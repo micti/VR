@@ -112,6 +112,29 @@ svg {
     opacity: 0.9;
 }
 
+.page_menu {
+    margin-top: 30px;
+    background: #eee;
+    padding: 15px 15px 5px 15px;
+}
+
+.page_menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.page_menu ul li {
+    display: inline-block;
+}
+
+.page_menu ul li {
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
