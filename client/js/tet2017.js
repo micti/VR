@@ -328,19 +328,51 @@ d3.json("data/tet2017.json", function(data) {
         createTrain('snt1', 'snt1', i)
     }
 
-    //setTrainsByTime(300)
-    var t = 2 * 24 * 60; // 0:00 ngày 2
-    var animation = function() {
-        setTrainsByTime(t);
-        updateTimer(t);
-        t += 0.3;
-        if (t >= 3 * 24 * 60) {
-            resetLastPos()
-            t = t - 1 * 24 * 60
-        }
-        setTimeout(animation, 100);
+    // Simualator control
+    var simIsPaused = false;
+    /**
+     * Khoảng thời gian dài nhất để một tàu thực hiện hành trình là 3 ngày
+     * Vì vậy khi chạy mô phỏng 1 ngày, mỗi tàu sẽ có lịch trình cho 3 ngày
+     * và thời gian thiết lập tứng với ngày thứ 3
+     */
+    var simTime = 2 * 24 * 60;
+
+    var simPause = function() {
+        simIsPaused = true;
     }
-    animation()
+
+    var simPlay = function() {
+        simIsPaused = false;
+    }
+
+    var simRunningStatus = function() {
+        return !simIsPaused;
+    }
+
+    var simSetTime = function(time) {
+        var status = simRunningStatus()
+        if (status) simPause()
+
+        simTime = 2 * 24 * 60 + time
+        resetLastPos()
+
+        if (status) simPlay()
+    }
+
+    var simEnable = function() {
+        if (simIsPaused) return
+
+        setTrainsByTime(simTime)
+        updateTimer(simTime)
+        simTime += 0.3
+        if (simTime >= 3 * 24 * 60) {
+            resetLastPos()
+            simTime = t - 1 * 24 * 60
+        }
+        setTimeout(simEnable, 100)
+    }
+
+    simEnable()
 
     /**
      * Vẽ biểu đồ
@@ -660,8 +692,7 @@ d3.json("data/tet2017.json", function(data) {
              return false
          }
 
-         resetLastPos()
-         t = timeToMin(time)
+         simSetTime(timeToMin(time))
          d3.select('#simulator_options').select('.close_button').dispatch('click')
     })
 
