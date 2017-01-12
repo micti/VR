@@ -32,6 +32,41 @@ svg {
     font-feature-settings: 'liga';
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal .modal_container {
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+}
+
+.modal .modal_container h3 {
+    font-size: 1.1rem;
+    width: 400px;
+}
+
+.modal .close_button {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    font-size: 36px;
+}
+
 .page_header {
     position: relative;
     height: 500px;
@@ -147,17 +182,15 @@ svg {
 }
 
 .section_intro .intro {
-    width: 60%;
-    float: left;
+    margin-bottom: 15px;
 }
 
-.section_intro .intro p {
-    padding-right: 15px;
+.section_intro .intro ul {
+    padding-left: 0px;
+    list-style-position: inside;
 }
 
 .section_intro .note {
-    float: left;
-    width: 40%;
     background: #f2614b;
     color: #fff;
 }
@@ -826,41 +859,6 @@ svg {
     fill: #393b79
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-    overflow-y: scroll;
-}
-
-.modal.show {
-    display: block;
-}
-
-.modal .modal_container {
-    margin: 20px auto 20px auto;
-    padding: 20px;
-    background: #fff;
-    position: relative;
-}
-
-.modal .modal_container h3 {
-    font-size: 1.1rem;
-    width: 400px;
-}
-
-.modal .close_button {
-    position: absolute;
-    top: 13px;
-    right: 13px;
-    font-size: 36px;
-}
-
 /*
  Bảng màu minh họa cho tàu
 "#1f77b4", "#aec7e8", "#ff7f0e", "#ffbb78", "#2ca02c", "#98df8a", "#d62728", "#ff9896", "#9467bd", "#c5b0d5",
@@ -873,67 +871,96 @@ svg {
 */
 
 @media (min-width: 576px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 @media (min-width: 768px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 @media (min-width: 992px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 @media (min-width: 1200px) {
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 @media (min-width: 576px) {
-  .container {
-    width: 540px;
-    max-width: 100%;
-  }
+    .container {
+        width: 540px;
+        max-width: 100%;
+    }
 
-  .modal .modal_container {
-      width: 500px;
-      max-width: 80%;
-  }
+    .modal .modal_container {
+        width: 500px;
+        max-width: 80%;
+    }
 
-  .modal .modal_container h3 {
-      font-size: 1rem;
-      width: 80%;
-  }
+    .modal .modal_container h3 {
+        font-size: 1rem;
+        width: 80%;
+    }
 }
 
 @media (min-width: 768px) {
-  .container {
-    width: 720px;
-    max-width: 100%;
-  }
+    .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
+    .section_intro .intro {
+        width: 50%;
+        float: left;
+        margin-bottom: 0px;
+    }
+
+    .section_intro .intro p {
+        padding-right: 15px;
+    }
+
+    .section_intro .intro ul {
+        padding-right: 15px;
+    }
+
+    .section_intro .note {
+        width: 50%;
+        float: left;
+    }
 }
 
 @media (min-width: 992px) {
-  .container {
-    width: 960px;
-    max-width: 100%;
-  }
+    .container {
+        width: 960px;
+        max-width: 100%;
+    }
+
+    .section_intro .intro {
+        width: 60%;
+        float: left;
+    }
+
+    .section_intro .note {
+        width: 40%;
+        float: left;
+    }
 }
 
 @media (min-width: 1200px) {
-  .container {
-    width: 1160px;
-    max-width: 100%;
-  }
+    .container {
+        width: 1160px;
+        max-width: 100%;
+    }
 }
