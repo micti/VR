@@ -1,6 +1,3 @@
-// Layout
-
-
 // extend d3
 d3.selection.prototype.moveToBack = function() {
     return this.each(function() {
@@ -14,6 +11,26 @@ d3.selection.prototype.moveToFront = function() {
     return this.each(function(){
         this.parentNode.appendChild(this);
     });
+}
+d3.selection.prototype.getOffset = function() {
+    var el = this._groups[0][0]
+    if (!el) {
+        return
+    }
+
+    if ( !el.getClientRects().length ) {
+        return { top: 0, left: 0 };
+    }
+
+    var rect = el.getBoundingClientRect();
+    var doc = el.ownerDocument;
+    var docElem = doc.documentElement;
+    var win = doc.defaultView;
+
+    return {
+        top: rect.top + win.pageYOffset - docElem.clientTop,
+        left: rect.left + win.pageXOffset - docElem.clientLeft
+    }
 }
 
 var lineLength = 1726,
@@ -38,9 +55,9 @@ var lineForMarley = d3.line()
     .x(function(d) { return scaleTime(d.time) })
 
 // 1. KM Axis
-var axisKM = d3.axisLeft(scale);
+var axisKM = d3.axisLeft(scale).ticks(16);
 svg.append('g')
-    .attr("transform", "translate(40,20)")
+    .attr("transform", "translate(33,20)")
     .call(axisKM)
 
 // 2. Marley time Axis
