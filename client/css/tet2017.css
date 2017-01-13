@@ -951,11 +951,11 @@ svg {
     }
 
     .section_intro .intro p {
-        padding-right: 15px;
+        padding-right: 30px;
     }
 
     .section_intro .intro ul {
-        padding-right: 15px;
+        padding-right: 30px;
     }
 
     .section_intro .note {
@@ -972,12 +972,10 @@ svg {
 
     .section_intro .intro {
         width: 60%;
-        float: left;
     }
 
     .section_intro .note {
         width: 40%;
-        float: left;
     }
 }
 
