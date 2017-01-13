@@ -706,6 +706,24 @@ d3.json("data/tet2017.json", function(data) {
         alert('hi3');
     }
 
+    var viewTrainScheduleLocomotive = function() {
+        d3.select('#schedule_table').selectAll('div.train')
+        .selectAll('div')
+            .attr('class', function (d) {
+                if (d === null) return "day_info"
+                return "day_info has_trip"
+            })
+            .text(function (d) {
+                if (d === null || d.loco === null) return ""
+                var c = []
+                for (i = 0; i < d.loco.length; i++) {
+                    var code = d.loco[i].code.split('-')[1]
+                    c.push(code)
+                }
+                return c.join(' / ')
+            })
+    }
+
     var viewTrainScheduleRoute = function() {
         d3.select('#schedule_table').selectAll('div.train')
         .selectAll('div')
@@ -734,6 +752,7 @@ d3.json("data/tet2017.json", function(data) {
             if (_view === 'viewTrainSchedule_DateStart') return viewTrainScheduleDateStart()
             if (_view === 'viewTrainSchedule_Cc') return viewTrainScheduleCc()
             // if (_view === 'viewTrainSchedule_StationStartEnd') return viewTrainScheduleStationStartEnd()
+            if (_view === 'viewTrainSchedule_Locomotive') return viewTrainScheduleLocomotive()
             if (_view === 'viewTrainSchedule_Route') return viewTrainScheduleRoute()
         })
     d3.selectAll('.submenu ul').select('li').dispatch('click')
