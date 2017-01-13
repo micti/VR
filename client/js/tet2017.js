@@ -43,13 +43,13 @@ var svg = d3.select("#bieudo").append("svg")
     .attr("height", height);
 
 var bieudoSVG = d3.select("#bieudo_chaytau_svg").append("svg")
-    .attr("width", 24 * 42 + 70)
+    .attr("width", 24 * 43 + 70)
     .attr("height", lineLength * scaleRatio + 50);
 
 var scaleStation = scale = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
 var scaleTime = d3.scaleTime()
     .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
-    .range([0, 24 * 42])
+    .range([0, 24 * 43])
 var lineForMarley = d3.line()
     .y(function(d) { return scaleStation(d.km) })
     .x(function(d) { return scaleTime(d.time) })
@@ -62,7 +62,7 @@ svg.append('g')
 
 // 2. Marley time Axis
 var bieudoTimeSVG = d3.select("#bieudo_chaytau_time_svg").append("svg")
-    .attr("width", 24 * 42 + 122)
+    .attr("width", 24 * 43 + 122)
     .attr("height", 20);
 var bieudoStationSVG = d3.select("#bieudo_chaytau_station_svg").append("svg")
     .attr("width", 50)
@@ -517,7 +517,7 @@ d3.json("data/tet2017.json", function(data) {
         .attr("y2", function (d, i) { return (scaleStation(d.km)) })
         .attr("y1", function (d, i) { return (scaleStation(d.km)) })
         .attr("x1", 0)
-        .attr("x2", 24 * 42)
+        .attr("x2", 24 * 43)
 
     // Chú thích giờ
     var timeHelper = bieudoSVG.append('g')
@@ -533,8 +533,8 @@ d3.json("data/tet2017.json", function(data) {
 
     timeHelper.enter().append('line')
         .attr("y1", 30)
-        .attr("x1", function (d, i) { return i * 42 })
-        .attr("x2", function (d, i) { return i * 42 })
+        .attr("x1", function (d, i) { return i * 43 })
+        .attr("x2", function (d, i) { return i * 43 })
         .attr("y2", 30 + lineLength * scaleRatio)
 
     // Tạp biểu đồ
