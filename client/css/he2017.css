@@ -1,0 +1,677 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+svg {
+    font-family: 'Roboto', sans-serif;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    overflow-y: scroll;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal .modal_container {
+    margin: 20px auto 20px auto;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+}
+
+.modal .modal_container h3 {
+    font-size: 1.1rem;
+    width: 400px;
+}
+
+.modal .close_button {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    font-size: 36px;
+}
+
+.page_header {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-image: url(/client/img/kehoach/tet2017/banner01.jpg);
+}
+
+.page_header .cover_filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #010101;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.page_header .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    heigh: 500px;
+    color: #fff;
+    z-index: 2;
+    padding: 30px;
+}
+
+.page_header .title {
+    height: 400px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.page_header .title h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.page_header .title .slogan {
+    opacity: 0.9;
+}
+
+.page_menu {
+    margin-top: 30px;
+    background: #eee;
+    padding: 15px 15px 5px 15px;
+}
+
+.page_menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.page_menu ul li {
+    display: inline-block;
+}
+
+.page_menu ul li {
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.heading {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.heading::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.heading h2 {
+    font-size: 1.2rem;
+    width: 300px;
+    float: left;
+}
+
+.heading .submenu {
+    float: right;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.heading .submenu ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+.heading .submenu ul li {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    padding-bottom: 3px;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
+.heading .submenu .material-icons {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.heading .submenu ul li.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+}
+
+.section_intro::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_intro .intro {
+    margin-bottom: 15px;
+}
+
+.section_intro .intro ul {
+    padding-left: 0px;
+    list-style-position: inside;
+}
+
+.section_intro .note {
+    background: #f2614b;
+    color: #fff;
+}
+
+.section_intro .note p {
+    padding: 15px;
+}
+
+.section_date .period {
+    color: #fff;
+    text-align: center;
+}
+
+.section_date .period::after,
+.section_date .period .before_tet::after,
+.section_date .period .in_tet::after,
+.section_date .period .after_tet::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_date .period .before_tet {
+    float: left;
+    background-color: #1f77b4;
+    width: 37%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .before_tet div {
+    float: left;
+    width: 7.692307692%
+}
+
+.section_date .period .in_tet {
+    float: left;
+    background-color: #aec7e8;
+    width: 26%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .in_tet div {
+    float: left;
+    width: 11.1111111111%
+}
+
+.section_date .period .after_tet {
+    float: left;
+    background-color: #ff7f0e;
+    width: 37%;
+    border-bottom: 1px solid #fff;
+}
+
+.section_date .period .after_tet div {
+    float: left;
+    width: 7.692307692%
+}
+
+.section_date .period .before_tet.title,
+.section_date .period .in_tet.title,
+.section_date .period .after_tet.title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.section_coachcomposition .overall::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_coachcomposition .overall .cc_company .title {
+    margin-bottom: 1px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.section_coachcomposition .overall .srt {
+    width: 54%;
+    float: left;
+}
+
+.section_coachcomposition .overall .srt .title {
+    background-color: #6baed6;
+}
+
+.section_coachcomposition .overall .hrt {
+    width: 46%;
+    float: left;
+}
+
+.section_coachcomposition .overall .hrt .title {
+    background-color: #fd8d3c;
+}
+
+.section_coachcomposition .overall .cc_company .cc_list::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_coachcomposition .overall .cc_company .cc_list .cc {
+    width: 27px;
+    height: 27px;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule {
+    position: relative;
+    overflow-x: auto;
+}
+
+.section_schedule .schedule_train {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 38px;
+}
+
+.section_schedule .schedule_train .train {
+    width: 38px;
+    height: 28px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.train {
+    background-color: #eee;
+}
+
+.section_cc #ccc {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.section_cc .cc {
+    width: 620px;
+    margin-bottom: 3px;
+}
+
+.section_cc .cc::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_cc .cc .info {
+    width: 38px;
+    height: 29px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_cc .cc .coaches {
+    float: left;
+    margin-left: 2px;
+    border-left: 1px solid #eee;
+}
+
+.section_cc .cc .coaches .coach {
+    width: 38px;
+    height: 28px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #000;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+    background-color: #fff;
+}
+
+.section_schedule .schedule_day {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    width: 1176px;
+}
+
+.section_schedule .schedule_day .day {
+    width: 28px;
+    height: 14px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule .schedule_day .day.prepared {
+    color: #000;
+    background-color: #fff;
+}
+
+.section_schedule .schedule_day .day.before_tet {
+    background-color: #1f77b4;
+}
+
+.section_schedule .schedule_day .day.in_tet {
+    background-color: #aec7e8;
+}
+
+.section_schedule .schedule_day .day.after_tet {
+    background-color: #ff7f0e;
+}
+
+.section_schedule .schedule_table {
+    width: 1214px;
+    padding-left: 38px;
+    padding-top: 15px;
+}
+
+.section_schedule .train::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.section_schedule .train .day_info {
+    width: 28px;
+    height: 28px;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    padding: 1px 1px 1px 1px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
+}
+
+.section_schedule .train .day_info.old_cc, .section_schedule .train .day_info.unknow_cc {
+    color: #000;
+}
+
+.day_info.has_trip {
+    background-color: #1f77b4;
+}
+
+#bieudo_mophong {
+    position: relative;
+}
+
+#bieudo_thongtin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+#bieudo_thongtin span {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+#bieudo_thongtin span[role="button"] {
+    padding-top: 7px;
+}
+
+#bieudo_thongtin span[role="button"]:hover {
+    background-color: #1f77b4;
+}
+
+#bieudo {
+    width: 200px;
+}
+
+.station_label {
+    text-anchor: end
+}
+
+#bieudo_chaytau {
+    position: relative;
+    overflow-x: auto;
+}
+
+#bieudo_chaytau_svg {
+
+}
+
+#bieudo_chaytau_station_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    background: #fff;
+
+}
+
+#bieudo_chaytau_time_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1130px;
+    z-index: 4;
+    background: #fff;
+}
+
+#bieudo_chaytau_svg .line_helper line, #bieudo_chaytau_svg .time_helper line {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 1, 1
+}
+
+#bieudo_chaytau_station_svg .station_helper text {
+    font-size: 10px;
+}
+
+#bieudo_chaytau_svg .train_detail path {
+    fill: none;
+    stroke-width: 2px;
+    stroke: #000;
+}
+
+#bieudo_chaytau_svg .train_detail path:hover {
+    stroke-width: 3px;
+}
+
+#bieudo_chaytau_svg .train_detail circle {
+    stroke: #fff;
+}
+
+#bieudo_chaytau_svg .train_detail text {
+    font-size: 10px;
+}
+
+#bieudo .train {
+    stroke-width: 0px;
+    fill: blue;
+}
+
+#biedudo .train_label {
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+        max-width: 100%;
+    }
+
+    .modal .modal_container {
+        width: 500px;
+        max-width: 80%;
+    }
+
+    .modal .modal_container h3 {
+        font-size: 1rem;
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
+    .section_intro .intro {
+        width: 50%;
+        float: left;
+        margin-bottom: 0px;
+    }
+
+    .section_intro .intro p {
+        padding-right: 30px;
+    }
+
+    .section_intro .intro ul {
+        padding-right: 30px;
+    }
+
+    .section_intro .note {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+        max-width: 100%;
+    }
+
+    .section_intro .intro {
+        width: 60%;
+    }
+
+    .section_intro .note {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1160px;
+        max-width: 100%;
+    }
+}
+
+/** COLOR FOR TRAIN **/
