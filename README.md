@@ -8,6 +8,6 @@
 
 ## WIP
 
--[ ] Tet 2018 Planning
--[ ] Locomotive Info
--[ ] Station Info
+- [ ] Tet 2018 Planning
+- [ ] Locomotive Info
+- [ ] Station Info
