@@ -2,9 +2,9 @@
 
 ## Work
 
-Tet 2017 Planning: https://vnrails.com/kehoach/tet2017.html
-Summer 2017 Planning: https://vnrails.com/kehoach/he2017.html
-After-Summer 2017 Planning: https://vnrails.com/kehoach/sauhe2017.html
+- Tet 2017 Planning: https://vnrails.com/kehoach/tet2017.html
+- Summer 2017 Planning: https://vnrails.com/kehoach/he2017.html
+- After-Summer 2017 Planning: https://vnrails.com/kehoach/sauhe2017.html
 
 ## WIP
 
