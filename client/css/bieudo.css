@@ -1,0 +1,39 @@
+svg {
+  font-family: 'Roboto', sans-serif;
+}
+
+#bieudo {
+    width: 200px;
+    shape-rendering: crispEdges
+}
+
+#bieudo .line {
+    stroke-width: 1px;
+    stroke: #000;
+    shape-rendering: crispEdges
+}
+
+#bieudo .station {
+  stroke-width: 0px;
+  fill: red;
+  shape-rendering: crispEdges
+}
+
+#bieudo .station_tick {
+  shape-rendering: crispEdges;
+  fill: none;
+  stroke: #000;
+}
+
+#bieudo .station_label {
+    text-anchor: end;
+}
+
+#bieudo .train {
+  stroke-width: 0px;
+  fill: blue;
+}
+
+#biedudo .train_label {
+  font-size: 12px;
+}
