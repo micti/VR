@@ -142,7 +142,7 @@ let builder = async function(dataFile) {
 let simConfig = {
   init: (data) => {
     simConfig.data = data
-    simConfig.scaleStation = d3.scaleLinear().domain([0, simConfig.lineLength]).range([0, simConfig.lineLength * simConfig.scaleRatio]),
+    simConfig.scaleStation = d3.scaleLinear().domain([0, simConfig.lineLength]).range([0, simConfig.lineLength * simConfig.scaleRatio])
       simConfig.scaleTime = d3.scaleTime()
       .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
       .range([0, 24 * 43])
