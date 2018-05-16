@@ -43,50 +43,50 @@ d3.selection.prototype.getOffset = function() {
 // - Biểu diễn lại đoạn Diêu Trì - Quy nhơn, Bình Thuận - Phan thiết
 
 // Xây dựng mô phỏng
-let builder = async function(dataFile) {
-  let data = await d3.json(dataFile)
+var builder = async function(dataFile) {
+  var data = await d3.json(dataFile)
 
   // Xử lý dữ liệu
-  let dataLines = [],
+  var dataLines = [],
     dataStations = []
-  for (let d in data.sections) {
+  for (var d in data.sections) {
     dataLines.push(data.sections[d])
   }
 
-  for (let d in data.stations) {
+  for (var d in data.stations) {
     dataStations.push(data.stations[d])
   }
 
   // Khai báo thông số
-  let lineLength = 1726,
+  var lineLength = 1726,
     scaleRatio = 3,
     width = 1200,
     height = (lineLength + 20) * scaleRatio
 
-  let svg = d3.select("#bieudo").append("svg")
+  var svg = d3.select("#bieudo").append("svg")
     .attr("width", 250)
     .attr("height", height)
 
-  let scaleStation = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
-  let scaleTime = d3.scaleTime()
+  var scaleStation = d3.scaleLinear().domain([0, 1726]).range([0, 1726 * scaleRatio])
+  var scaleTime = d3.scaleTime()
     .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
     .range([0, 24 * 43])
 
   // Cột KM
-  let axisKM = d3.axisLeft(scaleStation).ticks(32)
+  var axisKM = d3.axisLeft(scaleStation).ticks(32)
   svg.append('g')
     .attr("transform", "translate(33,20)")
     .call(axisKM)
 
-  let routeSvg = svg.append('g')
+  var routeSvg = svg.append('g')
     .attr("class", "route")
     .attr("transform", "translate(200,20)")
     .attr("font-size", "12px")
 
-  let lines = routeSvg.selectAll('.line').data(dataLines)
-  let stations = routeSvg.selectAll('.station').data(dataStations)
-  let stationLabels = routeSvg.selectAll('.station_label').data(dataStations)
-  let stationTicks = routeSvg.selectAll('.station_tick').data(dataStations)
+  var lines = routeSvg.selectAll('.line').data(dataLines)
+  var stations = routeSvg.selectAll('.station').data(dataStations)
+  var stationLabels = routeSvg.selectAll('.station_label').data(dataStations)
+  var stationTicks = routeSvg.selectAll('.station_tick').data(dataStations)
 
   lines.enter().append('line')
     .attr('class', 'line')
@@ -139,14 +139,14 @@ let builder = async function(dataFile) {
 }
 
 // helper & config
-let simConfig = {
-  init: (data) => {
+var simConfig = {
+  init: function (data) {
     simConfig.data = data
     simConfig.scaleStation = d3.scaleLinear().domain([0, simConfig.lineLength]).range([0, simConfig.lineLength * simConfig.scaleRatio])
-      simConfig.scaleTime = d3.scaleTime()
+    simConfig.scaleTime = d3.scaleTime()
       .domain([new Date(2016, 0, 15, 0), new Date(2016, 0, 16, 0)])
       .range([0, 24 * 43])
-    for (let d in data.stations) {
+    for (var d in data.stations) {
       simConfig.dataStations.push(data.stations[d])
     }
   },
@@ -156,24 +156,24 @@ let simConfig = {
   scaleRatio: 3,
   scaleStation: null,
   scaleTime: null,
-  praseTimeString: (time) => {
+  praseTimeString: function(time) {
     time = time.split(":")
     return new Date(2016, 0, 15, parseInt(time[0]), parseInt(time[1], 0))
   },
-  timeToMin: (time) => {
+  timeToMin: function(time) {
     parts = time.split(":")
     return parseInt(parts[0]) * 60 + parseInt(parts[1])
   },
 
-  dayToMin: (day) => {
+  dayToMin: function(day) {
     return day * 24 * 60
   }
 }
 
 // Sim
-let sim = {
+var sim = {
   // Init
-  init: (data, sgv, scale, speed) => {
+  init: function(data, sgv, scale, speed) {
     sim.data = data
     sim.scale = scale
     sim.sgv = sgv
@@ -204,23 +204,23 @@ let sim = {
   // 0.3 -> 1s mô phỏng bằng 3s thực tế
   speed: 0.1,
 
-  timeToMin: (time) => {
+  timeToMin: function(time) {
     parts = time.split(":")
     return parseInt(parts[0]) * 60 + parseInt(parts[1])
   },
 
-  dayToMin: (day) => {
+  dayToMin: function(day) {
     return day * 24 * 60
   },
 
-  setTrainsByTime: (time) => {
+  setTrainsByTime: function(time) {
     var total = sim.trains.length
     for (i = 0; i < total; i++) {
       sim.setTrainByTime(i, time)
     }
   },
 
-  setTrainByTime: (index, time) => {
+  setTrainByTime: function(index, time) {
     if (time < sim.trains[index].start) {
       sim.trainCircles[index].style("opacity", 0)
       sim.trainLabels[index].style("opacity", 0)
@@ -279,7 +279,7 @@ let sim = {
     sim.trainLastPos[index] = route
   },
 
-  createTrain: (name, route, day) => {
+  createTrain: function(name, route, day) {
     var train = {
       'name': name + '_' + day,
       'start': '',
@@ -334,12 +334,12 @@ let sim = {
 
     sim.trainLastPos.push(null)
   },
-  resetLastPos: () => {
+  resetLastPos: function() {
     for (var pos in sim.trainLastPos) {
       sim.trainLastPos[pos] = null
     }
   },
-  updateTimer: (time) => {
+  updateTimer: function(time) {
     var midnightToNow = Math.round(time) % (60 * 24);
     var hh = Math.floor(midnightToNow / 60);
     var mm = midnightToNow - (hh * 60);
@@ -359,15 +359,15 @@ let sim = {
    */
   simTime: 2 * 24 * 60,
 
-  simPause: () => {
+  simPause: function() {
     sim.simIsPaused = true;
   },
 
-  simPlay: () => {
+  simPlay: function() {
     sim.simIsPaused = false;
   },
 
-  simRunningStatus: () => {
+  simRunningStatus: function() {
     return !sim.simIsPaused;
   },
 
@@ -386,7 +386,7 @@ let sim = {
     }
   },
 
-  simEnable: () => {
+  simEnable: function() {
     if (!sim.simIsPaused) {
       sim.setTrainsByTime(sim.simTime)
       sim.updateTimer(sim.simTime)
@@ -401,15 +401,15 @@ let sim = {
 }
 
 // Merley
-let marley = {
-  init: (data, scale) => {
+var marley = {
+  init: function(data, scale) {
     marley.data = data
     marley.scale = scale
 
     marley.render()
   },
 
-  render: () => {
+  render: function() {
     // Tạo dữ liệu
     for (var route in marley.data.routes) {
       marley.dataTimeTable.push(marley.getTrainDiagramData(route))
@@ -551,8 +551,8 @@ let marley = {
     // On Scorll
     var w = $(window);
     var inner = $("#bieudo_chaytau");
-    let isOnScrollCall = false;
-    let updatePos = () => {
+    var isOnScrollCall = false;
+    var updatePos = function() {
       var bieudo_offset_top = $("#bieudo_chaytau").offset().top
       var bieudo_h = $("#bieudo_chaytau").outerHeight()
       var window_scroll_h = w.scrollTop()
@@ -573,7 +573,7 @@ let marley = {
 
       isOnScrollCall = false
     }
-    let onScorllCaller = () => {
+    var onScorllCaller = function() {
       if(!isOnScrollCall) {
         requestAnimationFrame(updatePos)
       }
@@ -591,7 +591,7 @@ let marley = {
     // })
   },
 
-  formatTime: (time) => {
+  formatTime: function(time) {
     var a = time.split(":")
     return "." + a[1]
   },
@@ -602,7 +602,7 @@ let marley = {
 
   dataTimeTable: [],
 
-  getTrainDiagramData: (route) => {
+  getTrainDiagramData: function(route) {
     var point = []
     var i = 0
     var lastKm = 0
