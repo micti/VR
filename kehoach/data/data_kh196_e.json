@@ -1036,8 +1036,8 @@
             "m": 760,
             "pos": 148
         },
-        "BTH": {
-            "code": "BTH",
+        "MMA": {
+            "code": "MMA",
             "name": "Bình Thuận",
             "km": 1551,
             "m": 150,
@@ -2788,10 +2788,10 @@
                 "2": 8
             }
         },
-        "MLA-BTH": {
+        "MLA-MMA": {
             "station1": "MLA",
-            "station2": "BTH",
-            "code": "MLA-BTH",
+            "station2": "MMA",
+            "code": "MLA-MMA",
             "length": 18390,
             "pos": 148,
             "tcf": {
@@ -2799,10 +2799,10 @@
                 "2": 15
             }
         },
-        "BTH-SVA": {
-            "station1": "BTH",
+        "MMA-SVA": {
+            "station1": "MMA",
             "station2": "SVA",
-            "code": "BTH-SVA",
+            "code": "MMA-SVA",
             "length": 16570,
             "pos": 149,
             "tcf": {
@@ -4915,9 +4915,9 @@
                     "time2OutDay": 2,
                     "duration": 8
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "2:14",
                     "time1InDay": 2,
                     "time1Out": "2:14",
@@ -4928,8 +4928,8 @@
                     "time2OutDay": 2,
                     "duration": 18
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "2:32",
                     "time1InDay": 2,
@@ -7080,9 +7080,9 @@
                     "time2OutDay": 2,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "0:52",
                     "time1InDay": 2,
                     "time1Out": "0:52",
@@ -7093,8 +7093,8 @@
                     "time2OutDay": 2,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "1:08",
                     "time1InDay": 2,
@@ -9245,9 +9245,9 @@
                     "time2OutDay": 1,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "14:51",
                     "time1InDay": 1,
                     "time1Out": "14:51",
@@ -9258,8 +9258,8 @@
                     "time2OutDay": 1,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "15:07",
                     "time1InDay": 1,
@@ -11410,9 +11410,9 @@
                     "time2OutDay": 1,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "12:11",
                     "time1InDay": 1,
                     "time1Out": "12:11",
@@ -11423,8 +11423,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "12:28",
                     "time1InDay": 1,
@@ -13575,9 +13575,9 @@
                     "time2OutDay": 1,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "22:10",
                     "time1InDay": 1,
                     "time1Out": "22:10",
@@ -13588,8 +13588,8 @@
                     "time2OutDay": 1,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "22:26",
                     "time1InDay": 1,
@@ -15740,9 +15740,9 @@
                     "time2OutDay": 1,
                     "duration": 10
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "16:33",
                     "time1InDay": 1,
                     "time1Out": "16:33",
@@ -15753,8 +15753,8 @@
                     "time2OutDay": 1,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "16:49",
                     "time1InDay": 1,
@@ -19180,9 +19180,9 @@
                     "time2OutDay": 1,
                     "duration": 10
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "0:30",
                     "time1InDay": 1,
                     "time1Out": "1:29",
@@ -19193,8 +19193,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "1:46",
                     "time1InDay": 1,
@@ -23285,9 +23285,9 @@
                     "time2OutDay": 1,
                     "duration": 10
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "0:01",
                     "time1InDay": 1,
                     "time1Out": "0:01",
@@ -23298,8 +23298,8 @@
                     "time2OutDay": 1,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "0:17",
                     "time1InDay": 1,
@@ -23747,9 +23747,9 @@
                     "time2OutDay": 1,
                     "duration": 10
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "2:37",
                     "time1InDay": 1,
                     "time1Out": "2:54",
@@ -23760,8 +23760,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "3:11",
                     "time1InDay": 1,
@@ -24209,9 +24209,9 @@
                     "time2OutDay": 0,
                     "duration": 10
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "17:01",
                     "time1InDay": 0,
                     "time1Out": "17:01",
@@ -24222,8 +24222,8 @@
                     "time2OutDay": 0,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "17:17",
                     "time1InDay": 0,
@@ -24671,9 +24671,9 @@
                     "time2OutDay": 0,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "21:30",
                     "time1InDay": 0,
                     "time1Out": "21:30",
@@ -24684,8 +24684,8 @@
                     "time2OutDay": 0,
                     "duration": 16
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "21:46",
                     "time1InDay": 0,
@@ -25367,9 +25367,9 @@
                     "time2OutDay": 0,
                     "duration": 13
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "22:55",
                     "time1InDay": 0,
                     "time1Out": "22:55",
@@ -25380,8 +25380,8 @@
                     "time2OutDay": 0,
                     "duration": 17
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "23:12",
                     "time1InDay": 0,
@@ -26245,9 +26245,9 @@
                     "time2OutDay": 1,
                     "duration": 9
                 },
-                "MLA-BTH": {
+                "MLA-MMA": {
                     "station1": "MLA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "3:40",
                     "time1InDay": 1,
                     "time1Out": "3:40",
@@ -26258,8 +26258,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "3:57",
                     "time1InDay": 1,
@@ -26499,8 +26499,8 @@
             "skip_start": 148,
             "skip_end": 0,
             "sections": {
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "13:16",
                     "time1InDay": 0,
@@ -26740,8 +26740,8 @@
             "skip_start": 148,
             "skip_end": 0,
             "sections": {
-                "BTH-SVA": {
-                    "station1": "BTH",
+                "MMA-SVA": {
+                    "station1": "MMA",
                     "station2": "SVA",
                     "time1In": "13:51",
                     "time1InDay": 0,
@@ -27202,9 +27202,9 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "0:48",
                     "time1InDay": 1,
                     "time1Out": "0:48",
@@ -27215,8 +27215,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "1:05",
                     "time1InDay": 1,
@@ -29367,9 +29367,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "22:57",
                     "time1InDay": 0,
                     "time1Out": "22:57",
@@ -29380,8 +29380,8 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "23:15",
                     "time1InDay": 0,
@@ -31532,9 +31532,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "12:07",
                     "time1InDay": 0,
                     "time1Out": "12:07",
@@ -31545,8 +31545,8 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "12:25",
                     "time1InDay": 0,
@@ -33697,9 +33697,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "9:11",
                     "time1InDay": 0,
                     "time1Out": "9:11",
@@ -33710,8 +33710,8 @@
                     "time2OutDay": 0,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "9:28",
                     "time1InDay": 0,
@@ -35862,9 +35862,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "18:20",
                     "time1InDay": 0,
                     "time1Out": "18:20",
@@ -35875,8 +35875,8 @@
                     "time2OutDay": 0,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "18:37",
                     "time1InDay": 0,
@@ -38027,9 +38027,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "11:07",
                     "time1InDay": 0,
                     "time1Out": "11:07",
@@ -38040,8 +38040,8 @@
                     "time2OutDay": 0,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "11:24",
                     "time1InDay": 0,
@@ -42442,9 +42442,9 @@
                     "time2OutDay": 0,
                     "duration": 19
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "15:21",
                     "time1InDay": 0,
                     "time1Out": "15:32",
@@ -42455,8 +42455,8 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "15:50",
                     "time1InDay": 0,
@@ -47275,9 +47275,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "23:42",
                     "time1InDay": 0,
                     "time1Out": "23:42",
@@ -47288,8 +47288,8 @@
                     "time2OutDay": 1,
                     "duration": 18
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "00:0",
                     "time1InDay": 1,
@@ -47737,9 +47737,9 @@
                     "time2OutDay": 1,
                     "duration": 20
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "2:48",
                     "time1InDay": 1,
                     "time1Out": "2:57",
@@ -47750,8 +47750,8 @@
                     "time2OutDay": 1,
                     "duration": 18
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "3:15",
                     "time1InDay": 1,
@@ -48199,9 +48199,9 @@
                     "time2OutDay": 1,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "3:30",
                     "time1InDay": 1,
                     "time1Out": "3:37",
@@ -48212,8 +48212,8 @@
                     "time2OutDay": 1,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "3:54",
                     "time1InDay": 1,
@@ -48661,9 +48661,9 @@
                     "time2OutDay": 1,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "4:13",
                     "time1InDay": 1,
                     "time1Out": "4:19",
@@ -48674,8 +48674,8 @@
                     "time2OutDay": 1,
                     "duration": 19
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "4:38",
                     "time1InDay": 1,
@@ -49123,9 +49123,9 @@
                     "time2OutDay": 1,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "1:30",
                     "time1InDay": 1,
                     "time1Out": "2:10",
@@ -49136,8 +49136,8 @@
                     "time2OutDay": 1,
                     "duration": 19
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "2:29",
                     "time1InDay": 1,
@@ -49819,9 +49819,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "22:12",
                     "time1InDay": 0,
                     "time1Out": "22:12",
@@ -49832,8 +49832,8 @@
                     "time2OutDay": 0,
                     "duration": 17
                 },
-                "BTH-MLA": {
-                    "station1": "BTH",
+                "MMA-MLA": {
+                    "station1": "MMA",
                     "station2": "MLA",
                     "time1In": "22:29",
                     "time1InDay": 0,
@@ -50697,9 +50697,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "9:57",
                     "time1InDay": 0,
                     "time1Out": "9:57",
@@ -50938,9 +50938,9 @@
                     "time2OutDay": 0,
                     "duration": 18
                 },
-                "SVA-BTH": {
+                "SVA-MMA": {
                     "station1": "SVA",
-                    "station2": "BTH",
+                    "station2": "MMA",
                     "time1In": "10:30",
                     "time1InDay": 0,
                     "time1Out": "10:30",
