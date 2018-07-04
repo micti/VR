@@ -1,0 +1,143 @@
+*, *::after, *::before {
+  box-sizing: border-box
+}
+
+body, ul, form, div, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.header {
+  background-color: blueviolet;
+  color: #fff;
+}
+.header .title {
+  padding: 0 1rem;
+  display: flex;
+}
+
+.header .title .icon {
+  height: 36px;
+  padding-top: 12px;
+  margin-right: 8px;
+}
+
+.header .title .icon svg .path {
+  fill: #fff;
+}
+
+.header .title .intro {
+  text-transform: uppercase;
+  height: 36px;
+  padding-top: 12px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.header .title .date {
+  text-transform: uppercase;
+  height: 36px;
+  padding: 12px 8px 0 8px;
+  background-color: #cfcfcf;
+  font-weight: 700;
+}
+
+.header nav {
+  color: #eee;
+  font-size: 0.875rem;
+  padding: 0.25rem 1rem;
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  height: 24px;
+}
+
+.data-list {
+  background: #fff;
+}
+
+.data, .data-header {
+  background: #ccc;
+  padding: 0 1rem;
+  display: flex;
+  font-size: 0.875rem
+}
+
+.data {
+  background: #fff;
+  padding: 0.25rem 1rem;
+}
+
+.data + .data {
+  border-top: 1px dashed #ddd;
+}
+
+.time-status {
+  flex: none;
+  width: 170px;
+}
+.train {
+  flex: none;
+  width: 400px;
+}
+.locomotive {
+  flex-grow: 1;
+}
+
+.loco-info {
+  display: flex;
+  align-items: center;
+}
+
+.loco-info + .loco-info {
+  margin-top: 4px;
+}
+
+.train-name, .locomotive-type, .locomotive-name, .status {
+  padding: 2px 4px;
+  background-color: #eee;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.locomotive-type {
+  margin-right: 4px;
+  flex: none;
+  width: 45px;
+}
+
+.locomotive-name {
+  flex: none;
+  width: 90px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.locomotive-name + .locomotive-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid #ddd;
+}
+
+.status.is-running {
+  background-color: #ccc;
+}
+
+.train-name {
+  font-weight: 700;
+  width: 100px;
+}
