@@ -95,6 +95,11 @@ body {
   width: 400px;
 }
 .locomotive {
+  flex: none;
+  width: 400px;
+}
+
+.checkpoint {
   flex-grow: 1;
 }
 
