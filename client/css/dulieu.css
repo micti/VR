@@ -148,11 +148,11 @@ body {
 }
 
 .data-list.is-loco-list .locomotive, .data-header.is-loco-list .locomotive {
-  width: 200px;
+  width: 180px;
 }
 
 .data-list.is-loco-list .train, .data-header.is-loco-list .train {
-  width: 200px;
+  width: 150px;
 }
 
 .time-status.is-to-time {
