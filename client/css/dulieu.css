@@ -154,3 +154,7 @@ body {
 .data-list.is-loco-list .train, .data-header.is-loco-list .train {
   width: 200px;
 }
+
+.time-status.is-to-time {
+  width: 220px;
+}
