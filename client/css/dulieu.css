@@ -159,6 +159,8 @@ body {
   width: 220px;
 }
 
-.data-list.is-passenger-train-list .time-status, .data-header.is-passenger-train-list .time-status {
+.data-list.is-passenger-train-list .time-status,
+.data-header.is-passenger-train-list .time-status,
+.data-header.is-loco-list .time-status {
   width: 220px;
 }
