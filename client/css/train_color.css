@@ -1,231 +1,413 @@
-.t_se1_f, .t_se1 circle, .t_se2_f, .t_se2 circle {
+.t_se1_f,
+.t_se1 circle,
+.t_se2_f,
+.t_se2 circle {
     fill: #1f77b4 !important;
 }
 
-.t_se1_s, .t_se1 path, .t_se2_s, .t_se2 path {
+.t_se1_s,
+.t_se1 path,
+.t_se2_s,
+.t_se2 path {
     stroke: #1f77b4 !important;
 }
 
-.t_se3_f, .t_se3 circle, .t_se4_f, .t_se4 circle {
+.t_se3_f,
+.t_se3 circle,
+.t_se4_f,
+.t_se4 circle {
     fill: #aec7e8 !important;
 }
 
-.t_se3_s, .t_se3 path, .t_se4_s, .t_se4 path {
+.t_se3_s,
+.t_se3 path,
+.t_se4_s,
+.t_se4 path {
     stroke: #aec7e8 !important;
 }
 
-.t_se5_f, .t_se5 circle, .t_se6_f, .t_se6 circle {
+.t_se5_f,
+.t_se5 circle,
+.t_se6_f,
+.t_se6 circle {
     fill: #ff7f0e !important;
 }
 
-.t_se5_s, .t_se5 path, .t_se6_s, .t_se6 path {
+.t_se5_s,
+.t_se5 path,
+.t_se6_s,
+.t_se6 path {
     stroke: #ff7f0e !important;
 }
 
-.t_se7_f, .t_se7 circle, .t_se8_f, .t_se8 circle {
+.t_se7_f,
+.t_se7 circle,
+.t_se8_f,
+.t_se8 circle {
     fill: #ffbb78 !important;
 }
 
-.t_se7_s, .t_se7 path, .t_se8_s, .t_se8 path {
+.t_se7_s,
+.t_se7 path,
+.t_se8_s,
+.t_se8 path {
     stroke: #ffbb78 !important;
 }
 
-.t_se9_f, .t_se9 circle, .t_se10_f, .t_se10 circle {
+.t_se9_f,
+.t_se9 circle,
+.t_se10_f,
+.t_se10 circle {
     fill: #2ca02c !important;
 }
 
-.t_se9_s, .t_se9 path, .t_se10_s, .t_se10 path {
+.t_se9_s,
+.t_se9 path,
+.t_se10_s,
+.t_se10 path {
     stroke: #2ca02c !important;
 }
 
-.t_se11_f, .t_se11 circle, .t_se12_f, .t_se12 circle {
+.t_se11_f,
+.t_se11 circle,
+.t_se12_f,
+.t_se12 circle {
     fill: #98df8a !important;
 }
 
-.t_se11_s, .t_se11 path, .t_se12_s, .t_se12 path {
+.t_se11_s,
+.t_se11 path,
+.t_se12_s,
+.t_se12 path {
     stroke: #98df8a !important;
 }
 
-.t_se13_f, .t_se13 circle, .t_se14_f, .t_se14 circle {
+.t_se13_f,
+.t_se13 circle,
+.t_se14_f,
+.t_se14 circle {
     fill: #d62728 !important;
 }
 
-.t_se13_s, .t_se13 path, .t_se14_s, .t_se14 path {
+.t_se13_s,
+.t_se13 path,
+.t_se14_s,
+.t_se14 path {
     stroke: #d62728 !important;
 }
 
-.t_se15_f, .t_se15 circle, .t_se16_f, .t_se16 circle {
+.t_se15_f,
+.t_se15 circle,
+.t_se16_f,
+.t_se16 circle {
     fill: #ff9896 !important;
 }
 
-.t_se15_s, .t_se15 path, .t_se16_s, .t_se16 path {
+.t_se15_s,
+.t_se15 path,
+.t_se16_s,
+.t_se16 path {
     stroke: #ff9896 !important;
 }
 
-.t_se17_f, .t_se17 circle, .t_se18_f, .t_se18 circle {
+.t_se17_f,
+.t_se17 circle,
+.t_se18_f,
+.t_se18 circle {
     fill: #9467bd !important;
 }
 
-.t_se17_s, .t_se17 path, .t_se18_s, .t_se18 path {
+.t_se17_s,
+.t_se17 path,
+.t_se18_s,
+.t_se18 path {
     stroke: #9467bd !important;
 }
 
-.t_se19_f, .t_se19 circle, .t_se20_f, .t_se20 circle {
+.t_se19_f,
+.t_se19 circle,
+.t_se20_f,
+.t_se20 circle {
     fill: #c5b0d5 !important;
 }
 
-.t_se19_s, .t_se19 path, .t_se20_s, .t_se20 path {
+.t_se19_s,
+.t_se19 path,
+.t_se20_s,
+.t_se20 path {
     stroke: #c5b0d5 !important;
 }
 
-.t_se21_f, .t_se21 circle, .t_se22_f, .t_se22 circle {
+.t_se21_f,
+.t_se21 circle,
+.t_se22_f,
+.t_se22 circle {
     fill: #8c564b !important;
 }
 
-.t_se21_s, .t_se21 path, .t_se22_s, .t_se22 path {
+.t_se21_s,
+.t_se21 path,
+.t_se22_s,
+.t_se22 path {
     stroke: #8c564b !important;
 }
 
-.t_se23_f, .t_se23 circle, .t_se24_f, .t_se24 circle {
+.t_se23_f,
+.t_se23 circle,
+.t_se24_f,
+.t_se24 circle {
     fill: #c49c94 !important;
 }
 
-.t_se23_s, .t_se23 path, .t_se24_s, .t_se24 path {
+.t_se23_s,
+.t_se23 path,
+.t_se24_s,
+.t_se24 path {
     stroke: #c49c94 !important;
 }
 
-.t_se25_f, .t_se25 circle, .t_se26_f, .t_se26 circle {
+.t_se25_f,
+.t_se25 circle,
+.t_se26_f,
+.t_se26 circle {
     fill: #e377c2 !important;
 }
 
-.t_se25_s, .t_se25 path, .t_se26_s, .t_se26 path {
+.t_se25_s,
+.t_se25 path,
+.t_se26_s,
+.t_se26 path {
     stroke: #e377c2 !important;
 }
 
-.t_se27_f, .t_se27 circle, .t_se28_f, .t_se28 circle {
+.t_se27_f,
+.t_se27 circle,
+.t_se28_f,
+.t_se28 circle {
     fill: #f7b6d2 !important;
 }
 
-.t_se27_s, .t_se27 path, .t_se28_s, .t_se28 path {
+.t_se27_s,
+.t_se27 path,
+.t_se28_s,
+.t_se28 path {
     stroke: #f7b6d2 !important;
 }
 
-.t_se29_f, .t_se29 circle, .t_se30_f, .t_se30 circle {
+.t_se29_f,
+.t_se29 circle,
+.t_se30_f,
+.t_se30 circle {
     fill: #7f7f7f !important;
 }
 
-.t_se29_s, .t_se29 path, .t_se30_s, .t_se30 path {
+.t_se29_s,
+.t_se29 path,
+.t_se30_s,
+.t_se30 path {
     stroke: #7f7f7f !important;
 }
 
-.t_se31_f, .t_se31 circle, .t_se32_f, .t_se32 circle {
+.t_se31_f,
+.t_se31 circle,
+.t_se32_f,
+.t_se32 circle {
     fill: #c7c7c7 !important;
 }
 
-.t_se31_s, .t_se31 path, .t_se32_s, .t_se32 path {
+.t_se31_s,
+.t_se31 path,
+.t_se32_s,
+.t_se32 path {
     stroke: #c7c7c7 !important;
 }
 
-.t_se33_f, .t_se33 circle, .t_se34_f, .t_se34 circle {
+.t_se33_f,
+.t_se33 circle,
+.t_se34_f,
+.t_se34 circle {
     fill: #bcbd22 !important;
 }
 
-.t_se33_s, .t_se33 path, .t_se34_s, .t_se34 path {
+.t_se33_s,
+.t_se33 path,
+.t_se34_s,
+.t_se34 path {
     stroke: #bcbd22 !important;
 }
 
-.t_se35_f, .t_se35 circle, .t_se36_f, .t_se36 circle {
+.t_se35_f,
+.t_se35 circle,
+.t_se36_f,
+.t_se36 circle {
     fill: #dbdb8d !important;
 }
 
-.t_se35_s, .t_se35 path, .t_se36_s, .t_se36 path {
+.t_se35_s,
+.t_se35 path,
+.t_se36_s,
+.t_se36 path {
     stroke: #dbdb8d !important;
 }
 
-.t_spt1_f, .t_spt1 circle, .t_spt2_f, .t_spt2 circle {
+.t_spt1_f,
+.t_spt1 circle,
+.t_spt2_f,
+.t_spt2 circle {
     fill: #17becf !important;
 }
 
-.t_spt1_s, .t_spt1 path, .t_spt2_s, .t_spt2 path {
+.t_spt1_s,
+.t_spt1 path,
+.t_spt2_s,
+.t_spt2 path {
     stroke: #17becf !important;
 }
 
-.t_spt3_f, .t_spt3 circle, .t_spt4_f, .t_spt4 circle {
+.t_spt3_f,
+.t_spt3 circle,
+.t_spt4_f,
+.t_spt4 circle {
     fill: #9edae5 !important;
 }
 
-.t_spt3_s, .t_spt3 path, .t_spt4_s, .t_spt4 path {
+.t_spt3_s,
+.t_spt3 path,
+.t_spt4_s,
+.t_spt4 path {
     stroke: #9edae5 !important;
 }
 
-.t_snt1_f, .t_snt1 circle, .t_snt2_f, .t_snt2 circle {
+.t_snt1_f,
+.t_snt1 circle,
+.t_snt2_f,
+.t_snt2 circle {
     fill: #393b79 !important;
 }
 
-.t_snt1_s, .t_snt1 path, .t_snt2_s, .t_snt2 path {
+.t_snt1_s,
+.t_snt1 path,
+.t_snt2_s,
+.t_snt2 path {
     stroke: #393b79 !important;
 }
 
-.t_snt3_f, .t_snt3 circle, .t_snt4_f, .t_snt4 circle {
+.t_snt3_f,
+.t_snt3 circle,
+.t_snt4_f,
+.t_snt4 circle {
     fill: #5254a3 !important;
 }
 
-.t_snt3_s, .t_snt3 path, .t_snt4_s, .t_snt4 path {
+.t_snt3_s,
+.t_snt3 path,
+.t_snt4_s,
+.t_snt4 path {
     stroke: #5254a3 !important;
 }
 
-.t_sqn1_f, .t_sqn1 circle, .t_sqn2_f, .t_sqn2 circle {
+.t_sqn1_f,
+.t_sqn1 circle,
+.t_sqn2_f,
+.t_sqn2 circle {
     fill: #6b6ecf !important;
 }
 
-.t_sqn1_s, .t_sqn1 path, .t_sqn2_s, .t_sqn2 path {
+.t_sqn1_s,
+.t_sqn1 path,
+.t_sqn2_s,
+.t_sqn2 path {
     stroke: #6b6ecf !important;
 }
 
-.t_sqn3_f, .t_sqn3 circle, .t_sqn4_f, .t_sqn4 circle {
+.t_sqn3_f,
+.t_sqn3 circle,
+.t_sqn4_f,
+.t_sqn4 circle {
     fill: #9c9ede !important;
 }
 
-.t_sqn3_s, .t_sqn3 path, .t_sqn4_s, .t_sqn4 path {
+.t_sqn3_s,
+.t_sqn3 path,
+.t_sqn4_s,
+.t_sqn4 path {
     stroke: #9c9ede !important;
 }
 
-.t_nh1_f, .t_nh1 circle, .t_nh2_f, .t_nh2 circle {
+.t_nh1_f,
+.t_nh1 circle,
+.t_nh2_f,
+.t_nh2 circle {
     fill: #637939 !important;
 }
 
-.t_nh1_s, .t_nh1 path, .t_nh2_s, .t_nh2 path {
+.t_nh1_s,
+.t_nh1 path,
+.t_nh2_s,
+.t_nh2 path {
     stroke: #637939 !important;
 }
 
-.t_qb1_f, .t_qb1 circle, .t_qb2_f, .t_qb2 circle {
+.t_qb1_f,
+.t_qb1 circle,
+.t_qb2_f,
+.t_qb2 circle {
     fill: #8ca252 !important;
 }
 
-.t_qb1_s, .t_qb1 path, .t_qb2_s, .t_qb2 path {
+.t_qb1_s,
+.t_qb1 path,
+.t_qb2_s,
+.t_qb2 path {
     stroke: #8ca252 !important;
 }
 
-.t_na1_f, .t_na1 circle, .t_na2_f, .t_na2 circle {
+.t_na1_f,
+.t_na1 circle,
+.t_na2_f,
+.t_na2 circle {
     fill: #b5cf6b !important;
 }
 
-.t_na1_s, .t_na1 path, .t_na2_s, .t_na2 path {
+.t_na1_s,
+.t_na1 path,
+.t_na2_s,
+.t_na2 path {
     stroke: #b5cf6b !important;
 }
 
-.t_na3_f, .t_na3 circle, .t_na4_f, .t_na4 circle {
+.t_na3_f,
+.t_na3 circle,
+.t_na4_f,
+.t_na4 circle {
     fill: #8c6d31 !important;
 }
 
-.t_na3_s, .t_na3 path, .t_na4_s, .t_na4 path {
+.t_na3_s,
+.t_na3 path,
+.t_na4_s,
+.t_na4 path {
     stroke: #8c6d31 !important;
 }
 
-.t_tn1_f, .t_tn1 circle, .t_tn2_f, .t_tn2 circle {
+.t_tn1_f,
+.t_tn1 circle,
+.t_tn2_f,
+.t_tn2 circle,
+.t_hđ1_f,
+.t_hđ1 circle,
+.t_hđ2_f,
+.t_hđ2 circle {
     fill: #bd9e39 !important;
 }
 
-.t_tn1_s, .t_tn1 path, .t_tn2_s, .t_tn2 path {
+.t_tn1_s,
+.t_tn1 path,
+.t_tn2_s,
+.t_tn2 path,
+.t_hđ1_s,
+.t_hđ1 path,
+.t_hđ2_s,
+.t_hđ2 path {
     stroke: #bd9e39 !important;
 }

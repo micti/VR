@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "node dev_server.js",
+    "start": "node dev_server.js"
+  },
   "standard": {
     "globals": [
       "d3"
