@@ -1,1 +1,0 @@
-exclude: [src, node_modules, Gemfile, Gemfile.lock, package-lock.json, package.json, README.md]

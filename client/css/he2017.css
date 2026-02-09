@@ -1,17 +1,17 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #000;
 }
 
 svg {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .material-icons {
-    font-family: 'Material Icons';
+    font-family: "Material Icons";
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px; /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -29,7 +29,7 @@ svg {
     -moz-osx-font-smoothing: grayscale;
 
     /* Support for IE. */
-    font-feature-settings: 'liga';
+    font-feature-settings: "liga";
 }
 
 .modal {
@@ -71,7 +71,7 @@ svg {
     position: relative;
     height: 500px;
     background-size: cover;
-    background-image: url(/client/img/kehoach/tet2017/banner01.jpg);
+    background-image: url(/images/kehoach/tet2017/banner01.jpg);
 }
 
 .page_header .cover_filter {
@@ -90,7 +90,7 @@ svg {
     top: 0;
     left: 0;
     right: 0;
-    heigh: 500px;
+    height: 500px;
     color: #fff;
     z-index: 2;
     padding: 30px;
@@ -245,7 +245,7 @@ svg {
 
 .section_date .period .before_tet div {
     float: left;
-    width: 7.692307692%
+    width: 7.692307692%;
 }
 
 .section_date .period .in_tet {
@@ -257,7 +257,7 @@ svg {
 
 .section_date .period .in_tet div {
     float: left;
-    width: 11.1111111111%
+    width: 11.1111111111%;
 }
 
 .section_date .period .after_tet {
@@ -269,7 +269,7 @@ svg {
 
 .section_date .period .after_tet div {
     float: left;
-    width: 7.692307692%
+    width: 7.692307692%;
 }
 
 .section_date .period .before_tet.title,
@@ -471,7 +471,8 @@ svg {
     line-height: 0.8rem;
 }
 
-.section_schedule .train .day_info.old_cc, .section_schedule .train .day_info.unknow_cc {
+.section_schedule .train .day_info.old_cc,
+.section_schedule .train .day_info.unknow_cc {
     color: #000;
 }
 
@@ -512,7 +513,7 @@ svg {
 }
 
 .station_label {
-    text-anchor: end
+    text-anchor: end;
 }
 
 #bieudo_chaytau {
@@ -521,7 +522,6 @@ svg {
 }
 
 #bieudo_chaytau_svg {
-
 }
 
 #bieudo_chaytau_station_svg {
@@ -530,7 +530,6 @@ svg {
     left: 0;
     width: 50px;
     background: #fff;
-
 }
 
 #bieudo_chaytau_time_svg {
@@ -542,12 +541,13 @@ svg {
     background: #fff;
 }
 
-#bieudo_chaytau_svg .line_helper line, #bieudo_chaytau_svg .time_helper line {
+#bieudo_chaytau_svg .line_helper line,
+#bieudo_chaytau_svg .time_helper line {
     fill: none;
     stroke-width: 1px;
     stroke: #ddd;
     shape-rendering: crispEdges;
-    stroke-dasharray: 1, 1
+    stroke-dasharray: 1, 1;
 }
 
 #bieudo_chaytau_station_svg .station_helper text {

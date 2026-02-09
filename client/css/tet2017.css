@@ -1,17 +1,17 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #000;
 }
 
 svg {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .material-icons {
-    font-family: 'Material Icons';
+    font-family: "Material Icons";
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px; /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -29,7 +29,7 @@ svg {
     -moz-osx-font-smoothing: grayscale;
 
     /* Support for IE. */
-    font-feature-settings: 'liga';
+    font-feature-settings: "liga";
 }
 
 .modal {
@@ -71,7 +71,7 @@ svg {
     position: relative;
     height: 500px;
     background-size: cover;
-    background-image: url(/client/img/kehoach/tet2017/banner01.jpg);
+    background-image: url(/images/kehoach/tet2017/banner01.jpg);
 }
 
 .page_header .cover_filter {
@@ -90,7 +90,7 @@ svg {
     top: 0;
     left: 0;
     right: 0;
-    heigh: 500px;
+    height: 500px;
     color: #fff;
     z-index: 2;
     padding: 30px;
@@ -245,7 +245,7 @@ svg {
 
 .section_date .period .before_tet div {
     float: left;
-    width: 7.692307692%
+    width: 7.692307692%;
 }
 
 .section_date .period .in_tet {
@@ -257,7 +257,7 @@ svg {
 
 .section_date .period .in_tet div {
     float: left;
-    width: 11.1111111111%
+    width: 11.1111111111%;
 }
 
 .section_date .period .after_tet {
@@ -269,7 +269,7 @@ svg {
 
 .section_date .period .after_tet div {
     float: left;
-    width: 7.692307692%
+    width: 7.692307692%;
 }
 
 .section_date .period .before_tet.title,
@@ -359,137 +359,198 @@ svg {
     background-color: #eee;
 }
 
-.t_se1, .t_se2 {
+.t_se1,
+.t_se2 {
     background-color: #1f77b4;
 }
 
-.t_se3, .t_se4  {
-    background-color: #aec7e8
+.t_se3,
+.t_se4 {
+    background-color: #aec7e8;
 }
 
-.t_se5, .t_se6  {
-    background-color: #ff7f0e
+.t_se5,
+.t_se6 {
+    background-color: #ff7f0e;
 }
 
-.t_se7, .t_se8  {
-    background-color: #ffbb78
+.t_se7,
+.t_se8 {
+    background-color: #ffbb78;
 }
 
-.t_se9, .t_se10 {
-    background-color: #2ca02c
+.t_se9,
+.t_se10 {
+    background-color: #2ca02c;
 }
 
-.t_se31, .t_se32 {
-    background-color: #98df8a
+.t_se31,
+.t_se32 {
+    background-color: #98df8a;
 }
 
-.t_se13, .t_se14 {
-    background-color: #d62728
+.t_se13,
+.t_se14 {
+    background-color: #d62728;
 }
 
-.t_se17, .t_se18 {
-    background-color: #ff9896
+.t_se17,
+.t_se18 {
+    background-color: #ff9896;
 }
 
-.t_se21, .t_se22 {
-    background-color: #c7c7c7
+.t_se21,
+.t_se22 {
+    background-color: #c7c7c7;
 }
 
-.t_se23, .t_se24 {
-    background-color: #9467bd
+.t_se23,
+.t_se24 {
+    background-color: #9467bd;
 }
 
-.t_se25, .t_se26 {
-    background-color: #c5b0d5
+.t_se25,
+.t_se26 {
+    background-color: #c5b0d5;
 }
 
-.t_se29, .t_se30 {
-    background-color: #8c564b
+.t_se29,
+.t_se30 {
+    background-color: #8c564b;
 }
 
-.t_tn1, .t_tn2 {
-    background-color: #c49c94
+.t_tn1,
+.t_tn2 {
+    background-color: #c49c94;
 }
 
-.t_tn3, .t_tn4 {
-    background-color: #e377c2
+.t_tn3,
+.t_tn4 {
+    background-color: #e377c2;
 }
 
-.t_tn5, .t_tn6 {
-    background-color: #f7b6d2
+.t_tn5,
+.t_tn6 {
+    background-color: #f7b6d2;
 }
 
-.t_tn7, .t_tn8 {
-    background-color: #7f7f7f
+.t_tn7,
+.t_tn8 {
+    background-color: #7f7f7f;
 }
 
-.t_snt1, .t_snt2 {
-    background-color: #bcbd22
+.t_snt1,
+.t_snt2 {
+    background-color: #bcbd22;
 }
 
-.t_snt3, .t_snt4, .t_snt6, .t_7502, .t_7501 {
-    background-color: #dbdb8d
+.t_snt3,
+.t_snt4,
+.t_snt6,
+.t_7502,
+.t_7501 {
+    background-color: #dbdb8d;
 }
 
-.t_spt1, .t_spt2 {
-    background-color: #17becf
+.t_spt1,
+.t_spt2 {
+    background-color: #17becf;
 }
 
-.t_sqn1, .t_sqn2 {
-    background-color: #9edae5
+.t_sqn1,
+.t_sqn2 {
+    background-color: #9edae5;
 }
 
 .t_se28 {
-    background-color: #393b79
+    background-color: #393b79;
 }
 
-.t_sn7, .t_sn8, .t_sn3, .t_sn4, .t_sn5, .t_sn6 {
-    background-color: #5254a3
+.t_sn7,
+.t_sn8,
+.t_sn3,
+.t_sn4,
+.t_sn5,
+.t_sn6 {
+    background-color: #5254a3;
 }
 
-.t_se11, .t_se12 {
+.t_se11,
+.t_se12 {
     background-color: #6b6ecf;
 }
 
-.t_se15, .t_se16 {
+.t_se15,
+.t_se16 {
     background-color: #9c9ede;
 }
 
-.t_spt3, .t_spt4 {
+.t_spt3,
+.t_spt4 {
     background-color: #bd9e39;
 }
 
-.t_se19, .t_se20 {
+.t_se19,
+.t_se20 {
     background-color: #e7ba52;
 }
 
-.t_na1, .t_na2, .t_na3, .t_na4, .t_na5, .t_na6, .t_na7, .t_na8,
-.t_na10, .t_7304, .t_7303 {
+.t_na1,
+.t_na2,
+.t_na3,
+.t_na4,
+.t_na5,
+.t_na6,
+.t_na7,
+.t_na8,
+.t_na10,
+.t_7304,
+.t_7303 {
     background-color: #e7cb94;
 }
 
-.t_sd5, .t_sd6, .t_7503, .t_sd2, .t_sd3, .t_sd4 {
-    background-color: #637939
+.t_sd5,
+.t_sd6,
+.t_7503,
+.t_sd2,
+.t_sd3,
+.t_sd4 {
+    background-color: #637939;
 }
 
-.t_sq2, .t_7407 {
-    background-color: #8ca252
+.t_sq2,
+.t_7407 {
+    background-color: #8ca252;
 }
 
-.t_stk2, .t_stk3, .t_stk4, .t_7405 {
-    background-color: #b5cf6b
+.t_stk2,
+.t_stk3,
+.t_stk4,
+.t_7405 {
+    background-color: #b5cf6b;
 }
 
-.t_d5, .t_d6, .t_7403, .t_d2, .t_d3, .t_d4, .t_d7, .t_d8 {
-    background-color: #cedb9c
+.t_d5,
+.t_d6,
+.t_7403,
+.t_d2,
+.t_d3,
+.t_d4,
+.t_d7,
+.t_d8 {
+    background-color: #cedb9c;
 }
 
-.t_se35, .t_se36, .t_se37 {
-    background-color: #8c6d31
+.t_se35,
+.t_se36,
+.t_se37 {
+    background-color: #8c6d31;
 }
 
-.t_sq5, .t_sq6, .t_7401 {
-    background-color: #843c39
+.t_sq5,
+.t_sq6,
+.t_7401 {
+    background-color: #843c39;
 }
 
 .section_cc #ccc {
@@ -604,7 +665,8 @@ svg {
     line-height: 0.8rem;
 }
 
-.section_schedule .train .day_info.old_cc, .section_schedule .train .day_info.unknow_cc {
+.section_schedule .train .day_info.old_cc,
+.section_schedule .train .day_info.unknow_cc {
     color: #000;
 }
 
@@ -645,7 +707,7 @@ svg {
 }
 
 .station_label {
-    text-anchor: end
+    text-anchor: end;
 }
 
 #bieudo_chaytau {
@@ -654,7 +716,6 @@ svg {
 }
 
 #bieudo_chaytau_svg {
-
 }
 
 #bieudo_chaytau_station_svg {
@@ -663,7 +724,6 @@ svg {
     left: 0;
     width: 50px;
     background: #fff;
-
 }
 
 #bieudo_chaytau_time_svg {
@@ -675,12 +735,13 @@ svg {
     background: #fff;
 }
 
-#bieudo_chaytau_svg .line_helper line, #bieudo_chaytau_svg .time_helper line {
+#bieudo_chaytau_svg .line_helper line,
+#bieudo_chaytau_svg .time_helper line {
     fill: none;
     stroke-width: 1px;
     stroke: #ddd;
     shape-rendering: crispEdges;
-    stroke-dasharray: 1, 1
+    stroke-dasharray: 1, 1;
 }
 
 #bieudo_chaytau_station_svg .station_helper text {
@@ -714,172 +775,256 @@ svg {
     font-size: 12px;
 }
 
-#bieudo_chaytau_svg .se1 path, #bieudo_chaytau_svg .se2 path {
+#bieudo_chaytau_svg .se1 path,
+#bieudo_chaytau_svg .se2 path {
     stroke: #1f77b4;
 }
 
-#bieudo_chaytau_svg .se3 path, #bieudo_chaytau_svg .se4 path {
-    stroke: #aec7e8
+#bieudo_chaytau_svg .se3 path,
+#bieudo_chaytau_svg .se4 path {
+    stroke: #aec7e8;
 }
 
-#bieudo_chaytau_svg .se5 path, #bieudo_chaytau_svg .se6 path {
-    stroke: #ff7f0e
+#bieudo_chaytau_svg .se5 path,
+#bieudo_chaytau_svg .se6 path {
+    stroke: #ff7f0e;
 }
 
-#bieudo_chaytau_svg .se7 path, #bieudo_chaytau_svg .se8 path {
-    stroke: #ffbb78
+#bieudo_chaytau_svg .se7 path,
+#bieudo_chaytau_svg .se8 path {
+    stroke: #ffbb78;
 }
 
-#bieudo_chaytau_svg .se9 path, #bieudo_chaytau_svg .se10 path {
-    stroke: #2ca02c
+#bieudo_chaytau_svg .se9 path,
+#bieudo_chaytau_svg .se10 path {
+    stroke: #2ca02c;
 }
 
-#bieudo_chaytau_svg .se11 path, #bieudo_chaytau_svg .se12 path {
-    stroke: #98df8a
+#bieudo_chaytau_svg .se11 path,
+#bieudo_chaytau_svg .se12 path {
+    stroke: #98df8a;
 }
 
-#bieudo_chaytau_svg .se13 path, #bieudo_chaytau_svg .se14 path {
-    stroke: #d62728
+#bieudo_chaytau_svg .se13 path,
+#bieudo_chaytau_svg .se14 path {
+    stroke: #d62728;
 }
 
-#bieudo_chaytau_svg .se17 path, #bieudo_chaytau_svg .se18 path {
-    stroke: #ff9896
+#bieudo_chaytau_svg .se17 path,
+#bieudo_chaytau_svg .se18 path {
+    stroke: #ff9896;
 }
 
-#bieudo_chaytau_svg .se21 path, #bieudo_chaytau_svg .se22 path {
-    stroke: #c7c7c7
+#bieudo_chaytau_svg .se21 path,
+#bieudo_chaytau_svg .se22 path {
+    stroke: #c7c7c7;
 }
 
-#bieudo_chaytau_svg .se23 path, #bieudo_chaytau_svg .se24 path {
-    stroke: #9467bd
+#bieudo_chaytau_svg .se23 path,
+#bieudo_chaytau_svg .se24 path {
+    stroke: #9467bd;
 }
 
-#bieudo_chaytau_svg .se25 path, #bieudo_chaytau_svg .se26 path {
-    stroke: #c5b0d5
+#bieudo_chaytau_svg .se25 path,
+#bieudo_chaytau_svg .se26 path {
+    stroke: #c5b0d5;
 }
 
-#bieudo_chaytau_svg .se29 path, #bieudo_chaytau_svg .se30 path {
-    stroke: #8c564b
+#bieudo_chaytau_svg .se29 path,
+#bieudo_chaytau_svg .se30 path {
+    stroke: #8c564b;
 }
 
-#bieudo_chaytau_svg .tn1 path, #bieudo_chaytau_svg .tn2 path {
-    stroke: #c49c94
+#bieudo_chaytau_svg .tn1 path,
+#bieudo_chaytau_svg .tn2 path {
+    stroke: #c49c94;
 }
 
-#bieudo_chaytau_svg .tn3 path, #bieudo_chaytau_svg .tn4 path {
-    stroke: #e377c2
+#bieudo_chaytau_svg .tn3 path,
+#bieudo_chaytau_svg .tn4 path {
+    stroke: #e377c2;
 }
 
-#bieudo_chaytau_svg .tn5 path, #bieudo_chaytau_svg .tn6 path {
-    stroke: #f7b6d2
+#bieudo_chaytau_svg .tn5 path,
+#bieudo_chaytau_svg .tn6 path {
+    stroke: #f7b6d2;
 }
 
-#bieudo_chaytau_svg .tn7 path, #bieudo_chaytau_svg .tn8 path {
-    stroke: #7f7f7f
+#bieudo_chaytau_svg .tn7 path,
+#bieudo_chaytau_svg .tn8 path {
+    stroke: #7f7f7f;
 }
 
-#bieudo_chaytau_svg .snt1 path, #bieudo_chaytau_svg .snt2 path {
-    stroke: #bcbd22
+#bieudo_chaytau_svg .snt1 path,
+#bieudo_chaytau_svg .snt2 path {
+    stroke: #bcbd22;
 }
 
-#bieudo_chaytau_svg .snt3 path, #bieudo_chaytau_svg .snt4 path, #bieudo_chaytau_svg .snt6 path {
-    stroke: #dbdb8d
+#bieudo_chaytau_svg .snt3 path,
+#bieudo_chaytau_svg .snt4 path,
+#bieudo_chaytau_svg .snt6 path {
+    stroke: #dbdb8d;
 }
 
-#bieudo_chaytau_svg .spt1 path, #bieudo_chaytau_svg .spt2 path {
-    stroke: #17becf
+#bieudo_chaytau_svg .spt1 path,
+#bieudo_chaytau_svg .spt2 path {
+    stroke: #17becf;
 }
 
-#bieudo_chaytau_svg .sqn1 path, #bieudo_chaytau_svg .sqn2 path {
-    stroke: #9edae5
+#bieudo_chaytau_svg .sqn1 path,
+#bieudo_chaytau_svg .sqn2 path {
+    stroke: #9edae5;
 }
 
 #bieudo_chaytau_svg .se28 path {
-    stroke: #393b79
+    stroke: #393b79;
 }
 
-#bieudo .se1, #bieudo .se2, #bieudo_chaytau_svg .se1 circle, #bieudo_chaytau_svg .se2 circle {
+#bieudo .se1,
+#bieudo .se2,
+#bieudo_chaytau_svg .se1 circle,
+#bieudo_chaytau_svg .se2 circle {
     fill: #1f77b4;
 }
 
-#bieudo .se3, #bieudo .se4, #bieudo_chaytau_svg .se3 circle, #bieudo_chaytau_svg .se4 circle {
-    fill: #aec7e8
+#bieudo .se3,
+#bieudo .se4,
+#bieudo_chaytau_svg .se3 circle,
+#bieudo_chaytau_svg .se4 circle {
+    fill: #aec7e8;
 }
 
-#bieudo .se5, #bieudo .se6, #bieudo_chaytau_svg .se5 circle, #bieudo_chaytau_svg .se6 circle {
-    fill: #ff7f0e
+#bieudo .se5,
+#bieudo .se6,
+#bieudo_chaytau_svg .se5 circle,
+#bieudo_chaytau_svg .se6 circle {
+    fill: #ff7f0e;
 }
 
-#bieudo .se7, #bieudo .se8, #bieudo_chaytau_svg .se7 circle, #bieudo_chaytau_svg .se8 circle {
-    fill: #ffbb78
+#bieudo .se7,
+#bieudo .se8,
+#bieudo_chaytau_svg .se7 circle,
+#bieudo_chaytau_svg .se8 circle {
+    fill: #ffbb78;
 }
 
-#bieudo .se9, #bieudo .se10, #bieudo_chaytau_svg .se9 circle, #bieudo_chaytau_svg .se10 circle {
-    fill: #2ca02c
+#bieudo .se9,
+#bieudo .se10,
+#bieudo_chaytau_svg .se9 circle,
+#bieudo_chaytau_svg .se10 circle {
+    fill: #2ca02c;
 }
 
-#bieudo .se11, #bieudo .se12, #bieudo_chaytau_svg .se11 circle, #bieudo_chaytau_svg .se12 circle {
-    fill: #98df8a
+#bieudo .se11,
+#bieudo .se12,
+#bieudo_chaytau_svg .se11 circle,
+#bieudo_chaytau_svg .se12 circle {
+    fill: #98df8a;
 }
 
-#bieudo .se13, #bieudo .se14, #bieudo_chaytau_svg .se13 circle, #bieudo_chaytau_svg .se14 circle {
-    fill: #d62728
+#bieudo .se13,
+#bieudo .se14,
+#bieudo_chaytau_svg .se13 circle,
+#bieudo_chaytau_svg .se14 circle {
+    fill: #d62728;
 }
 
-#bieudo .se17, #bieudo .se18, #bieudo_chaytau_svg .se17 circle, #bieudo_chaytau_svg .se18 circle {
-    fill: #ff9896
+#bieudo .se17,
+#bieudo .se18,
+#bieudo_chaytau_svg .se17 circle,
+#bieudo_chaytau_svg .se18 circle {
+    fill: #ff9896;
 }
 
-#bieudo .se21, #bieudo .se22, #bieudo_chaytau_svg .se21 circle, #bieudo_chaytau_svg .se22 circle {
-    fill: #c7c7c7
+#bieudo .se21,
+#bieudo .se22,
+#bieudo_chaytau_svg .se21 circle,
+#bieudo_chaytau_svg .se22 circle {
+    fill: #c7c7c7;
 }
 
-#bieudo .se23, #bieudo .se24, #bieudo_chaytau_svg .se23 circle, #bieudo_chaytau_svg .se24 circle {
-    fill: #9467bd
+#bieudo .se23,
+#bieudo .se24,
+#bieudo_chaytau_svg .se23 circle,
+#bieudo_chaytau_svg .se24 circle {
+    fill: #9467bd;
 }
 
-#bieudo .se25, #bieudo .se26, #bieudo_chaytau_svg .se25 circle, #bieudo_chaytau_svg .se26 circle {
-    fill: #c5b0d5
+#bieudo .se25,
+#bieudo .se26,
+#bieudo_chaytau_svg .se25 circle,
+#bieudo_chaytau_svg .se26 circle {
+    fill: #c5b0d5;
 }
 
-#bieudo .se29, #bieudo .se30, #bieudo_chaytau_svg .se29 circle, #bieudo_chaytau_svg .se30 circle {
-    fill: #8c564b
+#bieudo .se29,
+#bieudo .se30,
+#bieudo_chaytau_svg .se29 circle,
+#bieudo_chaytau_svg .se30 circle {
+    fill: #8c564b;
 }
 
-#bieudo .tn1, #bieudo .tn2, #bieudo_chaytau_svg .tn1 circle, #bieudo_chaytau_svg .tn2 circle {
-    fill: #c49c94
+#bieudo .tn1,
+#bieudo .tn2,
+#bieudo_chaytau_svg .tn1 circle,
+#bieudo_chaytau_svg .tn2 circle {
+    fill: #c49c94;
 }
 
-#bieudo .tn3, #bieudo .tn4, #bieudo_chaytau_svg .tn3 circle, #bieudo_chaytau_svg .tn4 circle {
-    fill: #e377c2
+#bieudo .tn3,
+#bieudo .tn4,
+#bieudo_chaytau_svg .tn3 circle,
+#bieudo_chaytau_svg .tn4 circle {
+    fill: #e377c2;
 }
 
-#bieudo .tn5, #bieudo .tn6, #bieudo_chaytau_svg .tn5 circle, #bieudo_chaytau_svg .tn6 circle {
-    fill: #f7b6d2
+#bieudo .tn5,
+#bieudo .tn6,
+#bieudo_chaytau_svg .tn5 circle,
+#bieudo_chaytau_svg .tn6 circle {
+    fill: #f7b6d2;
 }
 
-#bieudo .tn8, #bieudo .tn7, #bieudo_chaytau_svg .tn7 circle, #bieudo_chaytau_svg .tn8 circle {
-    fill: #7f7f7f
+#bieudo .tn8,
+#bieudo .tn7,
+#bieudo_chaytau_svg .tn7 circle,
+#bieudo_chaytau_svg .tn8 circle {
+    fill: #7f7f7f;
 }
 
-#bieudo .snt2, #bieudo .snt1, #bieudo_chaytau_svg .snt1 circle, #bieudo_chaytau_svg .snt2 circle {
-    fill: #bcbd22
+#bieudo .snt2,
+#bieudo .snt1,
+#bieudo_chaytau_svg .snt1 circle,
+#bieudo_chaytau_svg .snt2 circle {
+    fill: #bcbd22;
 }
 
-#bieudo .snt6, #bieudo .snt4, #bieudo .snt3, #bieudo_chaytau_svg .snt3 circle, #bieudo_chaytau_svg .snt4 circle, #bieudo_chaytau_svg .snt6 circle {
-    fill: #dbdb8d
+#bieudo .snt6,
+#bieudo .snt4,
+#bieudo .snt3,
+#bieudo_chaytau_svg .snt3 circle,
+#bieudo_chaytau_svg .snt4 circle,
+#bieudo_chaytau_svg .snt6 circle {
+    fill: #dbdb8d;
 }
 
-#bieudo .spt1, #bieudo .spt2, #bieudo_chaytau_svg .spt1 circle, #bieudo_chaytau_svg .spt2 circle {
-    fill: #17becf
+#bieudo .spt1,
+#bieudo .spt2,
+#bieudo_chaytau_svg .spt1 circle,
+#bieudo_chaytau_svg .spt2 circle {
+    fill: #17becf;
 }
 
-#bieudo .sqn1, #bieudo .sqn2, #bieudo_chaytau_svg .sqn1 circle, #bieudo_chaytau_svg .sqn2 circle {
-    fill: #9edae5
+#bieudo .sqn1,
+#bieudo .sqn2,
+#bieudo_chaytau_svg .sqn1 circle,
+#bieudo_chaytau_svg .sqn2 circle {
+    fill: #9edae5;
 }
 
-#bieudo .se28, #bieudo_chaytau_svg .se28 circle {
-    fill: #393b79
+#bieudo .se28,
+#bieudo_chaytau_svg .se28 circle {
+    fill: #393b79;
 }
 
 /*

@@ -1,18 +1,15 @@
 {
   "scripts": {
-    "dev": "node dev_server.js",
-    "start": "node dev_server.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
   },
-  "standard": {
-    "globals": [
-      "d3"
-    ]
-  },
-  "dependencies": {
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-minify": "^2.1.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify-es": "^1.0.4"
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "glob": "^13.0.1",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1"
   }
 }
