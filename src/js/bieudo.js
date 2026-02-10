@@ -809,70 +809,80 @@ const marley = {
         return marley.formatTime(d.ti);
       });
 
-    // On Scroll - replaced jQuery with vanilla JS
-    const w = window;
-    const inner = document.getElementById("bieudo_chaytau");
+    const parent = document.getElementById("bieudo_mophong");
+    const child = document.getElementById("bieudo_thongtin");
+
+    const update4 = () => {
+      const rect = parent.getBoundingClientRect();
+      child.style.left = `${rect.right - 50}px`;
+      child.style.right = "auto";
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          child.style.position = "fixed";
+          update4();
+        } else {
+          child.style.position = "absolute";
+          child.style.right = 0;
+          child.style.left = "auto";
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -100% 0px",
+        threshold: 0,
+      },
+    );
+
+    observer.observe(parent);
+
+    // case 2
+    const parent1 = document.getElementById("bieudo_chaytau");
+    const child1 = document.getElementById("bieudo_chaytau_time_svg");
+    const child12 = document.getElementById("bieudo_chaytau_station_svg");
     let isOnScrollCall = false;
 
-    const updatePos = function () {
-      const bieudoElement = document.getElementById("bieudo_chaytau");
-      const bieudoRect = bieudoElement.getBoundingClientRect();
-      const bieudo_offset_top = bieudoRect.top + window.pageYOffset;
-      const bieudo_h = bieudoElement.offsetHeight;
-      const window_scroll_h =
-        window.pageYOffset || document.documentElement.scrollTop;
-
-      const bieudoTimeSvgElement = document.getElementById(
-        "bieudo_chaytau_time_svg",
-      );
-      if (
-        window_scroll_h > bieudo_offset_top &&
-        window_scroll_h < bieudo_offset_top + bieudo_h - 40
-      ) {
-        bieudoTimeSvgElement.style.top =
-          window_scroll_h - bieudo_offset_top + "px";
-      } else {
-        bieudoTimeSvgElement.style.top = "0px";
-      }
-
-      const bieudoMophongElement = document.getElementById("bieudo_mophong");
-      const bieudoMophongRect = bieudoMophongElement.getBoundingClientRect();
-      const bieudo_mophong_offset_top =
-        bieudoMophongRect.top + window.pageYOffset;
-      const bieudo_mophong_h = bieudoMophongElement.offsetHeight;
-
-      const bieudoThongtinElement = document.getElementById("bieudo_thongtin");
-      if (
-        window_scroll_h > bieudo_mophong_offset_top &&
-        window_scroll_h < bieudo_mophong_offset_top + bieudo_mophong_h - 250
-      ) {
-        bieudoThongtinElement.style.top =
-          window_scroll_h - bieudo_mophong_offset_top + "px";
-      } else if (window_scroll_h <= bieudo_mophong_offset_top) {
-        bieudoThongtinElement.style.top = "0px";
-      }
-
-      isOnScrollCall = false;
+    const update5 = () => {
+      const rect = parent1.getBoundingClientRect();
+      const inner_scroll_left = parent1.scrollLeft;
+      console.log(rect);
+      child1.style.left = `${rect.left - inner_scroll_left}px`;
     };
 
     const updatePos2 = function () {
-      const inner_scroll_left = inner.scrollLeft;
-      const bieudoStationSvgElement = document.getElementById(
-        "bieudo_chaytau_station_svg",
-      );
-      bieudoStationSvgElement.style.left = inner_scroll_left + "px";
+      const inner_scroll_left = parent1.scrollLeft;
+      const rect = parent1.getBoundingClientRect();
+      child12.style.left = inner_scroll_left + "px";
+      if (child1.style.position === "fixed") {
+        child1.style.left = `${rect.left - inner_scroll_left}px`;
+      }
       isOnScrollCall = false;
     };
 
-    w.addEventListener("scroll", function () {
-      if (!isOnScrollCall) {
-        requestAnimationFrame(updatePos);
-      }
-      isOnScrollCall = true;
-    });
+    const observer2 = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          child1.style.position = "fixed";
+          update5();
+        } else {
+          child1.style.position = "absolute";
+          // child.style.right = 0;
+          child1.style.left = 0;
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -100% 0px",
+        threshold: 0,
+      },
+    );
 
-    if (inner) {
-      inner.addEventListener("scroll", function () {
+    observer2.observe(parent1);
+
+    if (parent1) {
+      parent1.addEventListener("scroll", function () {
         if (!isOnScrollCall) {
           requestAnimationFrame(updatePos2);
         }
