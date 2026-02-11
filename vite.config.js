@@ -52,6 +52,7 @@ export default defineConfig({
       // Alias for importing CSS/JS modules
       "/client": resolve(__dirname, "client"),
       "/kehoach": resolve(__dirname, "web/kehoach"),
+      "/src": resolve(__dirname, "src"),
     },
   },
 });

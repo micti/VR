@@ -168,7 +168,7 @@ const simConfig = {
       .range([0, simConfig.lineLength * simConfig.scaleRatio]);
     simConfig.scaleTime = scaleTime()
       .domain([new Date(2026, 1, 15, 0), new Date(2026, 1, 16, 0)])
-      .range([0, 24 * 43]);
+      .range([0, 24 * 50]);
 
     for (const d in simConfig.data.sections) {
       simConfig.dataLines.push(simConfig.data.sections[d]);
@@ -613,6 +613,7 @@ const sim = {
 
 // Biểu đồ Marley
 const marley = {
+  hourWidth: 50,
   init: function () {
     marley.render();
   },
@@ -626,11 +627,11 @@ const marley = {
     //
     var bieudoSVG = select("#bieudo_chaytau_svg")
       .append("svg")
-      .attr("width", 24 * 43 + 70)
+      .attr("width", 25 * marley.hourWidth + 40)
       .attr("height", simConfig.lineLength * simConfig.scaleRatio + 50);
     var bieudoTimeSVG = select("#bieudo_chaytau_time_svg")
       .append("svg")
-      .attr("width", 24 * 43 + 122)
+      .attr("width", 25 * marley.hourWidth + 40)
       .attr("height", 20);
     var bieudoStationSVG = select("#bieudo_chaytau_station_svg")
       .append("svg")
@@ -641,7 +642,7 @@ const marley = {
       .tickFormat(timeFormat("%H:%M"));
     bieudoTimeSVG
       .append("g")
-      .attr("transform", "translate(60,20)")
+      .attr("transform", "translate(70,20)")
       .call(axisTime);
     var lineForMarley = line()
       .y(function (d) {
@@ -661,7 +662,7 @@ const marley = {
 
     var lineHelper = bieudoSVG
       .append("g")
-      .attr("transform", "translate(60,30)")
+      .attr("transform", "translate(70,30)")
       .attr("class", "line_helper")
       .selectAll("g")
       .data(simConfig.dataStations);
@@ -690,12 +691,12 @@ const marley = {
         return simConfig.scaleStation(d.km);
       })
       .attr("x1", 0)
-      .attr("x2", 24 * 43);
+      .attr("x2", 24 * marley.hourWidth);
 
     // Chú thích giờ
     var timeHelper = bieudoSVG
       .append("g")
-      .attr("transform", "translate(60,0)")
+      .attr("transform", "translate(70,0)")
       .attr("class", "time_helper")
       .selectAll("g")
       .data([
@@ -731,17 +732,17 @@ const marley = {
       .append("line")
       .attr("y1", 30)
       .attr("x1", function (d, i) {
-        return i * 43;
+        return i * marley.hourWidth;
       })
       .attr("x2", function (d, i) {
-        return i * 43;
+        return i * marley.hourWidth;
       })
       .attr("y2", 30 + simConfig.lineLength * simConfig.scaleRatio);
 
     // Tạp biểu đồ
     var trainPath = bieudoSVG
       .append("g")
-      .attr("transform", "translate(60,30)")
+      .attr("transform", "translate(70,30)")
       .selectAll("g")
       .data(marley.dataTimeTable)
       .enter()
@@ -971,41 +972,43 @@ const marley = {
 
 const simControl = {
   init: function () {
-    // Control button
-    // apply setting timer
-    select("#sim_setting").on("click", function () {
-      select("#simulator_options").classed("show", true);
+    const settingEl = document.getElementById("sim_setting");
+    const modalEl = document.getElementById("simulator_options");
+    const closeBtn = modalEl.querySelector(".close_button");
+    const setTimeBtn = document.getElementById("play_from_setting");
+    const timeInput = document.getElementById("time_to_start");
+    const toggleSimBtn = document.getElementById("sim_toggle");
+
+    settingEl.addEventListener("click", () => {
+      modalEl.style.display = "block";
     });
 
-    select("#sim_toggle").on("click", function () {
-      var _this = select(this);
+    toggleSimBtn.addEventListener("click", () => {
       if (sim.simRunningStatus()) {
         sim.simPause();
-        _this.html('<i class="material-icons">play_arrow</i>');
+        toggleSimBtn.innerHTML = '<i class="material-icons">play_arrow</i>';
         return true;
       }
 
       sim.simPlay();
-      _this.html('<i class="material-icons">pause</i>');
+      toggleSimBtn.innerHTML = '<i class="material-icons">pause</i>';
     });
 
     // Sim setting
-    select("#play_from_setting").on("click", function () {
-      var time = select("#time_to_start").property("value").trim();
+    setTimeBtn.addEventListener("click", () => {
+      const time = timeInput.value.trim();
       if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(time)) {
         alert("Thời gian không đúng, vui lòng nhập từ 00:00 đến 23:59");
         return false;
       }
 
       sim.simSetTime(simConfig.timeToMin(time));
-      select("#simulator_options").select(".close_button").dispatch("click");
+      closeBtn.click();
     });
 
     // modal close
-    select(".close_button").on("click", function () {
-      var _this = select(this);
-      var _modal = "#" + _this.attr("data-modal");
-      select(_modal).classed("show", false);
+    closeBtn.addEventListener("click", () => {
+      modalEl.style.display = "none";
     });
   },
 };

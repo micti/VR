@@ -27,69 +27,69 @@
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=vietnamese" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="/client/css/normalize.css">
-        <link rel="stylesheet" href="/client/css/he2017.css">
-        <link rel="stylesheet" href="/client/css/bieudo.css">
+        <link rel="stylesheet" href="/src/css/main.css">
         <link rel="stylesheet" href="/client/css/train_color.css">
     </head>
     <body>
-        <div class="page_header">
-            <div class="cover_filter"></div>
-            <div class="content">
-                <div class="title">
-                    <h1>Kế hoạch chạy tàu tết Bính Ngọ 2026</h1>
-                    <p class="slogan"></p>
+        <div class="relative h-125 bg-cover bg-center bg-[url('/images/kehoach/tet2017/banner01.jpg')]">
+            <div class="absolute inset-0 bg-[#010101] opacity-50 z-1"></div>
+            <div class="relative z-2 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl font-bold mb-4">Tàu tết Bính Ngọ 2026</h1>
+                    <p class="text-lg md:text-xl mb-8"></p>
                 </div>
-                <div class="more">
-                    <div class="info">
+                <div class="mt-8">
+                    <div class="text-sm md:text-base text-gray-300">
                         L.N. Anh, N.T.B Nguyên
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <nav class="page_menu">
-                <ul>
-                    <!-- <li><a href="index.html">Trang chủ</a></li> -->
-                    <!-- <li><a href="mactau.html">Mác tàu</a></li> -->
-                    <li><a href="bieudo.html">Biểu đồ</a></li>
+        <div class="max-w-330 w-full mx-auto px-4">
+            <nav class="mt-8 bg-[#eee] pt-4 px-4 pb-4">
+                <ul class="m-0 p-0 list-none text-base font-bold">
+                    <li class="inline-block"><a href="bieudo.html">Biểu đồ</a></li>
                 </ul>
             </nav>
 
-            <div class="heading">
-                <h2>Biểu đồ chạy tàu</h2>
+            <div class="mt-12 mb-8">
+                <h2 class="font-bold text-xl">Biểu đồ chạy tàu</h2>
             </div>
-            <div id="bieudo_chaytau">
-                <div id="bieudo_chaytau_time_svg"></div>
-                <div id="bieudo_chaytau_station_svg"></div>
+            <div id="bieudo_chaytau" class="relative overflow-auto">
+                <div id="bieudo_chaytau_time_svg" class="absolute top-0 left-0 bg-white w-full z-10"></div>
+                <div id="bieudo_chaytau_station_svg" class="absolute left-0 top-0 w-12.5 z-10 bg-white"></div>
                 <div id="bieudo_chaytau_svg"></div>
             </div>
 
             <a name="mophongbieudo">
-            <div class="heading">
-                <h2>Mô phỏng biểu đồ chạy tàu</h2>
+            <div class="mt-12 mb-8">
+                <h2 class="font-bold text-xl">Mô phỏng biểu đồ chạy tàu</h2>
             </div>
-            <div id="bieudo_mophong">
-                <div id="bieudo_thongtin">
-                    <span id="timer">00:00</span>
-                    <span id="sim_toggle" role="button"><i class="material-icons">pause</i></span>
-                    <span id="sim_setting" role="button"><i class="material-icons">settings</i></span>
+            <div id="bieudo_mophong" class="relative">
+                <div id="bieudo_thongtin" class="absolute top-0 right-0 w-12.5 text-center text-white bg-black">
+                    <span id="timer" class="block p-1 border-b border-b-white">00:00</span>
+                    <span id="sim_toggle" class="block p-1 pt-2 border-b border-b-white hover:bg-[#1f77b4] cursor-pointer" role="button"><i class="material-icons">pause</i></span>
+                    <span id="sim_setting" class="block p-1 pt-2 border-b border-b-white hover:bg-[#1f77b4] cursor-pointer" role="button"><i class="material-icons">settings</i></span>
                 </div>
                 <div id="bieudo"></div>
             </div>
-            <div id="simulator_options" class="simulator_options modal">
-                <div class="modal_container">
-                    <h3>Tùy chọn xem mô phỏng chạy tàu</h3>
-                    <input class="timer" placeholder="00:00" id="time_to_start">
-                    <i id="play_from_setting" role="button" class="material-icons" style="font-size: 36px" >play_circle_outline</i>
-                    <i role="button" class="material-icons close_button" data-modal="simulator_options">close</i>
+            <div id="simulator_options" class="fixed hidden top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.6)] overflow-y-scroll z-1000">
+                <div class="relative mx-auto my-5 p-5 bg-white w-full max-w-110">
+                    <h3 class="text-xl font-bold">Tùy chọn mô phỏng chạy tàu</h3>
+                    <div class="flex mt-4">
+                        <input class="timer border p-2 border-black mr-1" placeholder="00:00" id="time_to_start">
+                        <i id="play_from_setting" role="button" class="material-icons cursor-pointer text-4xl!">play_circle_outline</i>
+                    </div>
+                    <i role="button" class="material-icons close_button absolute top-3 right-3 text-4xl! cursor-pointer" data-modal="simulator_options">close</i>
                 </div>
             </div>
         </div>
 
         <script type="module">
-          import { builder } from '../../../src/js/bieudo.js';
-          builder('/data/tet_2026_min.json');
+          import { builder } from '/src/js/bieudo.js';
+          document.addEventListener('DOMContentLoaded', () => {
+            builder('/data/tet_2026_min.json');
+          });
         </script>
 
     </body>

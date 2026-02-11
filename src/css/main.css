@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+#bieudo_chaytau_svg .line_helper line,
+#bieudo_chaytau_svg .time_helper line {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 1, 1;
+}
+
+#bieudo_chaytau_svg .train_detail path {
+    fill: none;
+    stroke-width: 3px;
+    stroke: #000;
+}
+
+#bieudo_chaytau_svg .train_detail path:hover {
+    stroke-width: 4px;
+}
+
+#bieudo_chaytau_svg .train_detail circle {
+    stroke: #fff;
+}
+
+#bieudo_chaytau_svg .train_detail text {
+    font-size: 10px;
+}
+
+#bieudo_chaytau_station_svg .station_helper text {
+    font-size: 10px;
+}
+
+#bieudo {
+    width: 200px;
+    shape-rendering: crispEdges;
+}
+
+#bieudo .line {
+    stroke-width: 1px;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+#bieudo .station {
+    stroke-width: 0px;
+    fill: red;
+    shape-rendering: crispEdges;
+}
+
+#bieudo .station_tick {
+    shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+}
+
+#bieudo .station_label {
+    text-anchor: end;
+}
+
+#bieudo .train {
+    stroke-width: 0px;
+    fill: blue;
+    shape-rendering: auto;
+}
+
+#biedudo .train_label {
+    font-size: 12px;
+    shape-rendering: crispEdges;
+}
